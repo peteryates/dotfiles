@@ -7,6 +7,7 @@ These are the configuration files for software I use frequently, including:
 * [psql](https://www.postgresql.org)
 * [tig](https://jonas.github.io/tig/)
 * [tmux](https://github.com/tmux/tmux)
+* [kitty](https://sw.kovidgoyal.net/kitty/)
 
 ## Instructions
 
