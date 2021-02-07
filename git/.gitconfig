@@ -1,0 +1,65 @@
+[user]
+	name = Peter Yates
+	email = peter.yates@graphia.co.uk
+	signingkey = A846F177470366B2FDD05B03F5A9E8AD2A5C54A1
+
+[commit]
+	verbose = true
+	gpgsign = true
+
+[core]
+	editor = vim
+	excludesfile = /home/peter/.gitignore_global
+	pager = /usr/share/git-core/contrib/diff-highlight | less
+	UseHttpPath = true
+
+[merge]
+	ff = false
+
+[fetch]
+	prune = true
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[color "diff"]
+	commit = green
+	meta = yellow
+	frag = cyan
+	old = red
+	new = green
+	whitespace = red reverse
+
+[color "diff-highlight"]
+	oldNormal = red
+	oldHighlight = 15 bold red
+	newNormal = green
+	newHighlight = 15 bold green
+
+[pull]
+	rebase = true
+
+[alias]
+	recent = branch --sort=-committerdate -v
+	kdiff = difftool --no-symlinks --dir-diff
+
+[diff]
+	colorMoved = default
+    tool = kitty
+    guitool = kitty.gui
+
+[difftool]
+    prompt = false
+    trustExitCode = true
+
+[difftool "kitty"]
+    cmd = kitty +kitten diff $LOCAL $REMOTE
+
+[difftool "kitty.gui"]
+    cmd = kitty kitty +kitten diff $LOCAL $REMOTE
+
+[tig]
+    line-graphics = utf-8

@@ -3,6 +3,7 @@
 These are the configuration files for software I use frequently, including:
 
 * [zsh](https://www.zsh.org/)
+* [git](https://www.git-scm.com/)
 * [neovim](https://neovim.io/)
 * [psql](https://www.postgresql.org)
 * [tig](https://jonas.github.io/tig/)
