@@ -1,0 +1,44 @@
+antigen use oh-my-zsh
+antigen bundles <<EOBUNDLES
+  git
+  command-not-found
+  colored-man-pages
+  zsh-users/zsh-completions
+  zsh-users/zsh-history-substring-search
+  desyncr/vagrant-zsh-completion
+  felixr/docker-zsh-completion
+  bbenne10/goenv
+  bric3/nice-exit-code
+  caarlos0/zsh-add-upstream
+  caarlos0/zsh-git-fetch-merge
+  caarlos0/zsh-git-sync
+  caarlos0/zsh-mkc
+  peterhurford/git-it-on.zsh
+  caarlos0/jvm.git
+  caarlos0/zsh-open-pr
+  junegunn/fzf@0.16.*
+  mafredri/zsh-async@v1.5.* # use version v1.5.x
+  mollifier/cd-gitroot
+  oz/safe-paste # a comment
+  caarlos0/ports
+  supercrabtree/k@0.*
+  Tarrasch/zsh-bd
+  Tarrasch/zsh-colors
+  heroku
+  unixorn/git-extra-commands
+  rimraf/k
+  # a bunch of bundles from default library
+  gitfast
+  jsontools
+  github
+  git-extras
+  web-search
+  grunt
+  chrissicool/zsh-256color
+  pass
+  sprunge
+  git@github.com:desyncr/gitr.git --branch=develop
+  git://repo.or.cz/safe-rm.git
+EOBUNDLES
+
+antigen apply
