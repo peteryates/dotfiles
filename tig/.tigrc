@@ -1,0 +1,2 @@
+set diff-highlight = true
+set diff-options = --show-signature
