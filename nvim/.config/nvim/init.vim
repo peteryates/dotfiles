@@ -28,10 +28,10 @@ call plug#begin('~/.cache/nvim')
 	Plug 'tpope/vim-vinegar'
 
 " colours
-	Plug 'vim-airline/vim-airline-themes'
-	Plug 'vim-airline/vim-airline'
+    Plug 'itchyny/lightline.vim'
 	Plug 'baeuml/summerfruit256.vim'
 	Plug 'morhetz/gruvbox'
+	Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 
@@ -46,7 +46,6 @@ set hidden
 set listchars=tab:→\ ,trail:·,precedes:←,extends:→
 set tags=\.tags;
 set colorcolumn=100
-set termguicolors
 
 set splitbelow
 set splitright
@@ -57,15 +56,22 @@ set guioptions-=e
 set conceallevel=0
 
 " colours
-colorscheme gruvbox
-let g:gruvbox_bold = 1
-let g:gruvbox_italic = 1
-let g:airline_theme='gruvbox'
-let g:airline#extensions#ale#enabled = 1
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline_powerline_fonts = 1
-set bg=light
+let g:nord_bold = 1
+let g:nord_italic = 1
+colorscheme nord
 
+let g:lightline = {
+      \ 'colorscheme': 'nord',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
 
 " ale
 let g:ale_linters = {'scss': ['stylelint'], 'ruby': ['rubocop'], 'eruby': ['erubylint']}
@@ -112,6 +118,20 @@ nnoremap <leader>l :BLines<CR>
 nnoremap <leader>L :Lines<CR>
 nnoremap <leader>T :Tags<CR>
 
+" fix for flickering netrw under wayland
+let g:clipboard = {
+	  \   'name': 'myClipboard',
+	  \   'copy': {
+	  \      '+': 'tmux load-buffer -',
+	  \      '*': 'tmux load-buffer -',
+	  \    },
+	  \   'paste': {
+	  \      '+': 'tmux save-buffer -',
+	  \      '*': 'tmux save-buffer -',
+	  \   },
+	  \   'cache_enabled': 1,
+	  \ }
+
 " indentline
 let g:indentLine_enabled = 0
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
@@ -119,24 +139,15 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
 " filetyle-specific settings
 :autocmd Filetype ruby set softtabstop=2 shiftwidth=2 tabstop=2
-
 :autocmd Filetype cucumber set softtabstop=4 shiftwidth=4 tabstop=4
-
 :autocmd Filetype yaml set softtabstop=2 shiftwidth=2 tabstop=2
-
 :autocmd Filetype slim set softtabstop=2 shiftwidth=2 tabstop=2
-
 :autocmd Filetype scss set softtabstop=2 shiftwidth=2 tabstop=2
 :autocmd Filetype sass set softtabstop=2 shiftwidth=2 tabstop=2
-
 :autocmd Filetype javascript set softtabstop=2 shiftwidth=2 tabstop=2
-
 :autocmd Filetype markdown set softtabstop=2 shiftwidth=2 tabstop=2 textwidth=0 wrapmargin=0 foldlevel=3 wrap linebreak nolist
-
 :autocmd Filetype jinja.html set tabstop=2 softtabstop=2 shiftwidth=2 tabstop=2
-
 :autocmd Filetype sql set noexpandtab softtabstop=4 shiftwidth=4 tabstop=4 list
-
 :autocmd Filetype gitcommit set colorcolumn=50,72
 
 
