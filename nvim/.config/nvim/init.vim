@@ -25,6 +25,7 @@ call plug#begin('~/.cache/nvim')
 	Plug 'tpope/vim-fugitive'
 	Plug 'tpope/vim-rails'
 	Plug 'tpope/vim-sensible'
+    Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-vinegar'
 
 " colours
@@ -46,6 +47,7 @@ set hidden
 set listchars=tab:→\ ,trail:·,precedes:←,extends:→
 set tags=\.tags;
 set colorcolumn=100
+set termguicolors
 
 set splitbelow
 set splitright
@@ -56,8 +58,14 @@ set guioptions-=e
 set conceallevel=0
 
 " colours
+augroup nord-overrides
+  autocmd!
+  autocmd ColorScheme nord highlight Comment ctermfg=2
+augroup END
+
 let g:nord_bold = 1
 let g:nord_italic = 1
+let g:nord_underline = 1
 colorscheme nord
 
 let g:lightline = {
@@ -156,6 +164,7 @@ set wildignore+=**/node_modules
 set wildignore+=**/logs
 set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem,*.woff,*.woff2
 set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
+set wildignore+=*.jpg,*.jpeg,*.png,*.gif
 set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
 set wildignore+=*/app/assets/*,*/tmp/cache/*
 set wildignore+=*/tmp/*
