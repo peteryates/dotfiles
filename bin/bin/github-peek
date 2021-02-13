@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+# https://git.sr.ht/~alexdavid/dotfiles/tree/master/bin/git-peak
+
+REPO="$1"
+[ -z "$REPO" ] && exit 1
+
+DIR=$(mktemp -d)
+git clone --depth 1 git@github.com:"$REPO" "$DIR"
+"$EDITOR" "$DIR"
+rm -rf "$DIR"

@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+if STDOUT.tty?
+  puts 'Usage:'
+  puts ' clean a single file:'
+  puts '       $ cleanse < dirty-file.txt > clean-file.txt'
+  puts ' clean and combine multiple files:'
+  puts '       $ cat dirty-file-one.txt dirty-file-2.txt | cleanse > clean-file.txt'
+  exit
+end
+
+STDOUT.puts(STDIN.read.scrub)
