@@ -16,9 +16,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle git
-antigen bundle git-extras
-#antigen bundle gitfast
+antigen bundle gitfast
 antigen bundle npm
 antigen bundle gem
 antigen bundle dnf
