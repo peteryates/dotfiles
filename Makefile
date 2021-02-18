@@ -10,4 +10,16 @@ refresh:
 	stow --restow ${dirs}
 
 bootstrap:
-	sudo dnf install make neovim stow direnv the_silver_searcher fd-find fzf entr tree exa zsh git
+	sudo dnf install           \
+		make                     \
+		neovim                   \
+		stow direnv              \
+		the_silver_searcher      \
+		fd-find                  \
+		fzf                      \
+		entr                     \
+		tree                     \
+		exa                      \
+		zsh                      \
+		git                      \
+		jetbrains-mono-fonts-all
