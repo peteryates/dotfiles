@@ -22,4 +22,5 @@ bootstrap:
 		exa                      \
 		zsh                      \
 		git                      \
+		git-delta                \
 		jetbrains-mono-fonts-all
