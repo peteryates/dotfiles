@@ -28,24 +28,12 @@
 [pull]
   rebase = true
 
-[alias]
-  recent = branch --sort=-committerdate -v
-  kdiff = difftool --no-symlinks --dir-diff
-
 [diff]
   colorMoved = default
-  tool = kitty
-  guitool = kitty.gui
 
 [difftool]
   prompt = false
   trustExitCode = true
-
-[difftool "kitty"]
-  cmd = kitty +kitten diff $LOCAL $REMOTE
-
-[difftool "kitty.gui"]
-  cmd = kitty kitty +kitten diff $LOCAL $REMOTE
 
 [tig]
   line-graphics = utf-8
@@ -53,6 +41,7 @@
 [delta]
   features = unobtrusive-line-numbers decorations
   whitespace-error-style = 22 reverse
+  side-by-side = true
 
 [delta "unobtrusive-line-numbers"]
   line-numbers = true
