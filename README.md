@@ -2,13 +2,16 @@
 
 These are the configuration files for software I use frequently, including:
 
-* [zsh](https://www.zsh.org/)
+* [bat](https://github.com/sharkdp/bat)
+* [fd](https://github.com/sharkdp/fd)
 * [git](https://www.git-scm.com/)
+* [kitty](https://sw.kovidgoyal.net/kitty/)
 * [neovim](https://neovim.io/)
 * [psql](https://www.postgresql.org)
 * [tig](https://jonas.github.io/tig/)
 * [tmux](https://github.com/tmux/tmux)
-* [kitty](https://sw.kovidgoyal.net/kitty/)
+* [zsh](https://www.zsh.org/)
+
 
 ## Instructions
 
