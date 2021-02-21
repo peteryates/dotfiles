@@ -19,7 +19,6 @@ call plug#begin('~/.cache/nvim')
 
   " tpope section
   Plug 'tpope/vim-commentary'
-  Plug 'tpope/vim-dadbod'
   Plug 'tpope/vim-dispatch'
   Plug 'tpope/vim-eunuch'
   Plug 'tpope/vim-fugitive'
@@ -59,118 +58,15 @@ set softtabstop=2
 set tabstop=2
 set noshowcmd
 
-" colours
-augroup nord-overrides
-  autocmd!
-  autocmd ColorScheme nord highlight Comment ctermfg=2
-augroup END
-
-let g:nord_bold = 1
-let g:nord_italic = 1
-let g:nord_underline = 1
-colorscheme nord
-
-let g:lightline = {
-      \ 'colorscheme': 'nord',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'relativepath', 'modified' ] ],
-      \   'right': [ [ 'lineinfo' ],
-      \              [ 'percent' ],
-      \              [ 'filetype' ] ]
-      \ },
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '', 'right': '' },
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
-      \ },
-      \ }
-
-" ale
-let g:ale_linters = {'scss': ['stylelint'], 'ruby': ['rubocop'], 'eruby': ['erubylint']}
-let g:ale_fixers = {'scss': ['stylelint'], 'ruby': ['rubocop']}
-
-" search mappings
-set grepprg=ag\ --nogroup\ --nocolor\ --vimgrep
-nnoremap <leader>G :Grepper -tool ag<cr>
-
-" coc vim
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
-fun! TrimWhitespace()
-    let l:save = winsaveview()
-    keeppatterns %s/\s\+$//e
-    call winrestview(l:save)
-endfun
-command! TrimWhitespace call TrimWhitespace()
-
-" markdown
-let g:vim_markdown_fenced_languages = ['ruby=ruby', 'sql=sql']
-let g:vim_markdown_frontmatter = 1
-let g:vim_markdown_conceal = 0
-
-" dadbod
-let g:db   = "postgresql:///peter"
-let g:gias = "postgresql:///gias"
-
-" pgsql
-let g:sql_type_default = 'pgsql'
-
-" fzf mappings
-nnoremap <leader>t :Files<CR>
-nnoremap <leader>b :Buffers<CR>
-nnoremap <leader>l :BLines<CR>
-nnoremap <leader>L :Lines<CR>
-nnoremap <leader>T :Tags<CR>
-
-" fix for flickering netrw under wayland
-let g:clipboard = {
-      \   'name': 'myClipboard',
-      \   'copy': {
-      \      '+': 'tmux load-buffer -',
-      \      '*': 'tmux load-buffer -',
-      \    },
-      \   'paste': {
-      \      '+': 'tmux save-buffer -',
-      \      '*': 'tmux save-buffer -',
-      \   },
-      \   'cache_enabled': 1,
-      \ }
-
-" indentline
-let g:indentLine_enabled = 0
-let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-
-
-" filetyle-specific settings
-:autocmd Filetype ruby set softtabstop=2 shiftwidth=2 tabstop=2
-:autocmd Filetype cucumber set softtabstop=4 shiftwidth=4 tabstop=4
-:autocmd Filetype yaml set softtabstop=2 shiftwidth=2 tabstop=2
-:autocmd Filetype slim set softtabstop=2 shiftwidth=2 tabstop=2
-:autocmd Filetype scss set softtabstop=2 shiftwidth=2 tabstop=2
-:autocmd Filetype sass set softtabstop=2 shiftwidth=2 tabstop=2
-:autocmd Filetype javascript set softtabstop=2 shiftwidth=2 tabstop=2
-:autocmd Filetype markdown set softtabstop=2 shiftwidth=2 tabstop=2 textwidth=0 wrapmargin=0 foldlevel=3 wrap linebreak nolist
-:autocmd Filetype jinja.html set tabstop=2 softtabstop=2 shiftwidth=2 tabstop=2
-:autocmd Filetype sql set noexpandtab softtabstop=4 shiftwidth=4 tabstop=4 list
-:autocmd Filetype gitcommit set colorcolumn=50,72
-
-
-" wildignore
-set wildignore+=**/node_modules
-set wildignore+=**/logs
-set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem,*.woff,*.woff2
-set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
-set wildignore+=*.jpg,*.jpeg,*.png,*.gif
-set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
-set wildignore+=*/app/assets/*,*/tmp/cache/*
-set wildignore+=*/tmp/*
-set wildignore+=**.swp,*~,._*
+source <sfile>:h/init/ale.vim
+source <sfile>:h/init/coc.vim
+source <sfile>:h/init/filetype.vim
+source <sfile>:h/init/functions.vim
+source <sfile>:h/init/fzf.vim
+source <sfile>:h/init/grepper.vim
+source <sfile>:h/init/indentline.vim
+source <sfile>:h/init/lightline.vim
+source <sfile>:h/init/markdown.vim
+source <sfile>:h/init/nord.vim
+source <sfile>:h/init/tmux.vim
+source <sfile>:h/init/wildignore.vim
