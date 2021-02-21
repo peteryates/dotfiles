@@ -41,7 +41,10 @@
 [delta]
   features = unobtrusive-line-numbers decorations
   whitespace-error-style = 22 reverse
+  syntax-theme = Nord
   side-by-side = true
+  minus-style = black red
+  plus-style = black green
 
 [delta "unobtrusive-line-numbers"]
   line-numbers = true
@@ -57,4 +60,4 @@
   commit-decoration-style = bold yellow box ul
   file-style = bold yellow ul
   file-decoration-style = none
-  hunk-header-decoration-style = yellow box
+  hunk-header-decoration-style = yellow
