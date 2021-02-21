@@ -1,3 +1,4 @@
+\set QUIET 1
 \set comp_keyword_case lower
 \set show_slow_queries
 \pset null '(null)'
@@ -10,3 +11,4 @@
 \pset x auto
 \pset tuples_only off
 \pset footer
+\set QUIET 0
