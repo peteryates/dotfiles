@@ -42,7 +42,7 @@
   features = unobtrusive-line-numbers decorations
   whitespace-error-style = 22 reverse
   syntax-theme = Nord
-  side-by-side = true
+  ; side-by-side = true
   minus-style = black red
   plus-style = black green
 
