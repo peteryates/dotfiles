@@ -56,6 +56,7 @@ export LESS="-XFR"
 alias be='bundle exec'
 alias cat='bat'
 alias ls='exa'
+alias http='xh'
 
 # Setup LS_COLORS
 # . "/home/peter/.local/share/lscolors.sh"
