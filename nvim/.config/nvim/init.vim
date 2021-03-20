@@ -16,6 +16,8 @@ call plug#begin('~/.cache/nvim')
   Plug 'plasticboy/vim-markdown'
   Plug 'slim-template/vim-slim'
   Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+  Plug 'mhinz/vim-signify'
+  Plug 'honza/vim-snippets'
 
   " tpope section
   Plug 'tpope/vim-commentary'
@@ -67,6 +69,7 @@ source <sfile>:h/init/grepper.vim
 source <sfile>:h/init/indentline.vim
 source <sfile>:h/init/lightline.vim
 source <sfile>:h/init/markdown.vim
+source <sfile>:h/init/signify.vim
 source <sfile>:h/init/nord.vim
 source <sfile>:h/init/tmux.vim
 source <sfile>:h/init/wildignore.vim

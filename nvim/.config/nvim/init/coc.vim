@@ -9,3 +9,7 @@ function! s:show_documentation()
   endif
 endfunction
 
+" coc-snippets
+imap <C-l> <Plug>(coc-snippets-expand)
+vmap <c-j> <Plug>(coc-snippets-select)
+imap <c-j> <Plug>(coc-snippets-expand-jump)
