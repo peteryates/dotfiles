@@ -57,6 +57,7 @@ alias be='bundle exec'
 alias cat='bat'
 alias ls='exa'
 alias http='xh'
+alias yank='yank-cli'
 
 # Setup LS_COLORS
 # . "/home/peter/.local/share/lscolors.sh"

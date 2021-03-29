@@ -28,6 +28,7 @@ call plug#begin('~/.cache/nvim')
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-vinegar'
+  Plug 'tpope/vim-rhubarb'
 
   " colours
   Plug 'itchyny/lightline.vim'

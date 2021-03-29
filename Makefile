@@ -23,4 +23,6 @@ bootstrap:
 		zsh                      \
 		git                      \
 		git-delta                \
-		jetbrains-mono-fonts-all
+		jetbrains-mono-fonts-all \
+		zsh                      \
+		yank
