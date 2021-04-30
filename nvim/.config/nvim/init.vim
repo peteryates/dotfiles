@@ -60,6 +60,7 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set noshowcmd
+set number relativenumber
 
 source <sfile>:h/init/ale.vim
 source <sfile>:h/init/coc.vim

@@ -15,6 +15,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
+autoload -Uz compinit && compinit
+
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle gitfast
 antigen bundle npm
@@ -26,7 +28,7 @@ antigen bundle nvm-auto
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
-# antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
 
 # Configure and load blox theme
@@ -64,7 +66,6 @@ alias yank='yank-cli'
 
 # Load completion files from the ~/.zsh directory.
 fpath=(~/.zsh $fpath)
-autoload -Uz compinit && compinit
 
 # Set up direnv for project-specific environment variables
 eval "$(direnv hook zsh)"

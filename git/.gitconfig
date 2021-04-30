@@ -42,7 +42,7 @@
   features = unobtrusive-line-numbers decorations
   whitespace-error-style = 22 reverse
   syntax-theme = Nord
-  side-by-side = true
+  #side-by-side = true
   minus-style = black red
   plus-style = black green
 
@@ -61,3 +61,8 @@
   file-style = bold yellow ul
   file-decoration-style = none
   hunk-header-decoration-style = yellow
+[maintenance]
+	repo = /home/peter/projects/department-for-education/current/get-into-teaching-content
+	repo = /home/peter/projects/department-for-education/current/get-into-teaching-app
+	repo = /home/peter/projects/department-for-education/current/govuk-design-system-formbuilder
+	repo = /home/peter/projects/department-for-education/current/govuk-components
