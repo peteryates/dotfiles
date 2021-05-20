@@ -66,3 +66,5 @@
 	repo = /home/peter/projects/department-for-education/current/get-into-teaching-app
 	repo = /home/peter/projects/department-for-education/current/govuk-design-system-formbuilder
 	repo = /home/peter/projects/department-for-education/current/govuk-components
+[init]
+	defaultBranch = master
