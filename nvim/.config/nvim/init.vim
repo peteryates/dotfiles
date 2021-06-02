@@ -35,6 +35,10 @@ call plug#begin('~/.cache/nvim')
   Plug 'baeuml/summerfruit256.vim'
   Plug 'morhetz/gruvbox'
   Plug 'arcticicestudio/nord-vim'
+
+  " requires nightly
+  Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+  Plug 'nvim-treesitter/playground'
 call plug#end()
 
 set t_Co=256
@@ -74,5 +78,6 @@ source <sfile>:h/init/mappings.vim
 source <sfile>:h/init/markdown.vim
 source <sfile>:h/init/signify.vim
 source <sfile>:h/init/nord.vim
+source <sfile>:h/init/treesitter.vim
 source <sfile>:h/init/tmux.vim
 source <sfile>:h/init/wildignore.vim
