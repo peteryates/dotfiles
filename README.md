@@ -12,10 +12,11 @@ These are the configuration files for software I use frequently, including:
 * [tmux](https://github.com/tmux/tmux)
 * [zsh](https://www.zsh.org/)
 
-
 ## Instructions
 
-1. Install [stow](https://www.gnu.org/software/stow/) and [make](https://www.gnu.org/software/make/)
+1. Install [stow](https://www.gnu.org/software/stow/),
+   [make](https://www.gnu.org/software/make/) and
+   [fd](https://github.com/sharkdp/fd).
 2. Clone or download this repository and `cd` into the directory
 3. Run `make up` to install and `make down` to uninstall
 
