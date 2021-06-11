@@ -72,6 +72,7 @@ source <sfile>:h/init/filetype.vim
 source <sfile>:h/init/functions.vim
 source <sfile>:h/init/fzf.vim
 source <sfile>:h/init/grepper.vim
+source <sfile>:h/init/hexokinase.vim
 source <sfile>:h/init/indentline.vim
 source <sfile>:h/init/lightline.vim
 source <sfile>:h/init/mappings.vim
