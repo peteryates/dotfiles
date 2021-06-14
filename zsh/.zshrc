@@ -31,12 +31,6 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
 
-# Configure and load blox theme
-BLOX_SEG__UPPER_LEFT=( cwd git )
-BLOX_SEG__UPPER_RIGHT=( bgjobs )
-BLOX_BLOCK__CWD_TRUNC=1
-antigen theme yardnsm/blox-zsh-theme
-
 # Tell Antigen that you're done.
 antigen apply
 
@@ -69,3 +63,4 @@ fpath=(~/.zsh $fpath)
 
 # Set up direnv for project-specific environment variables
 eval "$(direnv hook zsh)"
+eval "$(starship init zsh)"

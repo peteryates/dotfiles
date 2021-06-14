@@ -25,4 +25,6 @@ bootstrap:
 		git-delta                \
 		jetbrains-mono-fonts-all \
 		zsh                      \
-		yank
+		yank                     \
+		sd                       \
+		starship
