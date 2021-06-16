@@ -15,6 +15,13 @@ require'nvim-treesitter.configs'.setup {
     max_file_lines = 1000, -- Do not enable for files with more than 1000 lines, int
   }
 }
+
+require'nvim-treesitter.configs'.setup {
+  matchup = {
+    enable = true,              -- mandatory, false will disable the whole extension
+    -- disable = { "python" },  -- optional, list of language that will be disabled
+  },
+}
 EOF
 
 set foldmethod=expr

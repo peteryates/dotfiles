@@ -18,6 +18,7 @@ call plug#begin('~/.cache/nvim')
   Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
   Plug 'mhinz/vim-signify'
   Plug 'honza/vim-snippets'
+  Plug 'andymass/vim-matchup'
 
   " tpope section
   Plug 'tpope/vim-commentary'
