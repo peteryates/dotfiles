@@ -51,6 +51,8 @@ set listchars=tab:→\ ,trail:·,precedes:←,extends:→
 set tags=\.tags;
 set colorcolumn=100
 set termguicolors
+set showmatch
+set matchtime=2
 
 set splitbelow
 set splitright
