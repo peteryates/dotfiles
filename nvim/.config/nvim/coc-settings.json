@@ -1,4 +1,6 @@
 {
   "javascript.suggestionActions.enabled": false,
-  "coc.preferences.colorSupport": false
+  "coc.preferences.colorSupport": false,
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.displayByAle": true
 }

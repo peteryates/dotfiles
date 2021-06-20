@@ -1,5 +1,6 @@
 " load fzf before anything else
 :so /usr/share/nvim/site/plugin/fzf.vim
+let g:ale_disable_lsp = 1
 
 call plug#begin('~/.cache/nvim')
   " general
@@ -19,6 +20,7 @@ call plug#begin('~/.cache/nvim')
   Plug 'mhinz/vim-signify'
   Plug 'honza/vim-snippets'
   Plug 'andymass/vim-matchup'
+  Plug 'AndrewRadev/splitjoin.vim'
 
   " tpope section
   Plug 'tpope/vim-commentary'
@@ -33,6 +35,7 @@ call plug#begin('~/.cache/nvim')
 
   " colours
   Plug 'itchyny/lightline.vim'
+  Plug 'maximbaz/lightline-ale'
   Plug 'baeuml/summerfruit256.vim'
   Plug 'morhetz/gruvbox'
   Plug 'arcticicestudio/nord-vim'
