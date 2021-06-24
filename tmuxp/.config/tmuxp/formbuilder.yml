@@ -1,5 +1,5 @@
 session_name: formbuilder
-start_directory: ~/projects/department-for-education/current/govuk-design-system-formbuilder
+start_directory: ~/projects/department-for-education/current/govuk-design-system-formbuilder/
 windows:
   - window_name: editor
     layout: tiled
@@ -14,7 +14,7 @@ windows:
   - window_name: git
     layout: tiled
     panes:
-      - git status
+      - tig
 
   - window_name: tests
     layout: tiled
@@ -24,5 +24,4 @@ windows:
   - window_name: servers
     layout: tiled
     panes:
-      - be rails server
-      - bin/webpack-dev-server
+      -

@@ -8,6 +8,7 @@ export PATH="$HOME/bin:$PATH"
 
 # Add diff-highlight to path
 export PATH="/usr/share/git-core/contrib:$PATH"
+export PATH="/home/peter/.local/bin:$PATH"
 
 # Set up rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"

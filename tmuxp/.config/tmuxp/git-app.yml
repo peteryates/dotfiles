@@ -1,5 +1,5 @@
 session_name: git-app
-start_directory: ~/projects/department-for-education/current/get-into-teaching-app
+start_directory: ~/projects/department-for-education/current/get-into-teaching-app/
 windows:
   - window_name: editor
     layout: tiled
