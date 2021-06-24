@@ -21,6 +21,7 @@ call plug#begin('~/.cache/nvim')
   Plug 'honza/vim-snippets'
   Plug 'andymass/vim-matchup'
   Plug 'AndrewRadev/splitjoin.vim'
+  Plug 'kshenoy/vim-signature'
 
   " tpope section
   Plug 'tpope/vim-commentary'
