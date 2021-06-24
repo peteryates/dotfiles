@@ -1,0 +1,28 @@
+session_name: git-app
+start_directory: ~/projects/department-for-education/current/get-into-teaching-app
+windows:
+  - window_name: editor
+    layout: tiled
+    panes:
+      - vim
+
+  - window_name: extra
+    layout: tiled
+    panes:
+      -
+
+  - window_name: git
+    layout: tiled
+    panes:
+      - git status
+
+  - window_name: tests
+    layout: tiled
+    panes:
+      -
+
+  - window_name: servers
+    layout: tiled
+    panes:
+      - be rails server
+      - bin/webpack-dev-server

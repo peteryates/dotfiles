@@ -6,6 +6,9 @@ antigen use oh-my-zsh
 # Add user scripts
 export PATH="$HOME/bin:$PATH"
 
+# Add diff-highlight to path
+export PATH="/usr/share/git-core/contrib:$PATH"
+
 # Set up rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"

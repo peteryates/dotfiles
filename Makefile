@@ -19,6 +19,8 @@ bootstrap:
 		fzf                      \
 		entr                     \
 		tree                     \
+		tmux                     \
+		python3-tmuxp            \
 		exa                      \
 		zsh                      \
 		git                      \

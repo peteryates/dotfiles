@@ -83,6 +83,7 @@ source <sfile>:h/init/indentline.vim
 source <sfile>:h/init/lightline.vim
 source <sfile>:h/init/mappings.vim
 source <sfile>:h/init/markdown.vim
+source <sfile>:h/init/scss.vim
 source <sfile>:h/init/signify.vim
 source <sfile>:h/init/nord.vim
 source <sfile>:h/init/treesitter.vim
