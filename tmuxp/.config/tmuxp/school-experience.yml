@@ -1,6 +1,6 @@
 ---
-session_name: components
-start_directory: ~/projects/department-for-education/current/govuk-components/
+session_name: school-experience
+start_directory: ~/projects/department-for-education/reference/school-experience
 windows:
   - window_name: editor
     layout: tiled
@@ -15,7 +15,7 @@ windows:
   - window_name: git
     layout: tiled
     panes:
-      - git status
+      - tig
 
   - window_name: tests
     layout: tiled

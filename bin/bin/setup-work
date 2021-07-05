@@ -1,0 +1,3 @@
+#!/usr/bin/sh
+
+tmuxp load git-app git-tta school-experience formbuilder components

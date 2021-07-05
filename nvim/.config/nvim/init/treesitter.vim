@@ -26,4 +26,4 @@ EOF
 
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
-set foldlevel=4
+set foldlevel=5
