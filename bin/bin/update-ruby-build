@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+git -C /home/peter/.rbenv/plugins/ruby-build pull
