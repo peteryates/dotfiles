@@ -9,7 +9,7 @@
 
 [core]
 	editor = vim
-  pager = delta
+  pager = diff-highlight | less
 	excludesfile = /home/peter/.gitignore_global
 	UseHttpPath = true
 
@@ -38,29 +38,30 @@
 [tig]
   line-graphics = utf-8
 
-[delta]
-  features = unobtrusive-line-numbers decorations
-  whitespace-error-style = 22 reverse
-  syntax-theme = Nord
-  #side-by-side = true
-  minus-style = black red
-  plus-style = black green
+; [delta]
+;   features = unobtrusive-line-numbers decorations
+;   whitespace-error-style = 22 reverse
+;   syntax-theme = Nord
+;   #side-by-side = true
+;   minus-style = black red
+;   plus-style = black green
 
-[delta "unobtrusive-line-numbers"]
-  line-numbers = true
-  line-numbers-minus-style = "#88c0d0"
-  line-numbers-zero-style = "#88c0d0"
-  line-numbers-plus-style = "#88c0d0"
-  line-numbers-left-format = "{nm:>4}┊"
-  line-numbers-right-format = "{np:>4}│"
-  line-numbers-left-style = blue
-  line-numbers-right-style = blue
+; [delta "unobtrusive-line-numbers"]
+;   line-numbers = true
+;   line-numbers-minus-style = "#88c0d0"
+;   line-numbers-zero-style = "#88c0d0"
+;   line-numbers-plus-style = "#88c0d0"
+;   line-numbers-left-format = "{nm:>4}┊"
+;   line-numbers-right-format = "{np:>4}│"
+;   line-numbers-left-style = blue
+;   line-numbers-right-style = blue
 
-[delta "decorations"]
-  commit-decoration-style = bold yellow box ul
-  file-style = bold yellow ul
-  file-decoration-style = none
-  hunk-header-decoration-style = yellow
+; [delta "decorations"]
+;   commit-decoration-style = bold yellow box ul
+;   file-style = bold yellow ul
+;   file-decoration-style = none
+;   hunk-header-decoration-style = yellow
+
 [maintenance]
 	repo = /home/peter/projects/department-for-education/current/get-into-teaching-content
 	repo = /home/peter/projects/department-for-education/current/get-into-teaching-app
