@@ -44,6 +44,7 @@ call plug#begin('~/.cache/nvim')
   " requires nightly
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
   Plug 'nvim-treesitter/playground'
+  Plug 'p00f/nvim-ts-rainbow'
 call plug#end()
 
 set t_Co=256
@@ -88,7 +89,6 @@ source <sfile>:h/init/indentline.vim
 source <sfile>:h/init/lightline.vim
 source <sfile>:h/init/mappings.vim
 source <sfile>:h/init/markdown.vim
-source <sfile>:h/init/scss.vim
 source <sfile>:h/init/signify.vim
 source <sfile>:h/init/nord.vim
 source <sfile>:h/init/treesitter.vim
