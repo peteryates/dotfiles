@@ -73,6 +73,10 @@ set tabstop=2
 set noshowcmd
 set number relativenumber
 
+set nobackup
+set nowritebackup
+set noswapfile
+
 source <sfile>:h/init/ale.vim
 source <sfile>:h/init/coc.vim
 source <sfile>:h/init/filetype.vim
