@@ -1,6 +1,5 @@
 " load fzf before anything else
 :so /usr/share/nvim/site/plugin/fzf.vim
-let g:ale_disable_lsp = 1
 
 call plug#begin('~/.cache/nvim')
   " general
