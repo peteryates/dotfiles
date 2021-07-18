@@ -37,6 +37,10 @@ call plug#begin('~/.cache/nvim')
   Plug 'morhetz/gruvbox'
   Plug 'arcticicestudio/nord-vim'
 
+  " lsp stuff
+  Plug 'hrsh7th/nvim-compe'
+  Plug 'neovim/nvim-lspconfig'
+
   " requires nightly
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
   Plug 'nvim-treesitter/playground'
@@ -55,6 +59,7 @@ set colorcolumn=100
 set termguicolors
 set showmatch
 set matchtime=2
+set completeopt=menuone,noselect
 
 set splitbelow
 set splitright
@@ -88,3 +93,6 @@ source <sfile>:h/init/nord.vim
 source <sfile>:h/init/treesitter.vim
 source <sfile>:h/init/tmux.vim
 source <sfile>:h/init/wildignore.vim
+
+luafile <sfile>:h/init/compe.lua
+luafile <sfile>:h/init/lspconfig.lua
