@@ -40,7 +40,6 @@ call plug#begin('~/.cache/nvim')
   " lsp stuff
   Plug 'hrsh7th/nvim-compe'
   Plug 'neovim/nvim-lspconfig'
-  Plug 'glepnir/lspsaga.nvim'
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
   Plug 'nvim-treesitter/playground'
   Plug 'p00f/nvim-ts-rainbow'
@@ -95,4 +94,3 @@ source <sfile>:h/init/wildignore.vim
 
 luafile <sfile>:h/init/compe.lua
 luafile <sfile>:h/init/lspconfig.lua
-luafile <sfile>:h/init/saga.lua
