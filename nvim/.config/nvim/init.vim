@@ -1,11 +1,9 @@
 " load fzf before anything else
 :so /usr/share/nvim/site/plugin/fzf.vim
-let g:ale_disable_lsp = 1
 
 call plug#begin('~/.cache/nvim')
   " general
   Plug 'Yggdroot/indentLine'
-  Plug 'dense-analysis/ale'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'godlygeek/tabular'
   Plug 'iamcco/markdown-preview.vim'
@@ -13,7 +11,6 @@ call plug#begin('~/.cache/nvim')
   Plug 'junegunn/fzf.vim'
   Plug 'mg979/vim-visual-multi'
   Plug 'mhinz/vim-grepper'
-  Plug 'neoclide/coc.nvim'
   Plug 'plasticboy/vim-markdown'
   Plug 'slim-template/vim-slim'
   Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
@@ -36,7 +33,6 @@ call plug#begin('~/.cache/nvim')
 
   " colours
   Plug 'itchyny/lightline.vim'
-  Plug 'maximbaz/lightline-ale'
   Plug 'baeuml/summerfruit256.vim'
   Plug 'morhetz/gruvbox'
   Plug 'arcticicestudio/nord-vim'
@@ -78,8 +74,6 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-source <sfile>:h/init/ale.vim
-source <sfile>:h/init/coc.vim
 source <sfile>:h/init/filetype.vim
 source <sfile>:h/init/functions.vim
 source <sfile>:h/init/fzf.vim
