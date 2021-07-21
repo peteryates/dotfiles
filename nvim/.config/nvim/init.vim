@@ -6,7 +6,7 @@ call plug#begin('~/.cache/nvim')
   Plug 'Yggdroot/indentLine'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'godlygeek/tabular'
-  Plug 'iamcco/markdown-preview.vim'
+  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'mg979/vim-visual-multi'
