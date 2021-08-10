@@ -19,6 +19,7 @@ call plug#begin('~/.cache/nvim')
   Plug 'andymass/vim-matchup'
   Plug 'AndrewRadev/splitjoin.vim'
   Plug 'kshenoy/vim-signature'
+  Plug 'monaqa/dial.nvim'
 
   " tpope section
   Plug 'tpope/vim-commentary'
@@ -77,6 +78,7 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+source <sfile>:h/init/dial.vim
 source <sfile>:h/init/filetype.vim
 source <sfile>:h/init/functions.vim
 source <sfile>:h/init/fzf.vim
