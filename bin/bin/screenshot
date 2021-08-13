@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+DATE=$(date +%Y-%m-%d-%H:%M:%S)
+SCREENSHOTS_DIR=~/pictures/screenshots
+OPT=${1-0}
+
+if [ $OPT = "area" ]
+then
+  mode="-a"
+elif [ $OPT = "window" ]
+then
+  mode="-w"
+else
+  # full screen
+  mode=""
+fi
+
+gnome-screenshot $mode -f $SCREENSHOTS_DIR/Screenshot-$DATE.png
