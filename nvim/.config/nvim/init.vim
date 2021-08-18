@@ -36,7 +36,7 @@ call plug#begin('~/.cache/nvim')
   Plug 'itchyny/lightline.vim'
   Plug 'baeuml/summerfruit256.vim'
   Plug 'morhetz/gruvbox'
-  Plug 'arcticicestudio/nord-vim'
+  Plug 'shaunsingh/nord.nvim'
 
   " lsp stuff
   Plug 'hrsh7th/nvim-compe'
@@ -54,7 +54,6 @@ set nolist
 set hidden
 set listchars=tab:→\ ,trail:·,precedes:←,extends:→
 set tags=\.tags;
-set colorcolumn=100
 set termguicolors
 set showmatch
 set matchtime=2
