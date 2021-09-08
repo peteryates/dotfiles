@@ -20,6 +20,7 @@ call plug#begin('~/.cache/nvim')
   Plug 'AndrewRadev/splitjoin.vim'
   Plug 'kshenoy/vim-signature'
   Plug 'monaqa/dial.nvim'
+  Plug 'SirVer/ultisnips'
 
   " tpope section
   Plug 'tpope/vim-commentary'
