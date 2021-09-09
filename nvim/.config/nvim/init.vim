@@ -20,6 +20,7 @@ call plug#begin('~/.cache/nvim')
   Plug 'AndrewRadev/splitjoin.vim'
   Plug 'kshenoy/vim-signature'
   Plug 'monaqa/dial.nvim'
+  Plug 'SirVer/ultisnips'
 
   " tpope section
   Plug 'tpope/vim-commentary'
@@ -39,8 +40,15 @@ call plug#begin('~/.cache/nvim')
   Plug 'shaunsingh/nord.nvim'
 
   " lsp stuff
-  Plug 'hrsh7th/nvim-compe'
   Plug 'neovim/nvim-lspconfig'
+  Plug 'hrsh7th/nvim-cmp'
+
+  " lsp sources
+  Plug 'hrsh7th/cmp-nvim-lsp'
+  Plug 'hrsh7th/cmp-path'
+  Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+
+  " treesitter
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
   Plug 'nvim-treesitter/playground'
   Plug 'p00f/nvim-ts-rainbow'
@@ -93,5 +101,4 @@ source <sfile>:h/init/treesitter.vim
 source <sfile>:h/init/tmux.vim
 source <sfile>:h/init/wildignore.vim
 
-luafile <sfile>:h/init/compe.lua
-luafile <sfile>:h/init/lspconfig.lua
+luafile <sfile>:h/init/lsp.lua
