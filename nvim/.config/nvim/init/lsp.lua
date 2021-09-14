@@ -23,11 +23,8 @@ cmp.setup {
         nvim_lsp    = "[LSP]",
         ultisnips   = "[UltiSnips]",
         nvim_lua    = "[Lua]",
-        cmp_tabnine = "[TabNine]",
-        look        = "[Look]",
         path        = "[Path]",
         spell       = "[Spell]",
-        calc        = "[Calc]",
         emoji       = "[Emoji]"
       })[entry.source.name]
       return vim_item
