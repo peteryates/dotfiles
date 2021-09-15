@@ -5,66 +5,81 @@ require'lspconfig'.solargraph.setup{}
 
 local cmp = require('cmp')
 
-local t = function(str)
-    return vim.api.nvim_replace_termcodes(str, true, true, true)
-end
 
-local check_back_space = function()
-    local col = vim.fn.col(".") - 1
-    return col == 0 or vim.fn.getline("."):sub(col, col):match("%s") ~= nil
-end
+local compare = require('cmp.config.compare')
+local types = require('cmp.types')
 
+local WIDE_HEIGHT = 40
+
+---@return cmp.ConfigSchema
 cmp.setup {
-  formatting = {
-    format = function(entry, vim_item)
-      -- set a name for each source
-      vim_item.menu = ({
-        buffer      = "[Buffer]",
-        nvim_lsp    = "[LSP]",
-        ultisnips   = "[UltiSnips]",
-        nvim_lua    = "[Lua]",
-        path        = "[Path]",
-        spell       = "[Spell]",
-        emoji       = "[Emoji]"
-      })[entry.source.name]
-      return vim_item
-    end
+  enabled = function()
+    return vim.api.nvim_buf_get_option(0, 'buftype') ~= 'prompt'
+  end,
+  completion = {
+    autocomplete = {
+      types.cmp.TriggerEvent.TextChanged,
+    },
+    completeopt = 'menu,menuone,noselect',
+    keyword_pattern = [[\%(-\?\d\+\%(\.\d\+\)\?\|\h\w*\%(-\w*\)*\)]],
+    keyword_length = 1,
+    get_trigger_characters = function(trigger_characters)
+      return trigger_characters
+    end,
   },
+
+  snippet = {
+    expand = function()
+      error('snippet engine is not configured.')
+    end,
+  },
+
+  preselect = types.cmp.PreselectMode.Item,
+
+  documentation = {
+    border = {"┌", "─", "┐", "│", "┘", "─", "└", "│"},
+    winhighlight = 'NormalFloat:NormalFloat,FloatBorder:NormalFloat',
+    maxwidth = math.floor((WIDE_HEIGHT * 2) * (vim.o.columns / (WIDE_HEIGHT * 2 * 16 / 9))),
+    maxheight = math.floor(WIDE_HEIGHT * (WIDE_HEIGHT / vim.o.lines)),
+  },
+
+  confirmation = {
+    default_behavior = types.cmp.ConfirmBehavior.Insert,
+    get_commit_characters = function(commit_characters)
+      return commit_characters
+    end,
+  },
+
+  sorting = {
+    priority_weight = 2,
+    comparators = {
+      compare.offset,
+      compare.exact,
+      compare.score,
+      compare.kind,
+      compare.sort_text,
+      compare.length,
+      compare.order,
+    },
+  },
+
+  event = {},
 
   mapping = {
     ['<C-p>'] = cmp.mapping.select_prev_item(),
     ['<C-n>'] = cmp.mapping.select_next_item(),
-    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
-    ['<C-f>'] = cmp.mapping.scroll_docs(4),
-    ['<C-Space>'] = cmp.mapping.complete(),
-    ['<C-e>'] = cmp.mapping.close(),
-    ['<CR>'] = cmp.mapping.confirm({
-      behavior = cmp.ConfirmBehavior.Insert,
-      select = true
-    }),
-    ["<Tab>"] = cmp.mapping(function(fallback)
-      if vim.fn.pumvisible() == 1 then
-        if vim.fn["UltiSnips#CanExpandSnippet"]() == 1 or
-          vim.fn["UltiSnips#CanJumpForwards"]() == 1 then
-          return vim.fn.feedkeys(t("<C-R>=UltiSnips#ExpandSnippetOrJump()<CR>"))
-        end
-
-        vim.fn.feedkeys(t("<C-n>"), "n")
-      elseif check_back_space() then
-        vim.fn.feedkeys(t("<tab>"), "n")
-      else
-        fallback()
-      end
-    end, {"i", "s"}),
-    ["<S-Tab>"] = cmp.mapping(function(fallback)
-      if vim.fn.pumvisible() == 1 then
-        vim.fn.feedkeys(t("<C-p>"), "n")
-      else
-        fallback()
-      end
-    end, {"i", "s"})
   },
-  snippet = {expand = function(args) vim.fn["UltiSnips#Anon"](args.body) end},
+
+  formatting = {
+    deprecated = true,
+    format = function(_, vim_item)
+      return vim_item
+    end,
+  },
+
+  experimental = {
+    ghost_text = false,
+  },
 
   sources = {
     {name = 'buffer'},
@@ -74,6 +89,4 @@ cmp.setup {
     {name = "path"},
     {name = "emoji"}
   },
-
-  completion = {completeopt = 'menu,menuone,noinsert'}
 }

@@ -67,7 +67,6 @@ set tags=\.tags;
 set termguicolors
 set showmatch
 set matchtime=2
-set completeopt=menuone,noselect
 
 set splitbelow
 set splitright
