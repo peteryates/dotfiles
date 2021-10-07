@@ -15,12 +15,12 @@ call plug#begin('~/.cache/nvim')
   Plug 'slim-template/vim-slim'
   Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
   Plug 'mhinz/vim-signify'
-  Plug 'honza/vim-snippets'
+  Plug 'rafamadriz/friendly-snippets'
   Plug 'andymass/vim-matchup'
   Plug 'AndrewRadev/splitjoin.vim'
   Plug 'kshenoy/vim-signature'
   Plug 'monaqa/dial.nvim'
-  Plug 'SirVer/ultisnips'
+  Plug 'L3MON4D3/LuaSnip'
 
   " tpope section
   Plug 'tpope/vim-commentary'
@@ -48,7 +48,7 @@ call plug#begin('~/.cache/nvim')
   Plug 'hrsh7th/cmp-path'
   Plug 'hrsh7th/cmp-buffer'
   Plug 'hrsh7th/cmp-emoji'
-  Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+  Plug 'saadparwaiz1/cmp_luasnip'
 
   " treesitter
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
