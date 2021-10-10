@@ -1,0 +1,18 @@
+---
+session_name: neovim
+start_directory: ~/.dotfiles/nvim/.config/nvim
+windows:
+  - window_name: editor
+    layout: tiled
+    panes:
+      - vim
+
+  - window_name: extra
+    layout: tiled
+    panes:
+      - 
+
+  - window_name: git
+    layout: tiled
+    panes:
+      - 

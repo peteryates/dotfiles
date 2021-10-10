@@ -10,23 +10,24 @@ refresh:
 	stow --restow ${dirs}
 
 bootstrap:
-	sudo dnf install           \
-		make                     \
-		neovim                   \
-		stow direnv              \
-		the_silver_searcher      \
-		fd-find                  \
-		fzf                      \
-		entr                     \
-		tree                     \
-		tmux                     \
-		python3-tmuxp            \
-		exa                      \
-		zsh                      \
-		git                      \
-		git-delta                \
-		jetbrains-mono-fonts-all \
-		zsh                      \
-		yank                     \
-		sd                       \
-		starship
+	sudo dnf copr enable -y gourlaysama/ht-rust && \
+	sudo dnf -y install                            \
+	entr                                           \
+	exa                                            \
+	fd-find                                        \
+	fzf                                            \
+	git                                            \
+	jetbrains-mono-fonts-all                       \
+	make                                           \
+	neovim                                         \
+	python3-tmuxp                                  \
+	sd                                             \
+	starship                                       \
+	stow                                           \
+	direnv                                         \
+	the_silver_searcher                            \
+	tmux                                           \
+	tree                                           \
+	xsel                                           \
+	yank                                           \
+	zsh
