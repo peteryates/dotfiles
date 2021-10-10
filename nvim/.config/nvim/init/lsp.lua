@@ -9,6 +9,7 @@ local cmp = require('cmp')
 
 local compare = require('cmp.config.compare')
 local types = require('cmp.types')
+local luasnip = require('luasnip')
 
 local WIDE_HEIGHT = 40
 
@@ -70,7 +71,11 @@ cmp.setup {
     ['<C-p>'] = cmp.mapping.select_prev_item(),
     ['<C-n>'] = cmp.mapping.select_next_item(),
     ['<Tab>'] = function(fallback)
-      vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<Plug>luasnip-expand-or-jump', true, true, true), '')
+      if luasnip.expand_or_jumpable() then
+        vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<Plug>luasnip-expand-or-jump', true, true, true), '')
+      else
+        fallback()
+      end
     end,
   },
 
