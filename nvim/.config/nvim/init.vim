@@ -38,6 +38,7 @@ call plug#begin('~/.cache/nvim')
   Plug 'baeuml/summerfruit256.vim'
   Plug 'morhetz/gruvbox'
   Plug 'shaunsingh/nord.nvim'
+  Plug 'dracula/vim'
 
   " lsp stuff
   Plug 'neovim/nvim-lspconfig'
@@ -86,6 +87,7 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+source <sfile>:h/init/colours.vim
 source <sfile>:h/init/dial.vim
 source <sfile>:h/init/filetype.vim
 source <sfile>:h/init/functions.vim
@@ -97,7 +99,6 @@ source <sfile>:h/init/lightline.vim
 source <sfile>:h/init/mappings.vim
 source <sfile>:h/init/markdown.vim
 source <sfile>:h/init/signify.vim
-source <sfile>:h/init/nord.vim
 source <sfile>:h/init/treesitter.vim
 source <sfile>:h/init/tmux.vim
 source <sfile>:h/init/wildignore.vim
