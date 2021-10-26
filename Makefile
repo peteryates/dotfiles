@@ -25,6 +25,7 @@ bootstrap:
 	starship                                       \
 	stow                                           \
 	direnv                                         \
+	tig                                            \
 	the_silver_searcher                            \
 	tmux                                           \
 	tree                                           \
