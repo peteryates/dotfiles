@@ -7,7 +7,6 @@ call plug#begin('~/.cache/nvim')
   Plug 'editorconfig/editorconfig-vim'
   Plug 'godlygeek/tabular'
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'mg979/vim-visual-multi'
   Plug 'mhinz/vim-grepper'
@@ -97,6 +96,7 @@ source <sfile>:h/init/hexokinase.vim
 source <sfile>:h/init/indentline.vim
 source <sfile>:h/init/lightline.vim
 source <sfile>:h/init/mappings.vim
+source <sfile>:h/init/matchup.vim
 source <sfile>:h/init/markdown.vim
 source <sfile>:h/init/signify.vim
 source <sfile>:h/init/treesitter.vim
