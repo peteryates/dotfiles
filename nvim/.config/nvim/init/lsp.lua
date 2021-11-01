@@ -6,15 +6,14 @@ require'lspconfig'.solargraph.setup{}
 require("luasnip/loaders/from_vscode").lazy_load()
 
 local cmp = require('cmp')
-
 local compare = require('cmp.config.compare')
+local mapping = require('cmp.config.mapping')
 local types = require('cmp.types')
 local luasnip = require('luasnip')
 
 local WIDE_HEIGHT = 40
 
----@return cmp.ConfigSchema
-cmp.setup {
+cmp.setup({
   enabled = function()
     return vim.api.nvim_buf_get_option(0, 'buftype') ~= 'prompt'
   end,
@@ -24,15 +23,15 @@ cmp.setup {
     },
     completeopt = 'menu,menuone,noselect',
     keyword_pattern = [[\%(-\?\d\+\%(\.\d\+\)\?\|\h\w*\%(-\w*\)*\)]],
-    keyword_length = 1,
+    keyword_length = 2,
     get_trigger_characters = function(trigger_characters)
       return trigger_characters
     end,
   },
 
   snippet = {
-    expand = function(args)
-      require('luasnip').lsp_expand(args.body)
+    expand = function()
+      luasnip.lsp_expand(args.body)
     end,
   },
 
@@ -58,6 +57,7 @@ cmp.setup {
       compare.offset,
       compare.exact,
       compare.score,
+      compare.recently_used,
       compare.kind,
       compare.sort_text,
       compare.length,
@@ -68,34 +68,46 @@ cmp.setup {
   event = {},
 
   mapping = {
-    ['<C-p>'] = cmp.mapping.select_prev_item(),
-    ['<C-n>'] = cmp.mapping.select_next_item(),
-    ['<Tab>'] = function(fallback)
+
+    ["<Tab>"] = cmp.mapping(function(fallback)
       if luasnip.expand_or_jumpable() then
-        vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<Plug>luasnip-expand-or-jump', true, true, true), '')
+        luasnip.expand_or_jump()
       else
         fallback()
       end
-    end,
+    end, { "i", "s" }),
+
+    ["<S-Tab>"] = cmp.mapping(function(fallback)
+      if luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      else
+        fallback()
+      end
+    end, { "i", "s" }),
+
+    ['<C-n>'] = mapping(mapping.select_next_item({ behavior = types.cmp.SelectBehavior.Insert }), { 'i', 'c' }),
+    ['<C-p>'] = mapping(mapping.select_prev_item({ behavior = types.cmp.SelectBehavior.Insert }), { 'i', 'c' }),
+    ['<C-y>'] = mapping.confirm({ select = false }),
+    ['<C-e>'] = mapping.abort(),
   },
 
   formatting = {
-    deprecated = true,
+    fields = { 'abbr', 'kind', 'menu' },
     format = function(_, vim_item)
       return vim_item
     end,
   },
 
   experimental = {
+    native_menu = true,
     ghost_text = false,
   },
 
   sources = {
-    {name = "buffer"},
-    {name = "nvim_lsp"},
-    {name = "nvim_lua"},
-    {name = "luasnip"},
-    {name = "path"},
-    {name = "emoji"}
+    { name = 'nvim_lsp' },
+    { name = 'path' },
+    { name = 'luasnip' },
+    { name = 'emoji' },
+    { name = 'buffer', keyword_length = 5, max_item_count = 10 },
   },
-}
+})

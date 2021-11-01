@@ -34,9 +34,9 @@ call plug#begin('~/.cache/nvim')
 
   " colours
   Plug 'itchyny/lightline.vim'
-  Plug 'baeuml/summerfruit256.vim'
-  Plug 'morhetz/gruvbox'
-  Plug 'shaunsingh/nord.nvim'
+  " Plug 'baeuml/summerfruit256.vim'
+  " Plug 'morhetz/gruvbox'
+  " Plug 'shaunsingh/nord.nvim'
   Plug 'dracula/vim'
 
   " lsp stuff
