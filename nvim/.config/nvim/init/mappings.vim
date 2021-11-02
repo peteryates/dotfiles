@@ -8,3 +8,5 @@ nnoremap <silent><A-k>  <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <silent><A-j>  <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 nnoremap <silent><A-r>  <cmd>lua vim.lsp.buf.rename()<CR>
 nnoremap <silent><A-c>  <cmd>lua vim.lsp.buf.code_action()<CR>
+nnoremap <silent><A-n>  <cmd>:cnext<CR>
+nnoremap <silent><A-p>  <cmd>:cprev<CR>
