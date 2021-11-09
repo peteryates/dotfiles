@@ -3,6 +3,22 @@ require'lspconfig'.vimls.setup{}
 require'lspconfig'.yamlls.setup{}
 require'lspconfig'.solargraph.setup{}
 
+local css_capabilities = vim.lsp.protocol.make_client_capabilities()
+css_capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+require'lspconfig'.cssls.setup {
+  capabilities = css_capabilities,
+}
+
+
+local html_capabilities = vim.lsp.protocol.make_client_capabilities()
+html_capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+require'lspconfig'.html.setup {
+  capabilities = html_capabilities,
+  filetypes = { "html", "eruby" }
+}
+
 require("luasnip/loaders/from_vscode").lazy_load()
 
 local cmp = require('cmp')
