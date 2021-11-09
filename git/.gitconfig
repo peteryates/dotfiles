@@ -19,12 +19,6 @@
 [fetch]
 	prune = true
 
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-
 [pull]
   rebase = true
 
@@ -38,35 +32,10 @@
 [tig]
   line-graphics = utf-8
 
-; [delta]
-;   features = unobtrusive-line-numbers decorations
-;   whitespace-error-style = 22 reverse
-;   syntax-theme = Nord
-;   #side-by-side = true
-;   minus-style = black red
-;   plus-style = black green
-
-; [delta "unobtrusive-line-numbers"]
-;   line-numbers = true
-;   line-numbers-minus-style = "#88c0d0"
-;   line-numbers-zero-style = "#88c0d0"
-;   line-numbers-plus-style = "#88c0d0"
-;   line-numbers-left-format = "{nm:>4}┊"
-;   line-numbers-right-format = "{np:>4}│"
-;   line-numbers-left-style = blue
-;   line-numbers-right-style = blue
-
-; [delta "decorations"]
-;   commit-decoration-style = bold yellow box ul
-;   file-style = bold yellow ul
-;   file-decoration-style = none
-;   hunk-header-decoration-style = yellow
-
 [maintenance]
 	repo = /home/peter/projects/department-for-education/current/get-into-teaching-app
 	repo = /home/peter/projects/department-for-education/current/govuk-formbuilder
 	repo = /home/peter/projects/department-for-education/current/govuk-components
-[init]
-	defaultBranch = master
+
 [log]
 	date = iso
