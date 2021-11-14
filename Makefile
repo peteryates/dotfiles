@@ -12,23 +12,29 @@ refresh:
 bootstrap:
 	sudo dnf copr enable -y gourlaysama/ht-rust && \
 	sudo dnf -y install                            \
+	bat                                            \
+	direnv                                         \
 	entr                                           \
 	exa                                            \
 	fd-find                                        \
 	fzf                                            \
+	gcc-c++                                        \
 	git                                            \
+	golang                                         \
 	jetbrains-mono-fonts-all                       \
 	make                                           \
 	neovim                                         \
+	openssl-devel                                  \
+	openssl                                        \
 	python3-tmuxp                                  \
 	sd                                             \
 	starship                                       \
 	stow                                           \
-	direnv                                         \
-	tig                                            \
 	the_silver_searcher                            \
+	tig                                            \
 	tmux                                           \
 	tree                                           \
 	xsel                                           \
 	yank                                           \
+	zlib-devel                                     \
 	zsh
