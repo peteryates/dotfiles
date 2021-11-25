@@ -20,6 +20,7 @@ call plug#begin('~/.cache/nvim')
   Plug 'kshenoy/vim-signature'
   Plug 'monaqa/dial.nvim'
   Plug 'L3MON4D3/LuaSnip'
+  Plug 'sheerun/vim-polyglot'
 
   " tpope section
   Plug 'tpope/vim-commentary'
@@ -60,8 +61,8 @@ set t_Co=256
 set expandtab
 set nowrap
 set nohls
-set nolist
 set hidden
+set list
 set listchars=tab:→\ ,trail:·,precedes:←,extends:→
 set tags=\.tags;
 set termguicolors

@@ -22,6 +22,7 @@ bootstrap:
 	git                                            \
 	golang                                         \
 	jetbrains-mono-fonts-all                       \
+	kitty                                          \
 	make                                           \
 	neovim                                         \
 	openssl-devel                                  \
