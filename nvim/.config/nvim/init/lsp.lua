@@ -2,6 +2,7 @@ require'lspconfig'.tsserver.setup{}
 require'lspconfig'.vimls.setup{}
 require'lspconfig'.yamlls.setup{}
 require'lspconfig'.solargraph.setup{}
+require'lspconfig'.crystalline.setup{}
 require'luasnip'.filetype_extend("ruby", {"rails"})
 
 local css_capabilities = vim.lsp.protocol.make_client_capabilities()
