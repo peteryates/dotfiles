@@ -3,27 +3,18 @@
 
 call plug#begin('~/.cache/nvim')
   " general
-  Plug 'Yggdroot/indentLine'
-  Plug 'editorconfig/editorconfig-vim'
+  Plug 'AndrewRadev/splitjoin.vim'
   Plug 'godlygeek/tabular'
-  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
   Plug 'junegunn/fzf.vim'
   Plug 'mg979/vim-visual-multi'
   Plug 'mhinz/vim-grepper'
-  Plug 'plasticboy/vim-markdown'
-  Plug 'slim-template/vim-slim'
   Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-  Plug 'mhinz/vim-signify'
-  Plug 'rafamadriz/friendly-snippets'
-  Plug 'andymass/vim-matchup'
-  Plug 'AndrewRadev/splitjoin.vim'
-  Plug 'kshenoy/vim-signature'
-  Plug 'monaqa/dial.nvim'
-  Plug 'L3MON4D3/LuaSnip'
   Plug 'sheerun/vim-polyglot'
+  Plug 'numToStr/Comment.nvim'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'lewis6991/gitsigns.nvim'
 
   " tpope section
-  Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-dispatch'
   Plug 'tpope/vim-eunuch'
   Plug 'tpope/vim-fugitive'
@@ -35,10 +26,11 @@ call plug#begin('~/.cache/nvim')
 
   " colours
   Plug 'itchyny/lightline.vim'
-  " Plug 'baeuml/summerfruit256.vim'
-  " Plug 'morhetz/gruvbox'
-  " Plug 'shaunsingh/nord.nvim'
   Plug 'dracula/vim'
+
+  " snippets
+  Plug 'rafamadriz/friendly-snippets'
+  Plug 'L3MON4D3/LuaSnip'
 
   " lsp stuff
   Plug 'neovim/nvim-lspconfig'
@@ -88,20 +80,17 @@ set nowritebackup
 set noswapfile
 
 source <sfile>:h/init/colours.vim
-source <sfile>:h/init/dial.vim
 source <sfile>:h/init/filetype.vim
 source <sfile>:h/init/functions.vim
 source <sfile>:h/init/fzf.vim
 source <sfile>:h/init/grepper.vim
 source <sfile>:h/init/hexokinase.vim
-source <sfile>:h/init/indentline.vim
 source <sfile>:h/init/lightline.vim
 source <sfile>:h/init/mappings.vim
-source <sfile>:h/init/matchup.vim
-source <sfile>:h/init/markdown.vim
-source <sfile>:h/init/signify.vim
 source <sfile>:h/init/treesitter.vim
 source <sfile>:h/init/tmux.vim
 source <sfile>:h/init/wildignore.vim
 
 luafile <sfile>:h/init/lsp.lua
+luafile <sfile>:h/init/comment.lua
+luafile <sfile>:h/init/gitsigns.lua

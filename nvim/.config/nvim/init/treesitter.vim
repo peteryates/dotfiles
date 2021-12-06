@@ -10,7 +10,7 @@ require'nvim-treesitter.configs'.setup {
     enable = true,
     -- extended_mode = true, -- Highlight also non-parentheses delimiters, boolean or table: lang -> boolean
     max_file_lines = 1000, -- Do not enable for files with more than 1000 lines, int
-    colors = { "#bf616a", "#d08770", "#ebcb8b", "#a3be8c", "#b48ead", "#8fbcbb", "#88c0d0" }, -- table of hex strings
+    colors = { "#8be9fd", "#50fa7b", "#ffb86c", "#ff79c6", "#bd93f9", "#ff5555", "#f1fa8c" }
     -- termcolors = {}, -- table of colour name strings
   },
   matchup = {
