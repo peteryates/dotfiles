@@ -1,0 +1,8 @@
+---
+session_name: advent-of-code
+start_directory: ~/projects/graphia/advent-of-code-2021
+windows:
+  - window_name: editor
+    layout: tiled
+    panes:
+      -
