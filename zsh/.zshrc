@@ -75,7 +75,11 @@ _fzf_compgen_dir() {
 }
 
 source /usr/share/zsh/site-functions/fzf
+source /usr/share/fzf/shell/key-bindings.zsh
 
 # Set up direnv for project-specific environment variables
 eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
+
+# import private env variables
+source ~/.zsh/tokens.zsh
