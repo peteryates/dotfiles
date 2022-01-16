@@ -24,4 +24,4 @@ highlight link TSError Normal
 
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
-set foldlevel=8
+set foldlevel=4

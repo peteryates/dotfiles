@@ -13,6 +13,8 @@ call plug#begin('~/.cache/nvim')
   Plug 'numToStr/Comment.nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'lewis6991/gitsigns.nvim'
+  Plug 'stevearc/dressing.nvim'
+  Plug 'editorconfig/editorconfig-vim'
 
   " tpope section
   Plug 'tpope/vim-dispatch'
@@ -87,6 +89,7 @@ source <sfile>:h/init/grepper.vim
 source <sfile>:h/init/hexokinase.vim
 source <sfile>:h/init/lightline.vim
 source <sfile>:h/init/mappings.vim
+source <sfile>:h/init/markdown.vim
 source <sfile>:h/init/treesitter.vim
 source <sfile>:h/init/tmux.vim
 source <sfile>:h/init/wildignore.vim
