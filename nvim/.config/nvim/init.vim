@@ -15,6 +15,7 @@ call plug#begin('~/.cache/nvim')
   Plug 'lewis6991/gitsigns.nvim'
   Plug 'stevearc/dressing.nvim'
   Plug 'editorconfig/editorconfig-vim'
+  Plug 'folke/trouble.nvim'
 
   " tpope section
   Plug 'tpope/vim-dispatch'
@@ -97,3 +98,4 @@ source <sfile>:h/init/wildignore.vim
 luafile <sfile>:h/init/lsp.lua
 luafile <sfile>:h/init/comment.lua
 luafile <sfile>:h/init/gitsigns.lua
+luafile <sfile>:h/init/trouble.lua

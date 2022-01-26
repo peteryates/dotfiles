@@ -1,4 +1,5 @@
 map <F2> :Rename 
+map <F3> :TroubleToggle<CR>
 
 nnoremap <silent>gD     <cmd>lua vim.lsp.buf.declaration()<CR>
 nnoremap <silent>gd     <cmd>lua vim.lsp.buf.definition()<CR>
