@@ -8,7 +8,6 @@ export PATH="$HOME/bin:$PATH"
 
 # Add diff-highlight to path
 export PATH="/usr/share/git-core/contrib:$PATH"
-export PATH="/home/peter/.local/bin:$PATH"
 
 # Set up rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -56,6 +55,7 @@ alias cat='bat'
 alias ls='exa'
 alias http='xh'
 alias yank='yank-cli'
+alias open='xdg-open'
 
 # Setup LS_COLORS
 # . "/home/peter/.local/share/lscolors.sh"
