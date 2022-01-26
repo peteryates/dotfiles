@@ -20,17 +20,18 @@
 	prune = true
 
 [pull]
-  rebase = true
+	rebase = true
 
 [diff]
-  colorMoved = default
+	algorigthm = histogram
+	colorMoved = default
 
 [difftool]
-  prompt = false
-  trustExitCode = true
+	prompt = false
+	trustExitCode = true
 
 [tig]
-  line-graphics = utf-8
+	line-graphics = utf-8
 
 [maintenance]
 	repo = /home/peter/projects/department-for-education/current/get-into-teaching-app
