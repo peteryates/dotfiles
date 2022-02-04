@@ -1,0 +1,48 @@
+#!/usr/bin/env ruby
+
+require 'optparse'
+require 'debug'
+
+Options = Struct.new(:pattern, :exclude, :include, :dictionary, keyword_init: true)
+
+args = Options.new(dictionary: "/usr/share/dict/words")
+
+OptionParser.new do |parser|
+  parser.set_program_name("wordle")
+
+  parser.banner = <<~BANNER
+    Wordle solver
+
+    Usage: wordle --pattern="_ELL_" --include="H" --exclude="BAT"
+
+    Arguments:
+  BANNER
+
+  parser.on("-pNAME", "--pattern=NAME", "Pattern to match, use '_' for blanks") do |p|
+    args.pattern = p.downcase
+  end
+
+  parser.on("-eEXCLUDE", "--exclude=EXCLUDE", "Characters to exclude in any position (grey)") do |e|
+    args.exclude = e.downcase || ""
+  end
+
+  parser.on("-iINCLUDE", "--include=INCLUDE", "Characters to include in any position (yellow)") do |i|
+    args.include = i.downcase || ""
+  end
+
+  parser.on("-dDICTIONARY", "--dictionary=DICTIONARY", "Dictionary file, defaults to #{args.dictionary}") do |d|
+    args.dictionary = d
+  end
+end.parse!
+
+puts(
+   File.readlines(args.dictionary, chomp: true)
+    .select { |w| w.length == 5 }
+    .reject { |w| w =~ /[^a-z]/ }
+    .map(&:downcase)
+    .uniq
+    .reject { |w| w =~ Regexp.union(args.exclude.chars) }
+    .select { |w| args.include.chars.all? { |c| w =~ Regexp.new(c) } }
+    .select { |w| (0..4).all? { |c| (args.pattern[c] == "_" || w[c] == args.pattern[c]) } }
+    .join("\n")
+)
