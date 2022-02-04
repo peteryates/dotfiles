@@ -26,6 +26,7 @@ call plug#begin('~/.cache/nvim')
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-vinegar'
   Plug 'tpope/vim-rhubarb'
+  Plug 'tpope/vim-characterize'
 
   " colours
   Plug 'itchyny/lightline.vim'
