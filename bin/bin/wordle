@@ -5,7 +5,7 @@ require 'debug'
 
 Options = Struct.new(:pattern, :exclude, :include, :dictionary, keyword_init: true)
 
-args = Options.new(dictionary: "/usr/share/dict/words")
+args = Options.new(dictionary: "/usr/share/dict/words", include: "", exclude: "")
 
 OptionParser.new do |parser|
   parser.set_program_name("wordle")
@@ -35,6 +35,8 @@ OptionParser.new do |parser|
   end
 end.parse!
 
+matches = args.include.chars + args.pattern.chars.reject { |c| c == "_" }
+
 puts(
    File.readlines(args.dictionary, chomp: true)
     .select { |w| w.length == 5 }
@@ -42,7 +44,7 @@ puts(
     .map(&:downcase)
     .uniq
     .reject { |w| w =~ Regexp.union(args.exclude.chars) }
-    .select { |w| args.include.chars.all? { |c| w =~ Regexp.new(c) } }
+    .select { |w| matches.tally.all? { |char, qty| w.count(char) == qty } }
     .select { |w| (0..4).all? { |c| (args.pattern[c] == "_" || w[c] == args.pattern[c]) } }
     .join("\n")
 )
