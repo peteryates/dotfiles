@@ -17,6 +17,9 @@ require'nvim-treesitter.configs'.setup {
     enable = true,              -- mandatory, false will disable the whole extension
     -- disable = { "python" },  -- optional, list of language that will be disabled
   },
+  endwise = {
+      enable = true,
+  },
 }
 EOF
 

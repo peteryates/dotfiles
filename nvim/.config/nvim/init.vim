@@ -51,6 +51,7 @@ call plug#begin('~/.cache/nvim')
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
   Plug 'nvim-treesitter/playground'
   Plug 'p00f/nvim-ts-rainbow'
+  Plug 'RRethy/nvim-treesitter-endwise'
 call plug#end()
 
 set t_Co=256
