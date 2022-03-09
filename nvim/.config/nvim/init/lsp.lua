@@ -1,4 +1,3 @@
-require'lspconfig'.tsserver.setup{}
 require'lspconfig'.vimls.setup{}
 require'lspconfig'.yamlls.setup{}
 require'lspconfig'.solargraph.setup{}
@@ -12,6 +11,12 @@ require'lspconfig'.cssls.setup {
   capabilities = css_capabilities,
 }
 
+require("lspconfig").tsserver.setup({
+    on_attach = function(client)
+        client.resolved_capabilities.document_formatting = false
+        client.resolved_capabilities.document_range_formatting = false
+    end,
+})
 
 local html_capabilities = vim.lsp.protocol.make_client_capabilities()
 html_capabilities.textDocument.completion.completionItem.snippetSupport = true

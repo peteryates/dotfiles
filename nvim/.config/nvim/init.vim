@@ -46,6 +46,8 @@ call plug#begin('~/.cache/nvim')
   Plug 'hrsh7th/cmp-buffer'
   Plug 'hrsh7th/cmp-emoji'
   Plug 'saadparwaiz1/cmp_luasnip'
+  Plug 'jose-elias-alvarez/null-ls.nvim'
+  Plug 'MunifTanjim/prettier.nvim'
 
   " treesitter
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
@@ -101,3 +103,4 @@ luafile <sfile>:h/init/lsp.lua
 luafile <sfile>:h/init/comment.lua
 luafile <sfile>:h/init/gitsigns.lua
 luafile <sfile>:h/init/trouble.lua
+luafile <sfile>:h/init/prettier.lua
