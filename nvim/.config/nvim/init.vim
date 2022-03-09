@@ -39,6 +39,7 @@ call plug#begin('~/.cache/nvim')
   " lsp stuff
   Plug 'neovim/nvim-lspconfig'
   Plug 'hrsh7th/nvim-cmp'
+  Plug 'williamboman/nvim-lsp-installer'
 
   " lsp sources
   Plug 'hrsh7th/cmp-nvim-lsp'
@@ -100,6 +101,7 @@ source <sfile>:h/init/tmux.vim
 source <sfile>:h/init/wildignore.vim
 
 luafile <sfile>:h/init/lsp.lua
+luafile <sfile>:h/init/lsp-installer.lua
 luafile <sfile>:h/init/comment.lua
 luafile <sfile>:h/init/gitsigns.lua
 luafile <sfile>:h/init/trouble.lua
