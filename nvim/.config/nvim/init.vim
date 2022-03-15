@@ -106,3 +106,4 @@ luafile <sfile>:h/init/comment.lua
 luafile <sfile>:h/init/gitsigns.lua
 luafile <sfile>:h/init/trouble.lua
 luafile <sfile>:h/init/prettier.lua
+luafile <sfile>:h/init/snippets.lua
