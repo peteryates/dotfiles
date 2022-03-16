@@ -3,7 +3,7 @@ local ls = require("luasnip")
 -- some shorthands...
 local s = ls.snippet
 -- local sn = ls.snippet_node
--- local t = ls.text_node
+local t = ls.text_node
 local i = ls.insert_node
 -- local f = ls.function_node
 -- local c = ls.choice_node
@@ -40,5 +40,10 @@ ls.snippets = {
                 end
             ]], { i(1, "scenario name"), i(0) })
         )
+    },
+
+    gitcommit = {
+        s("ellie", t("Co-authored-by: EllieNodder <94541493+EllieNodder@users.noreply.github.com>")),
+        s("gemma", t("Co-authored-by: gemmadallmandfe <87642394+gemmadallmandfe@users.noreply.github.com>")),
     }
 }

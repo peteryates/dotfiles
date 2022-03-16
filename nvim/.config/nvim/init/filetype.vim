@@ -12,4 +12,4 @@ let g:sql_type_default = 'pgsql'
 :autocmd Filetype markdown set softtabstop=2 shiftwidth=2 tabstop=2 textwidth=0 wrapmargin=0 foldlevel=3 wrap linebreak nolist
 :autocmd Filetype jinja.html set tabstop=2 softtabstop=2 shiftwidth=2 tabstop=2
 :autocmd Filetype sql set noexpandtab softtabstop=4 shiftwidth=4 tabstop=4 list
-:autocmd Filetype gitcommit set colorcolumn=50,72
+:autocmd Filetype gitcommit set colorcolumn=50,72 tw=72 fo=cq wm=0
