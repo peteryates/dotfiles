@@ -11,3 +11,8 @@ nnoremap <silent><A-r>  <cmd>lua vim.lsp.buf.rename()<CR>
 nnoremap <silent><A-c>  <cmd>lua vim.lsp.buf.code_action()<CR>
 nnoremap <silent><A-n>  <cmd>:cnext<CR>
 nnoremap <silent><A-p>  <cmd>:cprev<CR>
+
+" Fugitive mappings
+nmap <leader>dh :diffget //2<CR>
+nmap <leader>dl :diffget //3<CR>
+nmap <leader>F :G<CR>
