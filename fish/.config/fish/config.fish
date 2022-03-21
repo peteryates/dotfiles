@@ -6,7 +6,7 @@ if status is-interactive
 
   source (/usr/bin/starship init fish --print-full-init | psub)
 
-  # fish_config theme choose dracula
+  fish_config theme choose Dracula
 end
 
 alias be='bundle exec'
