@@ -2,6 +2,7 @@ fish_add_path /usr/share/git-core/contrib
 fish_add_path ~/bin
 
 if status is-interactive
+  set -U fish_greeting
   set fish_cursor_default block
 
   source (/usr/bin/starship init fish --print-full-init | psub)
