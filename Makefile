@@ -10,8 +10,8 @@ refresh:
 	stow --restow ${dirs}
 
 bootstrap:
-	mkdir -p ~/projects                            \
-	mkdir -p ~/bin                                 \
+	mkdir -p ~/projects &&                         \
+	mkdir -p ~/bin &&                              \
 	sudo dnf copr enable -y gourlaysama/ht-rust && \
 	sudo dnf -y install                            \
 	bat                                            \

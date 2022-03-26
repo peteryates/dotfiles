@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+git clone git@github.com:rbenv/rbenv ~/.rbenv
+git clone git@github.com:rbenv/ruby-build ~/.rbenv/plugins/ruby-build
