@@ -17,6 +17,7 @@ bootstrap:
 	entr                                           \
 	exa                                            \
 	fd-find                                        \
+	fish                                           \
 	fzf                                            \
 	gcc-c++                                        \
 	git                                            \
@@ -28,6 +29,7 @@ bootstrap:
 	openssl-devel                                  \
 	openssl                                        \
 	python3-tmuxp                                  \
+	parallel                                       \
 	sd                                             \
 	starship                                       \
 	stow                                           \
@@ -38,4 +40,3 @@ bootstrap:
 	xsel                                           \
 	yank                                           \
 	zlib-devel                                     \
-	zsh
