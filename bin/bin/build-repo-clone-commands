@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+require "yaml"
+
+projects_dir = File.expand_path("~/projects")
+repos_config = File.expand_path("~/projects/repos.yml")
+
+fail "~/projects does not exist" unless Dir.exist?(projects_dir)
+fail "~/projects/repos.yml does not exist" unless File.exist?(repos_config)
+
+command = YAML
+  .load_file(repos_config)
+  .each
+  .with_object([]) do |(path, project), cmd|
+    target = File.join(projects_dir, path)
+
+    next if Dir.exist?(target)
+
+    cmd << "git clone git@github.com:#{project} #{target}"
+  end
+
+puts command.join("\n")
