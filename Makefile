@@ -38,7 +38,7 @@ bootstrap:
 	the_silver_searcher                            \
 	tig                                            \
 	tmux                                           \
-	tree                                           \
+	xh                                             \
 	xsel                                           \
 	yank                                           \
 	zlib-devel                                     \

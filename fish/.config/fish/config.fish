@@ -11,6 +11,7 @@ end
 
 alias be='bundle exec'
 alias http='xh'
-alias l='exa -l'
 alias ls='exa'
+alias l='exa --long'
+alias tree='exa --tree'
 alias open='xdg-open'
