@@ -1,1 +1,3 @@
-~/bin/build-repo-clone-commands | parallel
+#!/usr/bin/fish
+
+parallel -j10 -- (build-repo-clone-commands)
