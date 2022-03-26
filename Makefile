@@ -31,7 +31,7 @@ bootstrap:
 	openssl-devel                                  \
 	openssl                                        \
 	python3-tmuxp                                  \
-	parallel                                       \
+	moreutils-parallel                             \
 	sd                                             \
 	starship                                       \
 	stow                                           \
