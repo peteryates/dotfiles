@@ -63,7 +63,7 @@ set nowrap
 set nohls
 set hidden
 set list
-set listchars=tab:→\ ,trail:·,precedes:←,extends:→
+set listchars=tab:→\ ,trail:·,precedes:←,extends:→,eol:↲
 set tags=\.tags;
 set termguicolors
 set showmatch
