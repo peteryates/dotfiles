@@ -78,6 +78,7 @@ set guioptions-=e
 set conceallevel=0
 set expandtab
 set shiftwidth=2
+set shiftround
 set softtabstop=2
 set tabstop=2
 set noshowcmd
