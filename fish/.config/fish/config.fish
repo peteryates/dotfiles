@@ -5,8 +5,6 @@ if status is-interactive
   set -U fish_greeting
   set fish_cursor_default block
 
-  source (/usr/bin/starship init fish --print-full-init | psub)
-
   fish_config theme choose Dracula
 end
 

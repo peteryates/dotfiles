@@ -33,7 +33,6 @@ bootstrap:
 	python3-tmuxp                                  \
 	moreutils-parallel                             \
 	sd                                             \
-	starship                                       \
 	stow                                           \
 	the_silver_searcher                            \
 	tig                                            \
