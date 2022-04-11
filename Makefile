@@ -9,7 +9,7 @@ down:
 refresh:
 	stow --restow ${dirs}
 
-bootstrap:
+bootstrap: gh-cli
 	mkdir -p ~/projects &&                         \
 	mkdir -p ~/bin &&                              \
 	sudo dnf copr enable -y gourlaysama/ht-rust && \
@@ -23,6 +23,7 @@ bootstrap:
 	fzf                                            \
 	gcc-c++                                        \
 	git                                            \
+	gh                                             \
 	golang                                         \
 	jetbrains-mono-fonts-all                       \
 	kitty                                          \
@@ -41,3 +42,6 @@ bootstrap:
 	xsel                                           \
 	yank                                           \
 	zlib-devel                                     \
+
+gh-cli:
+	sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
