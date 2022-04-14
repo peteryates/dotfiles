@@ -20,14 +20,15 @@ local fmt = require("luasnip.extras.fmt").fmt
 -- local types = require("luasnip.util.types")
 -- local conds = require("luasnip.extras.expand_conditions")
 
-ls.snippets = {
-    ruby = {
+ls.add_snippets(
+    "ruby",
+    {
         s(
             "spec",
             fmt(
             [[
                 specify "{}" do
-                  {}
+                    {}
                 end
             ]], { i(1, "spec name"), i(0) })
         ),
@@ -36,14 +37,17 @@ ls.snippets = {
             fmt(
             [[
                 scenario "{}" do
-                  {}
+                    {}
                 end
             ]], { i(1, "scenario name"), i(0) })
         )
-    },
+    }
+)
 
-    gitcommit = {
+ls.add_snippets(
+    "gitcommit",
+    {
         s("ellie", t("Co-authored-by: EllieNodder <94541493+EllieNodder@users.noreply.github.com>")),
         s("gemma", t("Co-authored-by: gemmadallmandfe <87642394+gemmadallmandfe@users.noreply.github.com>")),
     }
-}
+)
