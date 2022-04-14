@@ -1,0 +1,3 @@
+#!/usr/bin/fish
+
+tmuxp load (tmuxp ls | fzf)
