@@ -15,7 +15,7 @@ function fish_prompt --description 'Write out the prompt'
     set -g __fish_git_prompt_color_cleanstate green --bold
 
     set color_cwd $fish_color_cwd
-    set suffix '$'
+    set suffix '❯'
 
     # pwd
     set_color $color_cwd
