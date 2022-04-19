@@ -7,7 +7,7 @@ department-for-education/current/get-teacher-training-adviser-service/: dfe-digi
 department-for-education/current/govuk-formbuilder/: dfe-digital/govuk-formbuilder
 department-for-education/current/govuk-components/: dfe-digital/govuk-components
 department-for-education/current/govuk-wizardry/: dfe-digital/govuk-wizardry
-department-for-education/current/html-attributes-utils/: graphia/html-attributes-utils
+department-for-education/current/html-attributes-utils/: dfe-digital/html-attributes-utils
 
 # projects i'm not directly involved in but reference
 department-for-education/reference/school-experience/: dfe-digital/schools-experience
