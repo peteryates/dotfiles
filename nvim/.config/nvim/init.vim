@@ -72,7 +72,7 @@ set matchtime=2
 set splitbelow
 set splitright
 
-set laststatus=2
+set laststatus=3
 set showtabline=0
 set guioptions-=e
 set conceallevel=0
