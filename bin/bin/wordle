@@ -35,6 +35,8 @@ OptionParser.new do |parser|
   end
 end.parse!
 
+fail("no pattern") unless args.pattern
+
 matches = args.include.chars + args.pattern.chars.reject { |c| c == "_" }
 
 puts(
@@ -44,7 +46,7 @@ puts(
     .map(&:downcase)
     .uniq
     .reject { |w| w =~ Regexp.union(args.exclude.chars) }
-    .select { |w| matches.tally.all? { |char, qty| w.count(char) == qty } }
+    .select { |w| matches.tally.all? { |char, qty| w.count(char) >= qty } }
     .select { |w| (0..4).all? { |c| (args.pattern[c] == "_" || w[c] == args.pattern[c]) } }
     .join("\n")
 )
