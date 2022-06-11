@@ -9,12 +9,12 @@ down:
 refresh:
 	stow --restow ${dirs}
 
-bootstrap: gh-cli
+bootstrap: gh-cli ht-rust heffer-btop
 	mkdir -p ~/projects &&                         \
 	mkdir -p ~/bin &&                              \
-	sudo dnf copr enable -y gourlaysama/ht-rust && \
 	sudo dnf -y install                            \
 	bat                                            \
+	btop                                           \
 	direnv                                         \
 	entr                                           \
 	exa                                            \
@@ -45,3 +45,9 @@ bootstrap: gh-cli
 
 gh-cli:
 	sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
+
+ht-rust:
+	sudo dnf copr enable -y gourlaysama/ht-rust
+
+heffer-btop:
+	sudo dnf copr enable -y heffer/btop
