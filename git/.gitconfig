@@ -43,3 +43,5 @@
 	date = iso
 [init]
 	defaultBranch = main
+[rerere]
+	enabled = true
