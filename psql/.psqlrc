@@ -12,3 +12,4 @@
 \pset tuples_only off
 \pset footer
 \set QUIET 0
+\setenv PAGER 'less -F'
