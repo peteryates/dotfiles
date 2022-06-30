@@ -1,6 +1,6 @@
 ---
-session_name: git-tta
-start_directory: ~/projects/department-for-education/get-into-teaching/get-teacher-training-adviser-service/
+session_name: ecf
+start_directory: ~/projects/department-for-education/current/ecf
 windows:
   - window_name: editor
     layout: tiled
@@ -26,3 +26,5 @@ windows:
     layout: tiled
     panes:
       -
+      # - be rails server
+      # - bin/webpack-dev-server
