@@ -16,6 +16,7 @@ call plug#begin('~/.cache/nvim')
   Plug 'stevearc/dressing.nvim'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'folke/trouble.nvim'
+  Plug 'vimwiki/vimwiki'
 
   " tpope section
   Plug 'tpope/vim-dispatch'
@@ -99,6 +100,7 @@ source <sfile>:h/init/mappings.vim
 source <sfile>:h/init/markdown.vim
 source <sfile>:h/init/treesitter.vim
 source <sfile>:h/init/tmux.vim
+source <sfile>:h/init/vimwiki.vim
 source <sfile>:h/init/wildignore.vim
 
 luafile <sfile>:h/init/lsp.lua
