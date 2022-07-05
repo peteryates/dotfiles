@@ -17,6 +17,7 @@ call plug#begin('~/.cache/nvim')
   Plug 'editorconfig/editorconfig-vim'
   Plug 'folke/trouble.nvim'
   Plug 'vimwiki/vimwiki'
+  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
   " tpope section
   Plug 'tpope/vim-dispatch'

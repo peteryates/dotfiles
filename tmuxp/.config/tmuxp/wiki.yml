@@ -1,0 +1,8 @@
+---
+session_name: wiki
+start_directory: ~/docs/wiki
+windows:
+  - window_name: wiki
+    layout: tiled
+    panes:
+      - vim ~/docs/wiki/index.md
