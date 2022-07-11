@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 
 cd ~/docs/wiki &&
-git pull &&
-git commit -am "backup"
+git pull

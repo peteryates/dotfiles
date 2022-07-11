@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+cd ~/docs/wiki &&
+git add . &&
+git commit -m "backup" &&
+git pull &&
+git push origin main
