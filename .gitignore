@@ -2,3 +2,4 @@
 tmux/.tmux/plugins/*
 nvim/.config/nvim/spell/*
 fish/.config/fish/fish_variables
+btop/**/*.log
