@@ -51,3 +51,10 @@ ls.add_snippets(
         s("gemma", t("Co-authored-by: gemmadallmandfe <87642394+gemmadallmandfe@users.noreply.github.com>")),
     }
 )
+
+ls.add_snippets(
+    "vimwiki",
+    {
+        s("pts", t("* programme team standup")),
+    }
+)
