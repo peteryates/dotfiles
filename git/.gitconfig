@@ -35,7 +35,8 @@
 	line-graphics = utf-8
 
 [maintenance]
-	repo = /home/peter/projects/department-for-education/current/get-into-teaching-app
+	repo = /home/peter/projects/department-for-education/current/ecf
+	repo = /home/peter/projects/department-for-education/current/npq
 	repo = /home/peter/projects/department-for-education/current/govuk-formbuilder
 	repo = /home/peter/projects/department-for-education/current/govuk-components
 
