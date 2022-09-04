@@ -1,0 +1,7 @@
+vim.api.nvim_set_keymap('n', '<Leader>t', ':Files<CR>',   {expr = false, noremap = true})
+vim.api.nvim_set_keymap('n', '<Leader>b', ':Buffer<CR>',  {expr = false, noremap = true})
+vim.api.nvim_set_keymap('n', '<Leader>l', ':BLines<CR>',  {expr = false, noremap = true})
+vim.api.nvim_set_keymap('n', '<Leader>L', ':Lines<CR>',   {expr = false, noremap = true})
+vim.api.nvim_set_keymap('n', '<Leader>T', ':Tags<CR>',    {expr = false, noremap = true})
+vim.api.nvim_set_keymap('n', '<Leader>h', ':History<CR>', {expr = false, noremap = true})
+vim.api.nvim_set_keymap('n', '<Leader>c', ':Commits<CR>', {expr = false, noremap = true})

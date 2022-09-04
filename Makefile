@@ -9,6 +9,10 @@ down:
 refresh:
 	stow --restow ${dirs}
 
+packer:
+	mkdir -p ~/.local/share/nvim/site/packer/start
+	git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
 bootstrap: gh-cli ht-rust heffer-btop
 	mkdir -p ~/projects &&                         \
 	mkdir -p ~/bin &&                              \
