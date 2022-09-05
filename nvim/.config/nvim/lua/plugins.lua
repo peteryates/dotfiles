@@ -30,6 +30,7 @@ return require('packer').startup(function(use)
 
   -- colours
   use 'dracula/vim'
+  use 'nvim-lualine/lualine.nvim'
 
   -- snippets
   use 'rafamadriz/friendly-snippets'
