@@ -20,13 +20,23 @@ require('lualine').setup {
   sections = {
     -- left
     lualine_a = {'mode'},
-    lualine_b = {'diagnostics'},
-    lualine_c = {'filename'},
+    lualine_b = {
+      {
+        'filename',
+        file_status = true,
+        path = 1,
+      }
+    },
 
     -- right
-    lualine_x = {'encoding'},
+    lualine_x = {
+      {
+        'diagnostics',
+        symbols = {error = 'E:', warn = 'W:', info = 'I:', hint = 'H:'},
+      }
+    },
     lualine_y = {'filetype'},
-    lualine_z = {'location'}
+    lualine_z = {'location'},
   },
   inactive_sections = {
     lualine_a = {},
