@@ -1,13 +1,31 @@
-require'lspconfig'.vimls.setup{}
-require'lspconfig'.yamlls.setup{}
-require'lspconfig'.solargraph.setup{}
-require'lspconfig'.crystalline.setup{}
-require'luasnip'.filetype_extend("ruby", {"rails"})
+local lsp_installer = require("nvim-lsp-installer")
+
+-- Register a handler that will be called for each installed server when it's ready (i.e. when installation is finished
+-- or if the server is already installed).
+lsp_installer.on_server_ready(function(server)
+    local opts = {}
+
+    -- (optional) Customize the options passed to the server
+    -- if server.name == "tsserver" then
+    --     opts.root_dir = function() ... end
+    -- end
+
+    -- This setup() function will take the provided server configuration and decorate it with the necessary properties
+    -- before passing it onwards to lspconfig.
+    -- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+    server:setup(opts)
+end)
+
+require("lspconfig").vimls.setup({})
+require("lspconfig").yamlls.setup({})
+require("lspconfig").solargraph.setup({})
+require("lspconfig").crystalline.setup({})
+require("luasnip").filetype_extend("ruby", {"rails"})
 
 local css_capabilities = vim.lsp.protocol.make_client_capabilities()
 css_capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-require'lspconfig'.cssls.setup {
+require("lspconfig").cssls.setup {
   capabilities = css_capabilities,
 }
 
@@ -21,9 +39,30 @@ require("lspconfig").tsserver.setup({
 local html_capabilities = vim.lsp.protocol.make_client_capabilities()
 html_capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-require'lspconfig'.html.setup {
+require("lspconfig").html.setup {
   capabilities = html_capabilities,
   filetypes = { "html", "eruby" }
+}
+
+local library = {}
+local path = vim.split(package.path, ";")
+
+require("lspconfig").sumneko_lua.setup {
+  settings = {
+    Lua = {
+      runtime = {
+        version = "LuaJIT",
+        path = path,
+      },
+      diagnostics = {
+        -- Get the language server to recognize the `vim` global
+        globals = {'vim'},
+      },
+      workspace = {
+        libary = library,
+      },
+    },
+  },
 }
 
 require("luasnip/loaders/from_vscode").lazy_load()
@@ -33,8 +72,6 @@ local compare = require('cmp.config.compare')
 local mapping = require('cmp.config.mapping')
 local types = require('cmp.types')
 local luasnip = require('luasnip')
-
-local WIDE_HEIGHT = 40
 
 cmp.setup({
   enabled = function()
@@ -53,14 +90,17 @@ cmp.setup({
   },
 
   snippet = {
-    expand = function()
+    expand = function(args)
       luasnip.lsp_expand(args.body)
     end,
   },
 
   preselect = types.cmp.PreselectMode.Item,
 
-  documentation = native,
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
+  },
 
   confirmation = {
     default_behavior = types.cmp.ConfirmBehavior.Insert,
@@ -122,6 +162,7 @@ cmp.setup({
 
   sources = {
     { name = 'nvim_lsp' },
+    { name = 'nvim_lua' },
     { name = 'path' },
     { name = 'luasnip' },
     { name = 'emoji' },

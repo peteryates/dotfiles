@@ -1,4 +1,3 @@
-lua <<EOF
 require'nvim-treesitter.configs'.setup {
   ensure_installed = {
       "ruby",
@@ -22,10 +21,5 @@ require'nvim-treesitter.configs'.setup {
       enable = true,
   },
 }
-EOF
 
-highlight link TSError Normal
-
-set foldmethod=expr
-set foldexpr=nvim_treesitter#foldexpr()
-set foldlevel=4
+vim.cmd [[set foldexpr=nvim_treesitter#foldexpr()]]

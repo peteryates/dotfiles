@@ -1,4 +1,6 @@
-let g:clipboard = {
+-- not sure how to represent '+' and '*' as keys in a lua table
+vim.cmd [[
+  let g:clipboard = {
       \   'name': 'myClipboard',
       \   'copy': {
       \      '+': 'tmux load-buffer -',
@@ -10,3 +12,4 @@ let g:clipboard = {
       \   },
       \   'cache_enabled': 1,
       \ }
+]]
