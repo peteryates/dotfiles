@@ -17,6 +17,7 @@ return require('packer').startup(function(use)
   use 'editorconfig/editorconfig-vim'
   use 'folke/trouble.nvim'
   use 'vimwiki/vimwiki'
+  use 'nathom/filetype.nvim'
 
   use 'tpope/vim-dispatch'
   use 'tpope/vim-eunuch'
@@ -54,5 +55,5 @@ return require('packer').startup(function(use)
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'nvim-treesitter/playground'
   use 'p00f/nvim-ts-rainbow'
-  use 'RRethy/nvim-treesitter-endwise'
+  use 'nvim-treesitter/nvim-treesitter-context'
 end)
