@@ -28,6 +28,7 @@ return require('packer').startup(function(use)
   use 'tpope/vim-vinegar'
   use 'tpope/vim-rhubarb'
   use 'tpope/vim-characterize'
+  use 'tpope/vim-unimpaired'
 
   -- colours
   use 'dracula/vim'
