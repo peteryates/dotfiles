@@ -3,22 +3,31 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
-  use 'AndrewRadev/splitjoin.vim'
-  use 'godlygeek/tabular'
-  use 'junegunn/fzf.vim'
-  use 'mg979/vim-visual-multi'
-  use 'mhinz/vim-grepper'
-  use { 'rrethy/vim-hexokinase', run = 'make hexokinase' }
-  use 'sheerun/vim-polyglot'
-  use 'numToStr/Comment.nvim'
+
+  -- utility / ui
+  use 'nathom/filetype.nvim'
   use 'nvim-lua/plenary.nvim'
-  use 'lewis6991/gitsigns.nvim'
   use 'stevearc/dressing.nvim'
   use 'editorconfig/editorconfig-vim'
-  use 'folke/trouble.nvim'
-  use 'vimwiki/vimwiki'
-  use 'nathom/filetype.nvim'
 
+  -- productivity
+  use 'vimwiki/vimwiki'
+
+  -- editing enhancements
+  use 'numToStr/Comment.nvim'
+  use 'lewis6991/gitsigns.nvim'
+  use 'mg979/vim-visual-multi'
+
+  -- formatting
+  use {'jdhao/whitespace.nvim', event = 'VimEnter'}
+  use 'godlygeek/tabular'
+  use 'AndrewRadev/splitjoin.vim'
+
+  -- searching
+  use 'mhinz/vim-grepper'
+  use 'junegunn/fzf.vim'
+
+  -- tpope section
   use 'tpope/vim-dispatch'
   use 'tpope/vim-eunuch'
   use 'tpope/vim-fugitive'
@@ -33,6 +42,7 @@ return require('packer').startup(function(use)
   -- colours
   use 'dracula/vim'
   use 'nvim-lualine/lualine.nvim'
+  use { 'rrethy/vim-hexokinase', run = 'make hexokinase' }
 
   -- snippets
   use 'rafamadriz/friendly-snippets'
