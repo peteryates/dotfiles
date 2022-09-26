@@ -16,6 +16,7 @@ vim.opt.tabstop = 2
 vim.opt.tags = '.tags'
 vim.opt.termguicolors = true
 vim.opt.wrap = false
+vim.opt.virtualedit = 'none'
 
 -- search
 vim.opt.hls = false

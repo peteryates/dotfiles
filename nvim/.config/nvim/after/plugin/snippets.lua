@@ -1,5 +1,11 @@
 local ls = require("luasnip")
 
+ls.config.set_config({
+  history = true,
+  updateevents = "TextChanged,TextChangedI",
+  delete_check_events = "TextChanged,InsertLeave",
+})
+
 -- some shorthands...
 local s = ls.snippet
 -- local sn = ls.snippet_node
@@ -27,18 +33,18 @@ ls.add_snippets(
             "spec",
             fmt(
             [[
-                specify "{}" do
-                    {}
-                end
+              specify "{}" do
+                {}
+              end
             ]], { i(1, "spec name"), i(0) })
         ),
         s(
             "scen",
             fmt(
             [[
-                scenario "{}" do
-                    {}
-                end
+              scenario "{}" do
+                {}
+              end
             ]], { i(1, "scenario name"), i(0) })
         )
     }
