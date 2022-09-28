@@ -127,7 +127,7 @@ _G.packer_plugins = {
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/peter/.local/share/nvim/site/pack/packer/start/friendly-snippets",
-    url = "https://github.com/rafamadriz/friendly-snippets"
+    url = "https://github.com/peteryates/friendly-snippets"
   },
   ["fzf.vim"] = {
     loaded = true,

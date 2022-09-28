@@ -45,7 +45,7 @@ return require('packer').startup(function(use)
   use { 'rrethy/vim-hexokinase', run = 'make hexokinase' }
 
   -- snippets
-  use 'rafamadriz/friendly-snippets'
+  use 'peteryates/friendly-snippets'
   use 'L3MON4D3/LuaSnip'
 
   -- lsp stuff
