@@ -102,6 +102,10 @@ cmp.setup({
     documentation = cmp.config.window.bordered(),
   },
 
+  indent = {
+    enable = true,
+  },
+
   confirmation = {
     default_behavior = types.cmp.ConfirmBehavior.Insert,
     get_commit_characters = function(commit_characters)
