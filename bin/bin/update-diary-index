@@ -1,0 +1,37 @@
+#!/usr/bin/env ruby
+require 'pry'
+require 'date'
+
+DIARY_ROOT = "/home/peter/docs/wiki/diary"
+DIARY_INDEX = File.join(DIARY_ROOT, "diary.md")
+DIARY_ENTRY_GLOB = File.join(DIARY_ROOT, "[0-9]*")
+
+entries = Dir
+  .glob(DIARY_ENTRY_GLOB)
+  .map              { |handle| File.basename(handle, ".md") }
+  .map              { |basename| Date.new(*basename.split("-").map(&:to_i)) }
+  .sort
+  .reverse
+  .group_by         { |entry| entry.year }
+  .transform_values { |entries_per_year| entries_per_year.group_by { |entry| entry.month } }
+
+def list_entry(date_str)
+  "- [#{date_str}](#{date_str})"
+end
+
+File.open(DIARY_INDEX, "w") do |buffer|
+  buffer << "# Diary\n\n"
+
+  entries.each do |year, months|
+    buffer << "## #{year}\n"
+
+    months.each do |month, days|
+      buffer << "\n"
+      buffer << "### " + Date::MONTHNAMES[month] + "\n\n"
+
+      days.each do |day|
+        buffer << list_entry(day.strftime('%Y-%m-%d')) + "\n"
+      end
+    end
+  end
+end

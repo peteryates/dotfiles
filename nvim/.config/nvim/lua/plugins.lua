@@ -11,7 +11,7 @@ return require('packer').startup(function(use)
   use 'editorconfig/editorconfig-vim'
 
   -- productivity
-  use 'vimwiki/vimwiki'
+  use 'jghauser/follow-md-links.nvim'
 
   -- editing enhancements
   use 'numToStr/Comment.nvim'

@@ -124,6 +124,11 @@ _G.packer_plugins = {
     path = "/home/peter/.local/share/nvim/site/pack/packer/start/filetype.nvim",
     url = "https://github.com/nathom/filetype.nvim"
   },
+  ["follow-md-links.nvim"] = {
+    loaded = true,
+    path = "/home/peter/.local/share/nvim/site/pack/packer/start/follow-md-links.nvim",
+    url = "https://github.com/jghauser/follow-md-links.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/peter/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -278,11 +283,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/peter/.local/share/nvim/site/pack/packer/start/vim-visual-multi",
     url = "https://github.com/mg979/vim-visual-multi"
-  },
-  vimwiki = {
-    loaded = true,
-    path = "/home/peter/.local/share/nvim/site/pack/packer/start/vimwiki",
-    url = "https://github.com/vimwiki/vimwiki"
   },
   ["whitespace.nvim"] = {
     loaded = false,
