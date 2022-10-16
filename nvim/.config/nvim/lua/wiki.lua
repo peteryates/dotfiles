@@ -26,3 +26,5 @@ vim.api.nvim_set_keymap(
   ":execute '!update-diary-index'<cr>:e" .. diary_root .. "diary.md<cr>",
   { silent = true }
 )
+
+vim.g.lists_filetypes = {'markdown'}

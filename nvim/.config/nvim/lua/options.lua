@@ -1,4 +1,4 @@
-vim.opt.conceallevel = 0
+vim.opt.conceallevel = 3
 vim.opt.expandtab = true
 vim.opt.hidden = true
 vim.opt.laststatus = 3

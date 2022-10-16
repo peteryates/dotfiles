@@ -12,6 +12,7 @@ return require('packer').startup(function(use)
 
   -- productivity
   use 'jghauser/follow-md-links.nvim'
+  use 'lervag/lists.vim'
 
   -- editing enhancements
   use 'numToStr/Comment.nvim'
