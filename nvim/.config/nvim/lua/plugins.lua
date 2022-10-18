@@ -10,10 +10,6 @@ return require('packer').startup(function(use)
   use 'stevearc/dressing.nvim'
   use 'editorconfig/editorconfig-vim'
 
-  -- productivity
-  use 'jghauser/follow-md-links.nvim'
-  use 'lervag/lists.vim'
-
   -- editing enhancements
   use 'numToStr/Comment.nvim'
   use 'lewis6991/gitsigns.nvim'
@@ -23,6 +19,11 @@ return require('packer').startup(function(use)
   use {'jdhao/whitespace.nvim', event = 'VimEnter'}
   use 'godlygeek/tabular'
   use 'AndrewRadev/splitjoin.vim'
+
+  -- productivity
+  -- use 'jghauser/follow-md-links.nvim' (commented out while TS markdown stabilises)
+  -- use 'lervag/lists.vim'              (commented out while TS markdown stabilises)
+  use 'preservim/vim-markdown'
 
   -- searching
   use 'mhinz/vim-grepper'

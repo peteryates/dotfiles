@@ -1,4 +1,3 @@
-vim.opt.conceallevel = 3
 vim.opt.expandtab = true
 vim.opt.hidden = true
 vim.opt.laststatus = 3
@@ -18,6 +17,8 @@ vim.opt.termguicolors = true
 vim.opt.wrap = false
 vim.opt.virtualedit = 'none'
 vim.opt.mouse = ''
+vim.opt.conceallevel = 3
+vim.opt.foldlevel = 3
 
 -- search
 vim.opt.hls = false

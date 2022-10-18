@@ -16,7 +16,7 @@ entries = Dir
   .transform_values { |entries_per_year| entries_per_year.group_by { |entry| entry.month } }
 
 def list_entry(date_str)
-  "- [#{date_str}](#{date_str})"
+  "- [#{date_str}](#{date_str}.md)"
 end
 
 File.open(DIARY_INDEX, "w") do |buffer|
