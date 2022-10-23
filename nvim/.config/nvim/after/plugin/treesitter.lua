@@ -6,10 +6,10 @@ require'nvim-treesitter.configs'.setup {
       "yaml",
       "html",
       "css",
-  }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  -- ignore_install = { "javascript" }, -- List of parsers to ignore installing
-  highlight = { enable = true },
-  -- indent = { enable = true },
+      "markdown",
+      "markdown_inline",
+  },
+  ignore_install = { "javascript" }, -- List of parsers to ignore installing
   rainbow = {
     enable = true,
     -- extended_mode = true, -- Highlight also non-parentheses delimiters, boolean or table: lang -> boolean
@@ -17,8 +17,8 @@ require'nvim-treesitter.configs'.setup {
     colors = dracula,
     termcolors = dracula,
   },
-  endwise = {
-      enable = true,
+  highlight = {
+    additional_vim_regex_highlighting = true,
   },
 }
 
@@ -29,5 +29,3 @@ for i, c in ipairs(dracula) do
 end
 
 require'treesitter-context'.setup{}
-
-vim.cmd [[set foldexpr=nvim_treesitter#foldexpr()]]

@@ -27,4 +27,4 @@ vim.api.nvim_set_keymap(
   { silent = true }
 )
 
-vim.g.lists_filetypes = {'markdown'}
+vim.g.lists_filetypes = {'md', 'markdown'}

@@ -21,9 +21,8 @@ return require('packer').startup(function(use)
   use 'AndrewRadev/splitjoin.vim'
 
   -- productivity
-  -- use 'jghauser/follow-md-links.nvim' (commented out while TS markdown stabilises)
-  -- use 'lervag/lists.vim'              (commented out while TS markdown stabilises)
   use 'preservim/vim-markdown'
+  use 'lervag/lists.vim'
 
   -- searching
   use 'mhinz/vim-grepper'
