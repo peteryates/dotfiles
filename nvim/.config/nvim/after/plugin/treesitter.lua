@@ -18,7 +18,7 @@ require'nvim-treesitter.configs'.setup {
     termcolors = dracula,
   },
   highlight = {
-    additional_vim_regex_highlighting = true,
+    additional_vim_regex_highlighting = {"markdown"},
   },
 }
 
