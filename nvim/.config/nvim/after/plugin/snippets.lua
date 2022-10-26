@@ -46,7 +46,8 @@ ls.add_snippets(
                 {}
               end
             ]], { i(1, "scenario name"), i(0) })
-        )
+        ),
+        s("ri", fmt("render_inline({})", { i(1, "component") })),
     }
 )
 
