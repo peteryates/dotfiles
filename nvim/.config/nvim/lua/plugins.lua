@@ -1,4 +1,5 @@
 vim.cmd [[packadd packer.nvim]]
+vim.cmd [[packadd cfilter]]
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
