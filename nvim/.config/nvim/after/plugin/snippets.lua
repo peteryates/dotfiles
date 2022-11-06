@@ -60,8 +60,22 @@ ls.add_snippets(
 )
 
 ls.add_snippets(
-    "vimwiki",
+    "markdown",
     {
-        s("pts", t("* programme team standup")),
+        s(
+          "li",
+          fmt(
+          [[
+            * {}
+          ]], { i(1, "list item") })
+        ),
+
+        s(
+          "cb",
+          fmt(
+          [[
+            * [ ] {}
+          ]], { i(1, "task") })
+        ),
     }
 )
