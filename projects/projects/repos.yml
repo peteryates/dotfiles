@@ -5,6 +5,7 @@ department-for-education/current/govuk-components/: dfe-digital/govuk-components
 department-for-education/current/govuk-wizardry/: dfe-digital/govuk-wizardry
 department-for-education/current/html-attributes-utils/: dfe-digital/html-attributes-utils
 department-for-education/current/npq/: dfe-digital/npq-registration
+department-for-education/current/npq-prototype/: dfe-digital/npq-prototype
 department-for-education/current/ecf/: dfe-digital/early-careers-framework
 department-for-education/current/ecf-engage-and-learn/: DFE-Digital/ecf-engage-and-learn
 
