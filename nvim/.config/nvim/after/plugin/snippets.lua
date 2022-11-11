@@ -65,17 +65,13 @@ ls.add_snippets(
         s(
           "li",
           fmt(
-          [[
-            * {}
-          ]], { i(1, "list item") })
+          [[* {}]], { i(1, "list item") })
         ),
 
         s(
           "cb",
           fmt(
-          [[
-            * [ ] {}
-          ]], { i(1, "task") })
+          [[* [ ] {}]], { i(1, "task") })
         ),
     }
 )
