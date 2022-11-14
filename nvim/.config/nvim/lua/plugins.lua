@@ -41,10 +41,11 @@ return require('packer').startup(function(use)
   use 'tpope/vim-characterize'
   use 'tpope/vim-unimpaired'
 
-  -- colours
+  -- colours/highlighting
   use 'dracula/vim'
   use 'nvim-lualine/lualine.nvim'
   use { 'rrethy/vim-hexokinase', run = 'make hexokinase' }
+  use 'rrethy/vim-illuminate'
 
   -- snippets
   use 'peteryates/friendly-snippets'

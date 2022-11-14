@@ -249,6 +249,11 @@ _G.packer_plugins = {
     path = "/home/peter/.local/share/nvim/site/pack/packer/start/vim-hexokinase",
     url = "https://github.com/rrethy/vim-hexokinase"
   },
+  ["vim-illuminate"] = {
+    loaded = true,
+    path = "/home/peter/.local/share/nvim/site/pack/packer/start/vim-illuminate",
+    url = "https://github.com/rrethy/vim-illuminate"
+  },
   ["vim-markdown"] = {
     loaded = true,
     path = "/home/peter/.local/share/nvim/site/pack/packer/start/vim-markdown",
