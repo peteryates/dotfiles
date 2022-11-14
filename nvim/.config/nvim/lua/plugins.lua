@@ -47,6 +47,9 @@ return require('packer').startup(function(use)
   use { 'rrethy/vim-hexokinase', run = 'make hexokinase' }
   use 'rrethy/vim-illuminate'
 
+  -- language specific
+  use 'vim-crystal/vim-crystal'
+
   -- snippets
   use 'peteryates/friendly-snippets'
   use 'L3MON4D3/LuaSnip'
@@ -64,6 +67,7 @@ return require('packer').startup(function(use)
   use 'saadparwaiz1/cmp_luasnip'
   use 'jose-elias-alvarez/null-ls.nvim'
   use 'MunifTanjim/prettier.nvim'
+  use 'elbywan/crystalline'
 
   -- treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
