@@ -9,4 +9,4 @@ require('illuminate').configure({
   },
 })
 
-vim.api.nvim_set_hl(0, 'IlluminatedWordText', {underdotted=true})
+vim.api.nvim_set_hl(0, 'IlluminatedWordText', {bg="#353741"})
