@@ -18,7 +18,8 @@ These are the configuration files for software I use frequently, including:
    [make](https://www.gnu.org/software/make/) and
    [fd](https://github.com/sharkdp/fd).
 2. Clone or download this repository and `cd` into the directory
-3. Run `make up` to install and `make down` to uninstall
+3. Run `make bootstrap` to install required packages
+4. Run `make up` to install and `make down` to uninstall
 
 ## Example
 
