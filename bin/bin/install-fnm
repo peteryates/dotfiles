@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+wget -P /tmp https://github.com/schniz/fnm/releases/latest/download/fnm-linux.zip
+
+unzip /tmp/fnm-linux.zip -d /tmp/
+
+mv /tmp/fnm ~/bin/fnm
+
+chmod +x ~/bin/fnm
