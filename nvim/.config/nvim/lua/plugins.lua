@@ -45,7 +45,6 @@ return require('packer').startup(function(use)
   use 'dracula/vim'
   use 'nvim-lualine/lualine.nvim'
   use { 'rrethy/vim-hexokinase', run = 'make hexokinase' }
-  use 'rrethy/vim-illuminate'
 
   -- language specific
   use 'vim-crystal/vim-crystal'
