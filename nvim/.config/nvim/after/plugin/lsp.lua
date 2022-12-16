@@ -191,7 +191,7 @@ cmp.setup({
     { name = 'nvim_lsp' },
     { name = 'nvim_lua' },
     { name = 'path' },
-    { name = 'luasnip' },
+    { name = 'luasnip', option = { show_autosnippets = false } },
     { name = 'emoji' },
     { name = 'buffer', keyword_length = 5, max_item_count = 10 },
   },
