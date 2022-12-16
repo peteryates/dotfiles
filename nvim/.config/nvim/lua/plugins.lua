@@ -15,6 +15,7 @@ return require('packer').startup(function(use)
   use 'numToStr/Comment.nvim'
   use 'lewis6991/gitsigns.nvim'
   use 'mg979/vim-visual-multi'
+  use 'mbbill/undotree'
 
   -- formatting
   use {'jdhao/whitespace.nvim', event = 'VimEnter'}
