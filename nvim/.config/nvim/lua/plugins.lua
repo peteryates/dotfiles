@@ -57,7 +57,7 @@ return require('packer').startup(function(use)
   -- lsp stuff
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/nvim-cmp'
-  use 'williamboman/nvim-lsp-installer'
+  use 'williamboman/mason.nvim'
 
   -- lsp sources
   use 'hrsh7th/cmp-nvim-lsp'
