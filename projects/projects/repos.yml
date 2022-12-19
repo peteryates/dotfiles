@@ -32,3 +32,6 @@ department-for-education/side-projects/rails-template/: dfe-digital/rails-templa
 graphia/website/: graphia/website
 graphia/advent-of-code-2021/: peteryates/advent-of-code-2021
 graphia/shakespeare/: peteryates/shakespeare
+
+# config
+graphia/config/friendly-snippets: peteryates/friendly-snippets
