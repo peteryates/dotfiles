@@ -18,7 +18,6 @@ return require('packer').startup(function(use)
   use 'mbbill/undotree'
 
   -- formatting
-  use {'jdhao/whitespace.nvim', event = 'VimEnter'}
   use 'godlygeek/tabular'
   use 'AndrewRadev/splitjoin.vim'
 
@@ -55,9 +54,18 @@ return require('packer').startup(function(use)
   use 'L3MON4D3/LuaSnip'
 
   -- lsp stuff
-  use 'neovim/nvim-lspconfig'
   use 'hrsh7th/nvim-cmp'
-  use 'williamboman/mason.nvim'
+  use { -- LSP Configuration & Plugins
+    'neovim/nvim-lspconfig',
+    requires = {
+      -- Automatically install LSPs to stdpath for neovim
+      'williamboman/mason.nvim',
+      'williamboman/mason-lspconfig.nvim',
+
+      -- Useful status updates for LSP
+      'j-hui/fidget.nvim',
+    },
+  }
 
   -- lsp sources
   use 'hrsh7th/cmp-nvim-lsp'
