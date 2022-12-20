@@ -10,3 +10,24 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     vim.highlight.on_yank({ higroup = "IncSearch", timeout = 75 })
   end,
 })
+
+vim.cmd([[
+  " blue
+  highlight! CmpItemAbbrMatch guibg=NONE guifg=#8be9fd
+  highlight! link CmpItemAbbrMatchFuzzy CmpItemAbbrMatch
+
+  highlight! CmpItemKindVariable guibg=NONE guifg=#ffb86c
+  highlight! link CmpItemKindInterface CmpItemKindVariable
+  highlight! link CmpItemKindText CmpItemKindVariable
+
+  highlight! CmpItemKindFunction guibg=NONE guifg=#ff79c6
+  highlight! link CmpItemKindMethod CmpItemKindFunction
+
+  highlight! CmpItemKindKeyword guibg=NONE guifg=#f1fa8c
+  highlight! link CmpItemKindProperty CmpItemKindKeyword
+  highlight! link CmpItemKindUnit CmpItemKindKeyword
+
+  highlight! CmpItemKindSnippet guibg=NONE guifg=#bd93f9
+  highlight! link CmpItemSnippetProperty CmpItemSnippetKeyword
+  highlight! link CmpItemSnippetUnit CmpItemSnippetKeyword
+]])
