@@ -1,12 +1,6 @@
 local ls = require("luasnip")
 require("luasnip/loaders/from_vscode").lazy_load()
 
-ls.config.set_config({
-  history = true,
-  updateevents = "TextChanged,TextChangedI",
-  delete_check_events = "TextChanged,InsertLeave",
-})
-
 -- some shorthands...
 local s = ls.snippet
 -- local sn = ls.snippet_node

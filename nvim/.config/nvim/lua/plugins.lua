@@ -1,85 +1,88 @@
-vim.cmd [[packadd packer.nvim]]
-vim.cmd [[packadd cfilter]]
+require("lazy").setup(
+  -- plugins
+  {
+    -- utility / ui
+    'nathom/filetype.nvim',
+    'nvim-lua/plenary.nvim',
+    'stevearc/dressing.nvim',
+    'editorconfig/editorconfig-vim',
+    'nvim-lualine/lualine.nvim',
 
-return require('packer').startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+    -- editing enhancements
+    'numToStr/Comment.nvim',
+    'lewis6991/gitsigns.nvim',
+    'mg979/vim-visual-multi',
+    'mbbill/undotree',
 
-  -- utility / ui
-  use 'nathom/filetype.nvim'
-  use 'nvim-lua/plenary.nvim'
-  use 'stevearc/dressing.nvim'
-  use 'editorconfig/editorconfig-vim'
+    -- formatting
+    'godlygeek/tabular',
+    'AndrewRadev/splitjoin.vim',
 
-  -- editing enhancements
-  use 'numToStr/Comment.nvim'
-  use 'lewis6991/gitsigns.nvim'
-  use 'mg979/vim-visual-multi'
-  use 'mbbill/undotree'
+    -- productivity
+    'preservim/vim-markdown',
+    'lervag/lists.vim',
 
-  -- formatting
-  use 'godlygeek/tabular'
-  use 'AndrewRadev/splitjoin.vim'
+    -- searching
+    'mhinz/vim-grepper',
+    'junegunn/fzf.vim',
 
-  -- productivity
-  use 'preservim/vim-markdown'
-  use 'lervag/lists.vim'
+    -- tpope section
+    'tpope/vim-dispatch',
+    'tpope/vim-eunuch',
+    'tpope/vim-fugitive',
+    'tpope/vim-rails',
+    'tpope/vim-sensible',
+    'tpope/vim-surround',
+    'tpope/vim-vinegar',
+    'tpope/vim-rhubarb',
+    'tpope/vim-characterize',
+    'tpope/vim-unimpaired',
 
-  -- searching
-  use 'mhinz/vim-grepper'
-  use 'junegunn/fzf.vim'
+    -- colours/highlighting
+    'dracula/vim',
+    { 'rrethy/vim-hexokinase', build = 'make hexokinase' },
 
-  -- tpope section
-  use 'tpope/vim-dispatch'
-  use 'tpope/vim-eunuch'
-  use 'tpope/vim-fugitive'
-  use 'tpope/vim-rails'
-  use 'tpope/vim-sensible'
-  use 'tpope/vim-surround'
-  use 'tpope/vim-vinegar'
-  use 'tpope/vim-rhubarb'
-  use 'tpope/vim-characterize'
-  use 'tpope/vim-unimpaired'
+    -- language specific
+    'vim-crystal/vim-crystal',
 
-  -- colours/highlighting
-  use 'dracula/vim'
-  use 'nvim-lualine/lualine.nvim'
-  use { 'rrethy/vim-hexokinase', run = 'make hexokinase' }
+    -- lsp and snippet stuff
+    {
+      'neovim/nvim-lspconfig',
+      dependencies = {
+        'williamboman/mason.nvim',
+        'williamboman/mason-lspconfig.nvim',
+        'j-hui/fidget.nvim',
+      },
+    },
 
-  -- language specific
-  use 'vim-crystal/vim-crystal'
+    {
+      'hrsh7th/nvim-cmp',
+      dependencies = {
+        'hrsh7th/cmp-nvim-lsp',
+        'hrsh7th/cmp-path',
+        'hrsh7th/cmp-buffer',
+        'hrsh7th/cmp-emoji',
+        'saadparwaiz1/cmp_luasnip',
+        'jose-elias-alvarez/null-ls.nvim',
+        'peteryates/friendly-snippets',
+        'L3MON4D3/LuaSnip',
 
-  -- snippets
-  use 'peteryates/friendly-snippets'
-  use 'L3MON4D3/LuaSnip'
+      },
+    },
 
-  -- lsp stuff
-  use 'hrsh7th/nvim-cmp'
-  use { -- LSP Configuration & Plugins
-    'neovim/nvim-lspconfig',
-    requires = {
-      -- Automatically install LSPs to stdpath for neovim
-      'williamboman/mason.nvim',
-      'williamboman/mason-lspconfig.nvim',
+    -- lsp sources
+    'MunifTanjim/prettier.nvim',
+    'elbywan/crystalline',
 
-      -- Useful status updates for LSP
-      'j-hui/fidget.nvim',
+    -- treesitter
+    {
+      'nvim-treesitter/nvim-treesitter',
+      build = ':TSUpdate',
+      dependencies = {
+        'nvim-treesitter/playground',
+        'nvim-treesitter/nvim-treesitter-context',
+        'p00f/nvim-ts-rainbow',
+      },
     },
   }
-
-  -- lsp sources
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-emoji'
-  use 'saadparwaiz1/cmp_luasnip'
-  use 'jose-elias-alvarez/null-ls.nvim'
-  use 'MunifTanjim/prettier.nvim'
-  use 'elbywan/crystalline'
-
-  -- treesitter
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use 'nvim-treesitter/playground'
-  use 'p00f/nvim-ts-rainbow'
-  use 'nvim-treesitter/nvim-treesitter-context'
-end)
+)
