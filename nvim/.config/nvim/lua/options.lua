@@ -21,7 +21,7 @@ vim.opt.conceallevel = 3
 vim.opt.foldlevel = 3
 
 -- search
-vim.opt.hls = false
+vim.opt.hls = true
 vim.opt.showmatch = true
 
 -- backup and swap

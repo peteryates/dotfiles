@@ -31,7 +31,6 @@ require("lazy").setup(
     'tpope/vim-eunuch',
     'tpope/vim-fugitive',
     'tpope/vim-rails',
-    'tpope/vim-sensible',
     'tpope/vim-surround',
     'tpope/vim-vinegar',
     'tpope/vim-rhubarb',
