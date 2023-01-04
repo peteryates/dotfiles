@@ -10,6 +10,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("options")
-require("plugins")
 require("wiki")
+require("plugins")
 require("tmux")
