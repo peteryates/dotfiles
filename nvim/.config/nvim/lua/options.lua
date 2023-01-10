@@ -19,6 +19,7 @@ vim.opt.virtualedit = 'none'
 vim.opt.mouse = ''
 vim.opt.conceallevel = 3
 vim.opt.foldlevel = 3
+vim.opt.cursorline = true
 
 -- search
 vim.opt.hls = true
