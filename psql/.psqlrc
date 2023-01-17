@@ -7,7 +7,6 @@
 \pset unicode_header_linestyle double
 \pset pager off
 \pset border 3
-\pset pager always
 \pset x auto
 \pset tuples_only off
 \pset footer

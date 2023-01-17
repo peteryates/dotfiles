@@ -23,7 +23,7 @@ File.open(DIARY_INDEX, "w") do |buffer|
   buffer << "# Diary\n\n"
 
   entries.each do |year, months|
-    buffer << "## #{year}\n"
+    buffer << "## #{year}\n\n"
 
     months.each do |month, days|
       buffer << "\n"
