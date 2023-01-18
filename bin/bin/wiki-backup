@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+update-diary-index &&
 cd ~/docs/wiki &&
 git add . &&
 git commit -m "backup" &&
