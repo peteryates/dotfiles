@@ -42,7 +42,12 @@
 
 [log]
 	date = iso
+
 [init]
 	defaultBranch = main
+
 [rerere]
 	enabled = true
+
+[mailmap]
+	file = /home/peter/.mailmap
