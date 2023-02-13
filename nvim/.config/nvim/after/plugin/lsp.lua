@@ -1,6 +1,6 @@
 require('mason').setup()
 
-local servers = { 'solargraph', 'tsserver', 'sumneko_lua', 'yamlls', 'jsonls' }
+local servers = { 'solargraph', 'tsserver', 'lua_ls', 'yamlls', 'jsonls' }
 
 -- Ensure the servers above are installed
 require('mason-lspconfig').setup {
