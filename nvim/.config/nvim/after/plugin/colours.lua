@@ -12,6 +12,8 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 vim.cmd([[
+  highlight! CursorLine guibg=#21232f
+
   highlight! CmpItemAbbrMatch guibg=NONE guifg=#8be9fd
   highlight! link CmpItemAbbrMatchFuzzy CmpItemAbbrMatch
 
