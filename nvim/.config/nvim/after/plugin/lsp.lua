@@ -1,6 +1,6 @@
 require('mason').setup()
 
-local servers = { 'solargraph', 'tsserver', 'lua_ls', 'yamlls', 'jsonls' }
+local servers = { 'tsserver', 'lua_ls', 'yamlls', 'jsonls' }
 
 -- Ensure the servers above are installed
 require('mason-lspconfig').setup {
@@ -24,7 +24,11 @@ require('fidget').setup()
 -- Ensure solargraph is configured
 
 local lspconfig = require("lspconfig")
-lspconfig.solargraph.setup({})
+lspconfig.solargraph.setup({
+  solargraph = {
+    useBundler = true
+  }
+})
 lspconfig.yamlls.setup({})
 
 local cmp = require 'cmp'
