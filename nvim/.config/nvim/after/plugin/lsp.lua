@@ -2,6 +2,9 @@ require('mason').setup()
 
 local servers = { 'tsserver', 'lua_ls', 'yamlls', 'jsonls' }
 
+-- Enable lsp lines
+require("lsp_lines").setup()
+
 -- Ensure the servers above are installed
 require('mason-lspconfig').setup {
   ensure_installed = servers,
@@ -76,3 +79,10 @@ cmp.setup {
     { name = 'buffer', keyword_length = 5, max_item_count = 10 },
   },
 }
+
+vim.keymap.set(
+  "",
+  "<Leader>d",
+  require("lsp_lines").toggle,
+  { desc = "Toggle lsp_lines" }
+)
