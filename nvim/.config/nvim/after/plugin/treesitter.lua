@@ -1,5 +1,3 @@
-local dracula = { "#8be9fd", "#50fa7b", "#ffb86c", "#ff79c6", "#bd93f9", "#ff5555", "#f1fa8c" }
-
 require'nvim-treesitter.configs'.setup {
   ensure_installed = {
       "ruby",
@@ -10,23 +8,23 @@ require'nvim-treesitter.configs'.setup {
       "markdown_inline",
   },
   ignore_install = { "javascript" }, -- List of parsers to ignore installing
-  rainbow = {
-    enable = true,
-    -- extended_mode = true, -- Highlight also non-parentheses delimiters, boolean or table: lang -> boolean
-    max_file_lines = 1000, -- Do not enable for files with more than 1000 lines, int
-    colors = dracula,
-    termcolors = dracula,
-  },
   highlight = {
     additional_vim_regex_highlighting = {"markdown"},
   },
+  rainbow = {
+    enable = true,
+  },
 }
 
--- workaround for not being able to set colors using the
--- config above https://github.com/p00f/nvim-ts-rainbow/issues/81
-for i, c in ipairs(dracula) do
-  vim.cmd(("hi rainbowcol%d guifg=%s"):format(i, c))
-end
+vim.cmd([[
+  highlight! TSRainbowRed guifg=#ff5555
+  highlight! TSRainbowYellow guifg=#f1fa8c
+  highlight! TSRainbowBlue guifg=#8be9fd
+  highlight! TSRainbowOrange guifg=#ffb86c
+  highlight! TSRainbowGreen guifg=#50fa7b
+  highlight! TSRainbowViolet guifg=#bd93f9
+  highlight! TSRainbowCyan guifg=#ff79c6
+]])
 
 require('treesitter-context').setup({})
 

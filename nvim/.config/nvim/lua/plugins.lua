@@ -80,7 +80,7 @@ require("lazy").setup(
       dependencies = {
         'nvim-treesitter/playground',
         'nvim-treesitter/nvim-treesitter-context',
-        'p00f/nvim-ts-rainbow',
+        'HiPhish/nvim-ts-rainbow2',
       },
     },
   }
