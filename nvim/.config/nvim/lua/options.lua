@@ -33,3 +33,5 @@ vim.opt.writebackup = false
 -- list chars
 vim.opt.list = true
 vim.opt.listchars = {eol = '↲', extends = '→', precedes = '←', trail = '·', tab = '»··', multispace = '·'}
+
+vim.diagnostic.config({ virtual_text = false })

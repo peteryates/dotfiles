@@ -22,10 +22,10 @@ File.open(DIARY_INDEX, "w") do |buffer|
   buffer << "# Diary\n\n"
 
   entries.each do |year, months|
-    buffer << "## #{year}\n\n"
+    buffer << "## #{year}\n"
 
     months.each do |month, days|
-      buffer << "\n"
+      buffer << "\n" unless days.count.zero?
       buffer << "### " + Date::MONTHNAMES[month] + "\n\n"
 
       days.each do |day|
