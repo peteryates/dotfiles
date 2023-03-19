@@ -16,7 +16,6 @@ require("lazy").setup(
 
     -- formatting
     'godlygeek/tabular',
-    'AndrewRadev/splitjoin.vim',
 
     -- productivity
     'preservim/vim-markdown',
@@ -81,6 +80,7 @@ require("lazy").setup(
         'nvim-treesitter/playground',
         'nvim-treesitter/nvim-treesitter-context',
         'HiPhish/nvim-ts-rainbow2',
+        'Wansmer/treesj',
       },
     },
   }
