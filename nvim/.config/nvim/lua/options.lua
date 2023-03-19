@@ -35,3 +35,5 @@ vim.opt.list = true
 vim.opt.listchars = {eol = '↲', extends = '→', precedes = '←', trail = '·', tab = '»··', multispace = '·'}
 
 vim.diagnostic.config({ virtual_text = false })
+
+vim.opt.formatoptions = 'ntcroq2p'
