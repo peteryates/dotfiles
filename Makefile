@@ -60,3 +60,6 @@ ht-rust:
 
 heffer-btop:
 	sudo dnf copr enable -y heffer/btop
+
+fix-weak-deps:
+	sudo echo "install_weak_deps=False" >> /etc/dnf/dnf.conf
