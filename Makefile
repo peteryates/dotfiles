@@ -31,12 +31,17 @@ bootstrap: gh-cli ht-rust heffer-btop
 	golang                                         \
 	jetbrains-mono-fonts-all                       \
 	kitty                                          \
+	libyaml-devel                                  \
 	make                                           \
 	neovim                                         \
 	openssl-devel                                  \
 	openssl                                        \
 	python3-tmuxp                                  \
+	postgresql                                     \
+	postgresql-contrib                             \
+	postgresql-server                              \
 	moreutils-parallel                             \
+	redis                                          \
 	sd                                             \
 	stow                                           \
 	the_silver_searcher                            \
