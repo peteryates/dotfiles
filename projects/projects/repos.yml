@@ -8,6 +8,7 @@ department-for-education/current/npq/: dfe-digital/npq-registration
 department-for-education/current/npq-prototype/: dfe-digital/npq-prototype
 department-for-education/current/ecf/: dfe-digital/early-careers-framework
 department-for-education/current/ecf-engage-and-learn/: DFE-Digital/ecf-engage-and-learn
+department-for-education/current/teacher-cpd-design-history/: DFE-Digital/teacher-cpd-design-history
 
 # projects i'm not directly involved in but reference
 department-for-education/reference/school-experience/: dfe-digital/schools-experience

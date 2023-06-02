@@ -14,6 +14,7 @@ alias ls='exa'
 alias l='exa --long'
 alias tree='exa --tree'
 alias open='xdg-open'
+alias icat="kitty +kitten icat"
 
 # directories i frequent
 alias fb='cd ~/projects/department-for-education/current/govuk-formbuilder'
