@@ -53,6 +53,7 @@ ls.add_snippets(
         s("gemma", t("Co-authored-by: gemmadallmandfe <87642394+gemmadallmandfe@users.noreply.github.com>")),
         s("hazel", t("Co-authored-by: hazelyule <111048910+hazelyule@users.noreply.github.com>")),
         s("tony",  t("Co-authored-by: tonyheadford <tony@binarycircus.com>")),
+        s("abeer", t("Co-authored-by: cwrw <cwrw@users.noreply.github.com>")),
     }
 )
 
