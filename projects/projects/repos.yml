@@ -1,7 +1,7 @@
 ---
 # things I work on frequently
-department-for-education/current/govuk-formbuilder/: dfe-digital/govuk-formbuilder
-department-for-education/current/govuk-components/: dfe-digital/govuk-components
+department-for-education/current/govuk-formbuilder/: x-govuk/govuk-formbuilder
+department-for-education/current/govuk-components/: x-govuk/govuk-components
 department-for-education/current/govuk-wizardry/: dfe-digital/govuk-wizardry
 department-for-education/current/html-attributes-utils/: dfe-digital/html-attributes-utils
 department-for-education/current/npq/: dfe-digital/npq-registration
