@@ -51,3 +51,6 @@
 
 [mailmap]
 	file = /home/peter/.mailmap
+
+[color "blame"]
+	highlightRecent = white,1 month ago,yellow,1 week ago,red
