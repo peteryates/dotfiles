@@ -1,0 +1,23 @@
+---
+session_name: gias
+start_directory: ~/projects/department-for-education/side-projects/gias-query-tool
+windows:
+  - window_name: editor
+    layout: tiled
+    panes:
+      - vim
+
+  - window_name: extra
+    layout: tiled
+    panes:
+      -
+
+  - window_name: git
+    layout: tiled
+    panes:
+      - git status
+
+  - window_name: psql
+    layout: tiled
+    panes:
+      -
