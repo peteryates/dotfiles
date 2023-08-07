@@ -20,6 +20,7 @@ require("lazy").setup(
     -- productivity
     'preservim/vim-markdown',
     'lervag/lists.vim',
+    'jghauser/follow-md-links.nvim',
 
     -- searching
     'mhinz/vim-grepper',
