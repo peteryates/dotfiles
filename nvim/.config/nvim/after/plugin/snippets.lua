@@ -55,6 +55,8 @@ ls.add_snippets(
         s("tony",  t("Co-authored-by: tonyheadford <tony@binarycircus.com>")),
         s("abeer", t("Co-authored-by: cwrw <cwrw@users.noreply.github.com>")),
         s("naomi", t("Co-authored-by: Lockyy <naomi@lockyy.com>")),
+        s("frankie", t("Co-authored-by: Frankie Roberto <frankie@frankieroberto.com>")),
+
     }
 )
 
