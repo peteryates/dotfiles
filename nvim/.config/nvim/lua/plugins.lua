@@ -62,7 +62,6 @@ require("lazy").setup(
         'hrsh7th/cmp-buffer',
         'hrsh7th/cmp-emoji',
         'saadparwaiz1/cmp_luasnip',
-        'jose-elias-alvarez/null-ls.nvim',
         'peteryates/friendly-snippets',
         'L3MON4D3/LuaSnip',
         { url = 'https://git.sr.ht/~whynothugo/lsp_lines.nvim' },
