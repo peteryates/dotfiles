@@ -2,7 +2,6 @@ require("lazy").setup(
   -- plugins
   {
     -- utility / ui
-    'nathom/filetype.nvim',
     'nvim-lua/plenary.nvim',
     'stevearc/dressing.nvim',
     'editorconfig/editorconfig-vim',
