@@ -1,6 +1,6 @@
 require('mason').setup()
 
-local servers = { 'tsserver', 'lua_ls', 'yamlls', 'jsonls' }
+local servers = { 'tsserver', 'lua_ls', 'yamlls', 'jsonls', 'terraformls', 'tflint' }
 
 -- Enable lsp lines
 require("lsp_lines").setup()
