@@ -57,6 +57,7 @@ ls.add_snippets(
         s("naomi", t("Co-authored-by: Lockyy <naomi@lockyy.com>")),
         s("frankie", t("Co-authored-by: Frankie Roberto <frankie@frankieroberto.com>")),
         s("rick",  t("Co-authored-by: Rick McVelia <rick.mcvelia@gmail.com>")),
+        s("pablo",  t("Co-authored-by: Pablo Manrubia <pmanrubia@gmail.com>")),
 
     }
 )
