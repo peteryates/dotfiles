@@ -9,7 +9,7 @@
 
 [core]
 	editor = vim
-  pager = diff-highlight | less
+  pager = diff-highlight
 	excludesfile = /home/peter/.gitignore_global
 	UseHttpPath = true
 
@@ -51,6 +51,9 @@
 
 [mailmap]
 	file = /home/peter/.mailmap
+
+[blame]
+	coloring = highlightRecent
 
 [color "blame"]
 	highlightRecent = white,1 month ago,yellow,1 week ago,red
