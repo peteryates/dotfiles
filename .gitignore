@@ -3,4 +3,5 @@ tmux/.tmux/plugins/*
 nvim/.config/nvim/spell/*
 nvim/.config/nvim/lazy-lock.json
 fish/.config/fish/fish_variables
+fish/.config/fish/*tmp*
 btop/**/*.log
