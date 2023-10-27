@@ -21,6 +21,9 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+-- Extra completion for writing git commit messages
+require("cmp_git").setup()
+
 -- Turn on lsp status information
 require('fidget').setup()
 
@@ -75,6 +78,7 @@ cmp.setup {
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
     { name = 'path' },
+    { name = 'git' },
     { name = 'emoji', insert = true },
     { name = 'buffer', keyword_length = 5, max_item_count = 10 },
   },
