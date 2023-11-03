@@ -10,5 +10,6 @@
 \pset x auto
 \pset tuples_only off
 \pset footer
+\pset format wrapped
 \set QUIET 0
 \setenv PAGER 'less -F'
