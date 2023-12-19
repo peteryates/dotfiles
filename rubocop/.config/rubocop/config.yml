@@ -10,11 +10,11 @@ Style/PercentLiteralDelimiters:
   Enabled: false
 Style/FormatString:
   Enabled: false
-Layout/MultilineMethodCallIndentation:
-  Enabled: false
 Style/StringConcatenation:
   Enabled: false
 Style/NumericPredicate:
+  Enabled: false
+Style/EmptyMethod:
   Enabled: false
 
 Layout/AccessModifierIndentation:
@@ -25,6 +25,8 @@ Layout/ArrayAlignment:
   Enabled: false
 Layout/LineLength:
   Max: 140
+Layout/MultilineMethodCallIndentation:
+  Enabled: false
 
 Metrics/ParameterLists:
   Max: 15
@@ -38,3 +40,8 @@ Metrics/CyclomaticComplexity:
   Enabled: false
 Metrics/ClassLength:
   Max: 10000
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+Naming/MethodParameterName:
+  Enabled: false
