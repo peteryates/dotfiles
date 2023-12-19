@@ -18,6 +18,15 @@ require("lazy").setup(
 
     -- productivity
     'preservim/vim-markdown',
+    {
+      "iamcco/markdown-preview.nvim",
+      cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+      build = "cd app && yarn install",
+      init = function()
+        vim.g.mkdp_filetypes = { "markdown" }
+      end,
+      ft = { "markdown" },
+    },
     'lervag/lists.vim',
     'jghauser/follow-md-links.nvim',
 
@@ -44,15 +53,10 @@ require("lazy").setup(
     'vim-crystal/vim-crystal',
 
     -- lsp and snippet stuff
-    {
-      'neovim/nvim-lspconfig',
-      dependencies = {
-        'williamboman/mason.nvim',
-        'williamboman/mason-lspconfig.nvim',
-        { 'j-hui/fidget.nvim', tag = 'legacy' },
-      },
-    },
-
+    'neovim/nvim-lspconfig',
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
+    'j-hui/fidget.nvim',
     {
       'hrsh7th/nvim-cmp',
       dependencies = {
