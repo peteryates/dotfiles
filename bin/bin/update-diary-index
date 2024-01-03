@@ -19,10 +19,10 @@ def list_entry(date_str)
 end
 
 File.open(DIARY_INDEX, "w") do |buffer|
-  buffer << "# Diary\n\n"
+  buffer << "# Diary\n"
 
   entries.each do |year, months|
-    buffer << "## #{year}\n"
+    buffer << "\n## #{year}\n"
 
     months.each do |month, days|
       buffer << "\n" unless days.count.zero?
