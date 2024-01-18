@@ -10,8 +10,8 @@ end
 
 alias be='bundle exec'
 alias http='xh'
-alias ls='exa'
-alias l='exa --long'
+alias ls='eza'
+alias l='eza --long'
 alias tree='exa --tree'
 alias open='xdg-open'
 alias icat="kitty +kitten icat"

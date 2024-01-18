@@ -21,7 +21,7 @@ bootstrap: gh-cli ht-rust heffer-btop
 	btop                                           \
 	direnv                                         \
 	entr                                           \
-	exa                                            \
+	eza                                            \
 	fd-find                                        \
 	fish                                           \
 	fzf                                            \
