@@ -12,7 +12,7 @@ alias be='bundle exec'
 alias http='xh'
 alias ls='eza'
 alias l='eza --long'
-alias tree='exa --tree'
+alias tree='eza --tree'
 alias open='xdg-open'
 alias icat="kitty +kitten icat"
 
