@@ -11,11 +11,16 @@ vim.api.nvim_set_keymap(
   { silent = true }
 )
 
+
+function TodayWikiFn ()
+  return diary_root .. os.date("%Y-%m-%d") .. ".md"
+end
+
 -- change to today's diary entry
 vim.api.nvim_set_keymap(
   "n",
   "<leader>w<leader>w",
-  ":e " .. diary_root .. os.date("%Y-%m-%d") .. ".md<cr>",
+  ":lua vim.cmd.edit(TodayWikiFn())<cr>",
   { silent = true }
 )
 
