@@ -11,6 +11,13 @@ require'nvim-treesitter.configs'.setup {
   highlight = {
     additional_vim_regex_highlighting = {"markdown"},
   },
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      node_incremental = "v",
+      node_decremental = "V",
+    },
+  },
 }
 
 require('treesitter-context').setup({})
