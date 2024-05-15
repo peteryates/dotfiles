@@ -9,7 +9,7 @@ down:
 refresh:
 	stow --restow ${dirs}
 
-bootstrap: gh-cli ht-rust heffer-btop
+bootstrap: gh-cli ht-rust
 	mkdir -p ~/projects &&                         \
 	mkdir -p ~/bin &&                              \
 	sudo dnf -y install                            \
@@ -53,9 +53,6 @@ gh-cli:
 
 ht-rust:
 	sudo dnf copr enable -y gourlaysama/ht-rust
-
-heffer-btop:
-	sudo dnf copr enable -y heffer/btop
 
 fix-weak-deps:
 	sudo echo "install_weak_deps=False" >> /etc/dnf/dnf.conf
