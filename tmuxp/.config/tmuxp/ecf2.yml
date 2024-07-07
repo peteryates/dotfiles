@@ -1,0 +1,28 @@
+---
+session_name: ecf2
+start_directory: ~/projects/department-for-education/current/ecf2
+windows:
+  - window_name: editor
+    layout: tiled
+    panes:
+      - vim
+
+  - window_name: extra
+    layout: tiled
+    panes:
+      -
+
+  - window_name: git
+    layout: tiled
+    panes:
+      - git status
+
+  - window_name: tests
+    layout: tiled
+    panes:
+      -
+
+  - window_name: servers
+    layout: tiled
+    panes:
+      -
