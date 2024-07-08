@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+git shortlog -sn | grep -v "🤖" | youplot bar -t "All time commits by person" --fmt yx
