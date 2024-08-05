@@ -4,7 +4,6 @@ require("lazy").setup(
     -- utility / ui
     'nvim-lua/plenary.nvim',
     'stevearc/dressing.nvim',
-    'editorconfig/editorconfig-vim',
     'nvim-lualine/lualine.nvim',
 
     -- editing enhancements
