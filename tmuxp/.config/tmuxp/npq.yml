@@ -1,6 +1,6 @@
 ---
 session_name: npq
-start_directory: ~/projects/department-for-education/current/npq
+start_directory: ~/projects/department-for-education/cpd/npq
 windows:
   - window_name: editor
     layout: tiled

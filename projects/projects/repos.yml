@@ -1,24 +1,29 @@
 ---
-# things I work on frequently
-department-for-education/current/govuk-formbuilder/: x-govuk/govuk-formbuilder
-department-for-education/current/govuk-components/: x-govuk/govuk-components
-department-for-education/current/govuk-wizardry/: dfe-digital/govuk-wizardry
-department-for-education/current/html-attributes-utils/: dfe-digital/html-attributes-utils
-department-for-education/current/npq/: dfe-digital/npq-registration
-department-for-education/current/npq-prototype/: dfe-digital/npq-prototype
-department-for-education/current/ecf/: dfe-digital/early-careers-framework
-department-for-education/current/ecf-engage-and-learn/: DFE-Digital/ecf-engage-and-learn
-department-for-education/current/teacher-cpd-design-history/: DFE-Digital/teacher-cpd-design-history
+# x-govuk
+department-for-education/x-govuk/govuk-formbuilder/: x-govuk/govuk-formbuilder
+department-for-education/x-govuk/govuk-components/: x-govuk/govuk-components
+department-for-education/x-govuk/govuk-wizardry/: dfe-digital/govuk-wizardry
+department-for-education/x-govuk/html-attributes-utils/: dfe-digital/html-attributes-utils
+
+# teacher CPD at DfE
+department-for-education/cpd/npq/: dfe-digital/npq-registration
+department-for-education/cpd/npq-prototype/: dfe-digital/npq-prototype
+department-for-education/cpd/ecf/: dfe-digital/early-careers-framework
+department-for-education/cpd/ecf2/: dfe-digital/ecf2
+department-for-education/cpd/support-for-early-career-teachers/: DFE-Digital/support-for-early-career-teachers
+department-for-education/cpd/teacher-cpd-design-history/: DFE-Digital/teacher-cpd-design-history
 
 # projects i'm not directly involved in but reference
-department-for-education/reference/school-experience/: dfe-digital/schools-experience
 department-for-education/reference/apply-for-teacher-training/: dfe-digital/apply-for-teacher-training
+department-for-education/reference/apply-for-qualified-teacher-status/: dfe-digital/apply-for-qualified-teacher-status
+department-for-education/reference/itt-mentor-services/: dfe-digital/itt-mentor-services
 
 # get into teaching
 department-for-education/get-into-teaching/get-into-teaching-app/: dfe-digital/get-into-teaching-app
 department-for-education/get-into-teaching/get-into-teaching-api/: dfe-digital/get-into-teaching-api
 department-for-education/get-into-teaching/get-into-teaching-crm-exports/: dfe-digital/get-into-teaching-crm-exports
 department-for-education/get-into-teaching/get-teacher-training-adviser-service/: dfe-digital/get-teacher-training-adviser-service
+department-for-education/get-into-teaching/school-experience/: dfe-digital/schools-experience
 
 # documentation
 department-for-education/reference/technical-guidance/: dfe-digital/technical-guidance
@@ -26,12 +31,12 @@ department-for-education/reference/architecture/: dfe-digital/architecture
 
 # small projects i've built in the past
 department-for-education/side-projects/gias-query-tool/: dfe-digital/gias-query-tool
+department-for-education/side-projects/gias-data/: dfe-digital/gias-data
 department-for-education/side-projects/govspeak-prototype-kit/: dfe-digital/govspeak-prototype-kit
 department-for-education/side-projects/rails-template/: dfe-digital/rails-template
 
 # graphia/personal stuff
 graphia/website/: graphia/website
-graphia/advent-of-code-2021/: peteryates/advent-of-code-2021
 graphia/shakespeare/: peteryates/shakespeare
 
 # config

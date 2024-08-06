@@ -1,6 +1,6 @@
 ---
 session_name: cpd-design-history
-start_directory: ~/projects/department-for-education/current/teacher-cpd-design-history
+start_directory: ~/projects/department-for-education/cpd/teacher-cpd-design-history
 windows:
   - window_name: editor
     layout: tiled

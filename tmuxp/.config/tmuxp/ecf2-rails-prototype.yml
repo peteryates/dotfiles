@@ -1,6 +1,6 @@
 ---
 session_name: ecf2-rails-prototype
-start_directory: ~/projects/department-for-education/current/ecf2-rails-prototype
+start_directory: ~/projects/department-for-education/cpd/ecf2-rails-prototype
 windows:
   - window_name: editor
     layout: tiled

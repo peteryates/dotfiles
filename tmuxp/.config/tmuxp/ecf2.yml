@@ -1,6 +1,6 @@
 ---
 session_name: ecf2
-start_directory: ~/projects/department-for-education/current/ecf2
+start_directory: ~/projects/department-for-education/cpd/ecf2
 windows:
   - window_name: editor
     layout: tiled
