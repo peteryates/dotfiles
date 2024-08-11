@@ -1,10 +1,17 @@
-vim.keymap.set({'n'},      '<Leader>t', ':Files<CR>',    {expr = false, noremap = true, silent = true})
-vim.keymap.set({'n'},      '<Leader>b', ':Buffer<CR>',   {expr = false, noremap = true, silent = true})
-vim.keymap.set({'n'},      '<Leader>l', ':BLines<CR>',   {expr = false, noremap = true, silent = true})
-vim.keymap.set({'n'},      '<Leader>L', ':Lines<CR>',    {expr = false, noremap = true, silent = true})
-vim.keymap.set({'n'},      '<Leader>T', ':Tags<CR>',     {expr = false, noremap = true, silent = true})
-vim.keymap.set({'n'},      '<Leader>f', ':History<CR>',  {expr = false, noremap = true, silent = true})
-vim.keymap.set({'n'},      '<Leader>C', ':Commits<CR>',  {expr = false, noremap = true, silent = true})
-vim.keymap.set({'n', 'v'}, '<Leader>c', ':BCommits<CR>', {expr = false, noremap = true, silent = true})
-vim.keymap.set({'n'},      '<Leader>h', ':0Gclog<CR>',   {expr = false, noremap = true, silent = true})
-vim.keymap.set({'n'},      '<Leader>H', ':Gedit<CR>',   {expr = false, noremap = true, silent = true})
+require("fzf-lua").setup({
+  'fzf-native',
+  file_icons = false,
+  fzf_opts =  {['--layout'] = 'default'}
+})
+
+vim.keymap.set({'n'}, '<Leader>t', ':FzfLua files<CR>', {expr = false, noremap = true, silent = true})
+vim.keymap.set({'n'}, '<Leader>T', ':FzfLua grep<CR>', {expr = false, noremap = true, silent = true})
+vim.keymap.set({'n'}, '<Leader>b', ':FzfLua buffers<CR>', {expr = false, noremap = true, silent = true})
+vim.keymap.set({'n'}, '<Leader>l', ':FzfLua blines<CR>', {expr = false, noremap = true, silent = true})
+vim.keymap.set({'n'}, '<Leader>L', ':FzfLua lines<CR>', {expr = false, noremap = true, silent = true})
+vim.keymap.set({'n'}, '<Leader>h', ':FzfLua git_bcommits<CR>', {expr = false, noremap = true, silent = true})
+vim.keymap.set({'n'}, '<Leader>H', ':FzfLua git_commits<CR>', {expr = false, noremap = true, silent = true})
+vim.keymap.set({'n'}, '<Leader>s', ':FzfLua spell_suggest<CR>', {expr = false, noremap = true, silent = true})
+vim.keymap.set({'n'}, '<Leader>r', ':FzfLua lsp_references<CR>', {expr = false, noremap = true, silent = true})
+vim.keymap.set({'n'}, '<Leader>g', ':FzfLua grep_project<CR>', {expr = false, noremap = true, silent = true})
+vim.keymap.set({'n'}, '<Leader>G', ':FzfLua grep_cWORD<CR>', {expr = false, noremap = true, silent = true})

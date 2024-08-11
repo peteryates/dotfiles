@@ -30,8 +30,7 @@ require("lazy").setup(
     'jghauser/follow-md-links.nvim',
 
     -- searching
-    'mhinz/vim-grepper',
-    'junegunn/fzf.vim',
+    'ibhagwan/fzf-lua',
 
     -- tpope section
     'tpope/vim-dispatch',
