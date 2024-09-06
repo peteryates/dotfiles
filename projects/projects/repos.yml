@@ -3,7 +3,8 @@
 department-for-education/x-govuk/govuk-formbuilder/: x-govuk/govuk-formbuilder
 department-for-education/x-govuk/govuk-components/: x-govuk/govuk-components
 department-for-education/x-govuk/govuk-wizardry/: dfe-digital/govuk-wizardry
-department-for-education/x-govuk/html-attributes-utils/: dfe-digital/html-attributes-utils
+department-for-education/x-govuk/html-attributes-utils/: x-govuk/html-attributes-utils
+department-for-education/x-govuk/govuk-accessibility-mistakes-forms/: x-govuk/govuk-accessibility-mistakes-forms
 
 # teacher CPD at DfE
 department-for-education/cpd/npq/: dfe-digital/npq-registration
