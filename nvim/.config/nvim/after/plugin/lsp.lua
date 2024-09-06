@@ -1,41 +1,10 @@
-require('mason').setup()
-
-local servers = { 'tsserver', 'lua_ls', 'yamlls', 'jsonls', 'terraformls', 'tflint' }
-
--- Enable lsp lines
-require("lsp_lines").setup()
-
--- Ensure the servers above are installed
-require('mason-lspconfig').setup {
-  ensure_installed = servers,
+require("mason").setup()
+require("mason-lspconfig").setup()
+require("mason-lspconfig").setup_handlers {
+  function (server_name) -- default handler (optional)
+    require("lspconfig")[server_name].setup {}
+  end,
 }
-
--- nvim-cmp supports additional completion capabilities
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
-
-for _, lsp in ipairs(servers) do
-  require('lspconfig')[lsp].setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-  }
-end
-
--- Extra completion for writing git commit messages
-require("cmp_git").setup()
-
--- Turn on lsp status information
-require('fidget').setup()
-
--- Ensure solargraph is configured
-
-local lspconfig = require("lspconfig")
-lspconfig.solargraph.setup({
-  solargraph = {
-    useBundler = true
-  }
-})
-lspconfig.yamlls.setup({})
 
 local cmp = require 'cmp'
 local luasnip = require 'luasnip'
@@ -84,6 +53,7 @@ cmp.setup {
   },
 }
 
+require("lsp_lines").setup()
 vim.keymap.set(
   "",
   "<Leader>d",

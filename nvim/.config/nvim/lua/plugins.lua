@@ -9,7 +9,6 @@ require("lazy").setup(
     -- editing enhancements
     'numToStr/Comment.nvim',
     'lewis6991/gitsigns.nvim',
-    'mg979/vim-visual-multi',
     'mbbill/undotree',
 
     -- formatting
@@ -54,7 +53,6 @@ require("lazy").setup(
     'neovim/nvim-lspconfig',
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
-    'j-hui/fidget.nvim',
     {
       'hrsh7th/nvim-cmp',
       dependencies = {
@@ -72,7 +70,6 @@ require("lazy").setup(
 
     -- lsp sources
     'MunifTanjim/prettier.nvim',
-    'elbywan/crystalline',
 
     -- treesitter
     {

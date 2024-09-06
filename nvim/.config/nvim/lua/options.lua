@@ -34,6 +34,6 @@ vim.opt.writebackup = false
 vim.opt.list = true
 vim.opt.listchars = {eol = '↲', extends = '→', precedes = '←', trail = '·', tab = '»··', multispace = '·'}
 
-vim.diagnostic.config({ virtual_text = false })
+vim.diagnostic.config({ virtual_text = false, virtual_lines = { only_current_line = true } })
 
 vim.opt.formatoptions = 'ntcroq2p'
