@@ -62,7 +62,7 @@ require("lazy").setup(
         'hrsh7th/cmp-emoji',
         'petertriho/cmp-git',
         'saadparwaiz1/cmp_luasnip',
-        'peteryates/friendly-snippets',
+        'rafamadriz/friendly-snippets',
         'L3MON4D3/LuaSnip',
         { url = 'https://git.sr.ht/~whynothugo/lsp_lines.nvim' },
       },
