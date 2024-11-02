@@ -24,6 +24,7 @@ vim.opt.cursorline = true
 -- search
 vim.opt.hls = true
 vim.opt.showmatch = true
+vim.opt.grepprg="ag --vimgrep"
 
 -- backup and swap
 vim.opt.backup = false
