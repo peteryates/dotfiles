@@ -1,8 +1,48 @@
-vim.g.dracula_italic = 1
-vim.opt.background = 'dark'
+local dracula = require("dracula")
+
+dracula.setup({
+  -- customize dracula color palette
+  colors = {
+    bg = "#282A36",
+    fg = "#F8F8F2",
+    selection = "#44475A",
+    comment = "#6272A4",
+    red = "#FF5555",
+    orange = "#FFB86C",
+    yellow = "#F1FA8C",
+    green = "#50fa7b",
+    purple = "#BD93F9",
+    cyan = "#8BE9FD",
+    pink = "#FF79C6",
+    bright_red = "#FF6E6E",
+    bright_green = "#69FF94",
+    bright_yellow = "#FFFFA5",
+    bright_blue = "#D6ACFF",
+    bright_magenta = "#FF92DF",
+    bright_cyan = "#A4FFFF",
+    bright_white = "#FFFFFF",
+    menu = "#21222C",
+    visual = "#3E4452",
+    gutter_fg = "#4B5263",
+    nontext = "#3B4048",
+    white = "#ABB2BF",
+    black = "#191A21",
+  },
+  show_end_of_buffer = true, -- default false
+  transparent_bg = true, -- default false
+  -- lualine_bg_color = "#282A36", -- default nil
+  -- set italic comment
+  italic_comment = true, -- default false
+  -- overrides the default highlights with table see `:h synIDattr`
+  overrides = {
+    LineNrAbove = { fg = "#6272A4" },
+    LineNr= { fg = "#6272A4" },
+    LineNrBelow = { fg = "#6272A4" },
+    Comment = { fg = "#50fa7b" },
+  },
+})
 
 vim.cmd('colorscheme dracula')
-vim.cmd('highlight WinSeparator guibg=None guifg=#44475a')
 
 vim.api.nvim_create_autocmd("TextYankPost", {
   pattern = "*",
@@ -10,25 +50,3 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     vim.highlight.on_yank({ higroup = "IncSearch", timeout = 75 })
   end,
 })
-
-vim.cmd([[
-  highlight! CursorLine guibg=#21232f
-
-  highlight! CmpItemAbbrMatch guibg=NONE guifg=#8be9fd
-  highlight! link CmpItemAbbrMatchFuzzy CmpItemAbbrMatch
-
-  highlight! CmpItemKindVariable guibg=NONE guifg=#ffb86c
-  highlight! link CmpItemKindInterface CmpItemKindVariable
-  highlight! link CmpItemKindText CmpItemKindVariable
-
-  highlight! CmpItemKindFunction guibg=NONE guifg=#ff79c6
-  highlight! link CmpItemKindMethod CmpItemKindFunction
-
-  highlight! CmpItemKindKeyword guibg=NONE guifg=#f1fa8c
-  highlight! link CmpItemKindProperty CmpItemKindKeyword
-  highlight! link CmpItemKindUnit CmpItemKindKeyword
-
-  highlight! CmpItemKindSnippet guibg=NONE guifg=#bd93f9
-  highlight! link CmpItemSnippetProperty CmpItemSnippetKeyword
-  highlight! link CmpItemSnippetUnit CmpItemSnippetKeyword
-]])

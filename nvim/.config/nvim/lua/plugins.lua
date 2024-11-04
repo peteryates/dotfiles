@@ -43,7 +43,7 @@ require("lazy").setup(
     'tpope/vim-unimpaired',
 
     -- colours/highlighting
-    'dracula/vim',
+    'Mofiqul/dracula.nvim',
     { 'rrethy/vim-hexokinase', build = 'make hexokinase' },
 
     -- language specific
