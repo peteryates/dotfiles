@@ -38,7 +38,8 @@ dracula.setup({
     LineNrAbove = { fg = "#6272A4" },
     LineNr= { fg = "#6272A4" },
     LineNrBelow = { fg = "#6272A4" },
-    Comment = { fg = "#50fa7b" },
+
+    mkdBlockquote = { fg = "#F1FA8C" },
   },
 })
 
