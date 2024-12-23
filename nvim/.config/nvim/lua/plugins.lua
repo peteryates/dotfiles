@@ -27,6 +27,8 @@ require("lazy").setup(
     },
     'lervag/lists.vim',
     'jghauser/follow-md-links.nvim',
+    'stevearc/oil.nvim',
+
 
     -- searching
     'ibhagwan/fzf-lua',
@@ -37,7 +39,6 @@ require("lazy").setup(
     'tpope/vim-fugitive',
     'tpope/vim-rails',
     'tpope/vim-surround',
-    'tpope/vim-vinegar',
     'tpope/vim-rhubarb',
     'tpope/vim-characterize',
     'tpope/vim-unimpaired',
