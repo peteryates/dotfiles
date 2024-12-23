@@ -60,6 +60,7 @@ ls.add_snippets(
         s("pablo",   t("Co-authored-by: Pablo Manrubia <pmanrubia@gmail.com>")),
         s("leo",     t("Co-authored-by: Leonidas Apostolidis <leoapost@users.noreply.github.com>")),
         s("claire",  t("Co-authored-by: claire-hughez <93539621+claire-hughez@users.noreply.github.com>")),
+        s("rose",    t("Co-authored-by: Rose Asaf <rose.asaf@education.gov.uk>")),
     }
 )
 
