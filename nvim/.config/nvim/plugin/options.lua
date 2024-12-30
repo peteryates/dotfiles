@@ -3,6 +3,7 @@ vim.opt.hidden = true
 vim.opt.laststatus = 3
 vim.opt.matchtime = 2
 vim.opt.number = true
+vim.opt.numberwidth = 3
 vim.opt.relativenumber = true
 vim.opt.shiftround = true
 vim.opt.shiftwidth = 2
@@ -34,7 +35,5 @@ vim.opt.writebackup = false
 -- list chars
 vim.opt.list = true
 vim.opt.listchars = {eol = '↲', extends = '→', precedes = '←', trail = '·', tab = '»··', multispace = '·'}
-
-vim.diagnostic.config({ virtual_text = false, virtual_lines = { only_current_line = true } })
 
 vim.opt.formatoptions = 'ntcroq2p'
