@@ -13,10 +13,10 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
+require('wiki')
+
 require("lazy").setup({ import = "custom/plugins" }, {
   change_detection = {
     notify = false,
   },
 })
-
-require('wiki')
