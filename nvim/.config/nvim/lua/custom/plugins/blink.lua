@@ -14,6 +14,7 @@ return {
     dependencies = {
       { 'l3mon4d3/luasnip', version = 'v2.*' },
       { 'rafamadriz/friendly-snippets' },
+      { 'moyiz/blink-emoji.nvim' },
     },
     opts = {
       snippets = {
@@ -27,11 +28,21 @@ return {
         jump = function(direction) require('luasnip').jump(direction) end,
       },
       sources = {
-        default = { 'luasnip', 'lsp', 'path', 'buffer' },
+        default = { 'luasnip', 'emoji', 'lsp', 'path', 'buffer' },
         providers = {
+          luasnip = {
+             score_offset = 1000
+
+          },
           lsp = {
-             score_offset = -5
-          }
+             score_offset = 800
+          },
+          emoji = {
+            module = 'blink-emoji',
+            name = 'Emoji',
+            score_offset = 600,
+            opts = { insert = true },
+          },
         }
       },
       signature = { enabled = true },
