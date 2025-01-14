@@ -11,15 +11,38 @@
 
 return {
   "nvim-treesitter/nvim-treesitter",
+  dependencies = {
+    'Wansmer/treesj',
+    'nvim-treesitter/nvim-treesitter-context',
+  },
   build = ":TSUpdate",
   config = function () 
     local configs = require("nvim-treesitter.configs")
 
     configs.setup({
-      ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "elixir", "heex", "javascript", "html" },
+      ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "elixir", "heex", "javascript", "html", "markdown", "markdown_inline" },
       sync_install = false,
       highlight = { enable = true },
       indent = { enable = false },
     })
+
+    local tsj = require('treesj')
+    tsj.setup({
+      use_default_keymaps = true,
+      check_syntax_error = true,
+      max_join_length = 200,
+      cursor_behavior = 'hold',
+      notify = true,
+      langs = {},
+      dot_repeat = true,
+    })
+
+    vim.keymap.set('n', 'gS', require('treesj').split)
+    vim.keymap.set('n', 'gJ', require('treesj').join)
+
+    local colors = require('dracula').colors()
+
+    vim.api.nvim_set_hl(0, 'TreesitterContextBottom', { bg = colors['selection'] })
+    vim.api.nvim_set_hl(0, 'TreesitterContextLineNumberBottom', { bg = colors['selection'] })
   end
 }

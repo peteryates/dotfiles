@@ -43,6 +43,11 @@ return {
             score_offset = 600,
             opts = { insert = true },
           },
+          markdown = {
+            name = 'RenderMarkdown',
+            module = 'render-markdown.integ.blink',
+            fallbacks = { 'lsp' }
+          }
         }
       },
       signature = { enabled = true },
