@@ -17,22 +17,12 @@ return {
       { 'moyiz/blink-emoji.nvim' },
     },
     opts = {
-      snippets = {
-        expand = function(snippet) require('luasnip').lsp_expand(snippet) end,
-        active = function(filter)
-          if filter and filter.direction then
-            return require('luasnip').jumpable(filter.direction)
-          end
-          return require('luasnip').in_snippet()
-        end,
-        jump = function(direction) require('luasnip').jump(direction) end,
-      },
+      snippets = { preset = 'luasnip' },
       sources = {
-        default = { 'luasnip', 'emoji', 'lsp', 'path', 'buffer' },
+        default = { 'snippets', 'emoji', 'lsp', 'path', 'buffer' },
         providers = {
-          luasnip = {
-             score_offset = 1000
-
+          snippets = {
+            score_offset = 1000
           },
           lsp = {
              score_offset = 800
