@@ -1,6 +1,6 @@
 ---
 session_name: components
-start_directory: ~/projects/department-for-education/x-govuk/govuk-components/
+start_directory: ~/projects/x-govuk/govuk-components/
 windows:
   - window_name: editor
     layout: tiled

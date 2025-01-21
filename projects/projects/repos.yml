@@ -1,46 +1,44 @@
 ---
 # x-govuk
-department-for-education/x-govuk/govuk-formbuilder/: x-govuk/govuk-formbuilder
-department-for-education/x-govuk/govuk-components/: x-govuk/govuk-components
-department-for-education/x-govuk/govuk-wizardry/: dfe-digital/govuk-wizardry
-department-for-education/x-govuk/html-attributes-utils/: x-govuk/html-attributes-utils
-department-for-education/x-govuk/govuk-accessibility-mistakes-forms/: x-govuk/govuk-accessibility-mistakes-forms
+x-govuk/govuk-formbuilder/: x-govuk/govuk-formbuilder
+x-govuk/govuk-components/: x-govuk/govuk-components
+x-govuk/html-attributes-utils/: x-govuk/html-attributes-utils
+x-govuk/govuk-accessibility-mistakes-forms/: x-govuk/govuk-accessibility-mistakes-forms
 
 # teacher CPD at DfE
-department-for-education/cpd/npq/: dfe-digital/npq-registration
-department-for-education/cpd/npq-prototype/: dfe-digital/npq-prototype
-department-for-education/cpd/ecf/: dfe-digital/early-careers-framework
-department-for-education/cpd/ecf2/: dfe-digital/ecf2
+department-for-education/cpd/npq/: DFE-Digital/npq-registration
+department-for-education/cpd/npq-prototype/: DFE-Digital/npq-prototype
+department-for-education/cpd/ecf/: DFE-Digital/early-careers-framework
+department-for-education/cpd/ecf2/: DFE-Digital/register-early-career-teachers-public
+department-for-education/cpd/ecf2-board/: DFE-Digital/register-ects-project-board
 department-for-education/cpd/support-for-early-career-teachers/: DFE-Digital/support-for-early-career-teachers
 department-for-education/cpd/teacher-cpd-design-history/: DFE-Digital/teacher-cpd-design-history
 department-for-education/cpd/teaching-school-hub-finder/: DFE-Digital/teaching-school-hub-finder
 
 # projects i'm not directly involved in but reference
-department-for-education/reference/apply-for-teacher-training/: dfe-digital/apply-for-teacher-training
-department-for-education/reference/apply-for-qualified-teacher-status/: dfe-digital/apply-for-qualified-teacher-status
-department-for-education/reference/itt-mentor-services/: dfe-digital/itt-mentor-services
+department-for-education/reference/apply-for-teacher-training/: DFE-Digital/apply-for-teacher-training
+department-for-education/reference/apply-for-qualified-teacher-status/: DFE-Digital/apply-for-qualified-teacher-status
+department-for-education/reference/itt-mentor-services/: DFE-Digital/itt-mentor-services
 department-for-education/reference/teaching-record-system/: DFE-Digital/teaching-record-system/
 
 # get into teaching
-department-for-education/get-into-teaching/get-into-teaching-app/: dfe-digital/get-into-teaching-app
-department-for-education/get-into-teaching/get-into-teaching-api/: dfe-digital/get-into-teaching-api
-department-for-education/get-into-teaching/get-into-teaching-crm-exports/: dfe-digital/get-into-teaching-crm-exports
-department-for-education/get-into-teaching/get-teacher-training-adviser-service/: dfe-digital/get-teacher-training-adviser-service
-department-for-education/get-into-teaching/school-experience/: dfe-digital/schools-experience
+department-for-education/get-into-teaching/get-into-teaching-app/: DFE-Digital/get-into-teaching-app
+department-for-education/get-into-teaching/get-into-teaching-api/: DFE-Digital/get-into-teaching-api
+department-for-education/get-into-teaching/get-into-teaching-crm-exports/: DFE-Digital/get-into-teaching-crm-exports
+department-for-education/get-into-teaching/get-teacher-training-adviser-service/: DFE-Digital/get-teacher-training-adviser-service
+department-for-education/get-into-teaching/school-experience/: DFE-Digital/schools-experience
 
 # documentation
-department-for-education/reference/technical-guidance/: dfe-digital/technical-guidance
-department-for-education/reference/architecture/: dfe-digital/architecture
+department-for-education/reference/technical-guidance/: DFE-Digital/technical-guidance
+department-for-education/reference/architecture/: DFE-Digital/architecture
 
 # small projects i've built in the past
-department-for-education/side-projects/gias-query-tool/: dfe-digital/gias-query-tool
-department-for-education/side-projects/gias-data/: dfe-digital/gias-data
-department-for-education/side-projects/govspeak-prototype-kit/: dfe-digital/govspeak-prototype-kit
-department-for-education/side-projects/rails-template/: dfe-digital/rails-template
+department-for-education/side-projects/gias-query-tool/: DFE-Digital/gias-query-tool
+department-for-education/side-projects/gias-data/: DFE-Digital/gias-data
+department-for-education/side-projects/govspeak-prototype-kit/: DFE-Digital/govspeak-prototype-kit
+department-for-education/side-projects/rails-template/: DFE-Digital/rails-template
+department-for-education/side-projects/govuk-wizardry/: DFE-Digital/govuk-wizardry
 
 # graphia/personal stuff
 graphia/website/: graphia/website
 graphia/shakespeare/: peteryates/shakespeare
-
-# config
-graphia/config/friendly-snippets: peteryates/friendly-snippets
