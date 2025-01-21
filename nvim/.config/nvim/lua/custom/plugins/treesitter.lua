@@ -20,10 +20,10 @@ return {
     local configs = require("nvim-treesitter.configs")
 
     configs.setup({
-      ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "elixir", "heex", "javascript", "html", "markdown", "markdown_inline" },
+      ensure_installed = { "lua", "vim", "vimdoc", "ruby", "javascript", "html", "markdown", "markdown_inline" },
       sync_install = false,
       highlight = { enable = true },
-      indent = { enable = false },
+      indent = { enable = true, disable = { "ruby" } },
     })
 
     local tsj = require('treesj')
