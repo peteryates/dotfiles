@@ -22,8 +22,14 @@ return {
     configs.setup({
       ensure_installed = { "lua", "vim", "vimdoc", "ruby", "javascript", "html", "markdown", "markdown_inline" },
       sync_install = false,
-      highlight = { enable = true },
-      indent = { enable = true, disable = { "ruby" } },
+      highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = { 'ruby' },
+      },
+      indent = {
+        enable = true,
+        disable = 'ruby',
+      },
     })
 
     local tsj = require('treesj')
