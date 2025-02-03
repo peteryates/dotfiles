@@ -21,6 +21,7 @@ vim.opt.mouse = ''
 vim.opt.conceallevel = 3
 vim.opt.foldlevel = 5
 vim.opt.cursorline = true
+vim.opt.smartindent = true
 
 -- search
 vim.opt.hls = true
