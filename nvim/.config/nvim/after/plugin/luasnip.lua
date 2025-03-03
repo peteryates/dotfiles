@@ -81,3 +81,9 @@ ls.add_snippets(
     ),
   }
 )
+
+vim.keymap.set({ 'i', 's' }, '<C-s>', function()
+  if ls.expand_or_jumpable() then
+    ls.expand_or_jump()
+  end
+end, { silent = true })
