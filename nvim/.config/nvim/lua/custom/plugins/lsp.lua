@@ -32,5 +32,6 @@ return {
     lspconfig.ts_ls.setup({})
     lspconfig.cssls.setup({})
     lspconfig.rubocop.setup({})
+    lspconfig.ruby_lsp.setup({})
   end
 }
