@@ -87,3 +87,6 @@ vim.keymap.set({ 'i', 's' }, '<C-s>', function()
     ls.expand_or_jump()
   end
 end, { silent = true })
+
+vim.keymap.set({"i", "s"}, "<C-n>", function() ls.jump( 1) end, {silent = true})
+vim.keymap.set({"i", "s"}, "<C-p>", function() ls.jump(-1) end, {silent = true})
