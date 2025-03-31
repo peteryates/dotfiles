@@ -24,8 +24,9 @@
 	rebase = true
 
 [diff]
-	algorigthm = histogram
-	colorMoved = default
+	algorigthm   = histogram
+	colorMoved   = default
+	colorMovedWS = allow-indentation-change
 
 [difftool]
 	prompt = false
