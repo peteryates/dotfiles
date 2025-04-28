@@ -1,0 +1,3 @@
+#!/usr/bin/env fish
+
+rsync --progress --stats --ignore-existing ~/pictures/Screenshots/*.png truenas:Screenshots/
