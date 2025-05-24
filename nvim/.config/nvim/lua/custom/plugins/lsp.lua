@@ -30,10 +30,18 @@ return {
     })
     lspconfig.terraformls.setup({})
     lspconfig.ts_ls.setup({})
+    lspconfig.tflint.setup({})
     lspconfig.cssls.setup({})
     lspconfig.rubocop.setup({})
     lspconfig.ruby_lsp.setup({
-      cmd = { 'rbenv', 'exec', 'ruby-lsp' }
+      cmd = { 'rbenv', 'exec', 'ruby-lsp' },
+      init_options = {
+        addonSettings = {
+          ["Ruby LSP Rails"] = {
+            enablePendingMigrationsPrompt = false
+          }
+        }
+      }
     })
   end
 }
