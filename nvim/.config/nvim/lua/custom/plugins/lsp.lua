@@ -32,7 +32,10 @@ return {
     lspconfig.ts_ls.setup({})
     lspconfig.tflint.setup({})
     lspconfig.cssls.setup({})
-    lspconfig.rubocop.setup({})
+    lspconfig.rubocop.setup({
+      command = "bundle",
+      args = { "exec", "rubocop", "--lsp" }
+    })
     lspconfig.ruby_lsp.setup({
       cmd = { 'rbenv', 'exec', 'ruby-lsp' },
       init_options = {
