@@ -9,7 +9,7 @@ down:
 refresh:
 	stow --restow ${dirs}
 
-bootstrap: gh-cli ht-rust
+bootstrap:
 	mkdir -p ~/projects &&                         \
 	mkdir -p ~/bin &&                              \
 	sudo dnf -y install                            \
@@ -17,7 +17,6 @@ bootstrap: gh-cli ht-rust
 	btop                                           \
 	direnv                                         \
 	entr                                           \
-	eza                                            \
 	fd-find                                        \
 	fish                                           \
 	fzf                                            \
@@ -38,7 +37,6 @@ bootstrap: gh-cli ht-rust
 	postgresql-server                              \
 	moreutils-parallel                             \
 	redis                                          \
-	sd                                             \
 	stow                                           \
 	the_silver_searcher                            \
 	tig                                            \
@@ -49,7 +47,7 @@ bootstrap: gh-cli ht-rust
 	zlib-devel                                     \
 
 gh-cli:
-	sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
+	sudo dnf config-manager addrepo --from-repofile=https://cli.github.com/packages/rpm/gh-cli.repo
 
 ht-rust:
 	sudo dnf copr enable -y gourlaysama/ht-rust
