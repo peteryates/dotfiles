@@ -22,6 +22,8 @@ local fmt = require("luasnip.extras.fmt").fmt
 -- local types = require("luasnip.util.types")
 -- local conds = require("luasnip.extras.expand_conditions")
 
+ls.filetype_extend("ruby", { "rails" })
+
 ls.add_snippets(
   "ruby",
   {

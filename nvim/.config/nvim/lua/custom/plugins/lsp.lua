@@ -36,15 +36,15 @@ return {
       command = "bundle",
       args = { "exec", "rubocop", "--lsp" }
     })
-    lspconfig.ruby_lsp.setup({
-      cmd = { 'rbenv', 'exec', 'ruby-lsp' },
-      init_options = {
-        addonSettings = {
-          ["Ruby LSP Rails"] = {
-            enablePendingMigrationsPrompt = false
-          }
-        }
-      }
-    })
+    -- lspconfig.ruby_lsp.setup({
+    --   cmd = { 'rbenv', 'exec', 'ruby-lsp' },
+    --   init_options = {
+    --     addonSettings = {
+    --       ["Ruby LSP Rails"] = {
+    --         enablePendingMigrationsPrompt = false
+    --       }
+    --     }
+    --   }
+    -- })
   end
 }
