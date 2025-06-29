@@ -32,6 +32,7 @@ return {
     lspconfig.ts_ls.setup({})
     lspconfig.tflint.setup({})
     lspconfig.cssls.setup({})
+    lspconfig.lua_ls.setup({})
     lspconfig.rubocop.setup({
       command = "bundle",
       args = { "exec", "rubocop", "--lsp" }
