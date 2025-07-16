@@ -19,9 +19,9 @@ vim.opt.wrap = false
 vim.opt.virtualedit = 'none'
 vim.opt.mouse = ''
 vim.opt.conceallevel = 3
-vim.opt.foldlevel = 5
 vim.opt.cursorline = true
 vim.opt.smartindent = true
+vim.opt.winborder = 'rounded'
 
 -- search
 vim.opt.hls = true
@@ -38,3 +38,9 @@ vim.opt.list = true
 vim.opt.listchars = {eol = '↲', extends = '→', precedes = '←', trail = '·', tab = '»··', multispace = '·'}
 
 vim.opt.formatoptions = 'ntcroq2p'
+
+-- folding
+vim.opt.foldlevel = 8
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldtext = ""
