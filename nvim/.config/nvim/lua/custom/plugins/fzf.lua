@@ -48,8 +48,8 @@ return {
         { silent = true, desc = "Fuzzy find diagnostics in buffer" })
 
       vim.keymap.set({ "n", "v", "i" }, "<Leader>D",
-        function() require("fzf-lua").diagnostics_document() end,
-        { silent = true, desc = "Fuzzy find diagnostics in project" })
+        function() require("fzf-lua").diagnostics_workspace() end,
+        { silent = true, desc = "Fuzzy find workspace in project" })
 
       vim.keymap.set({ "n", "v", "i" }, "<C-x><C-f>",
         function() require("fzf-lua").complete_path() end,

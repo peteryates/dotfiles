@@ -26,6 +26,7 @@ return {
         rename = true,
         symbols = true,
         autoformat = true,
+        diagnostic = false,
       }
     })
     lspconfig.terraformls.setup({})
@@ -33,20 +34,20 @@ return {
     lspconfig.tflint.setup({})
     lspconfig.cssls.setup({})
     lspconfig.lua_ls.setup({})
-    lspconfig.rubocop.setup({
-      command = "bundle",
-      args = { "exec", "rubocop", "--lsp" }
-    })
-    lspconfig.ruby_lsp.setup({
-      cmd = { 'rbenv', 'exec', 'ruby-lsp' },
-      init_options = {
-        addonSettings = {
-          ["Ruby LSP Rails"] = {
-            enablePendingMigrationsPrompt = false
-          }
-        }
-      }
-    })
+    -- lspconfig.rubocop.setup({
+    --   command = "bundle",
+    --   args = { "exec", "rubocop", "--lsp" }
+    -- })
+    -- lspconfig.ruby_lsp.setup({
+    --   cmd = { 'rbenv', 'exec', 'ruby-lsp' },
+    --   init_options = {
+    --     addonSettings = {
+    --       ["Ruby LSP Rails"] = {
+    --         enablePendingMigrationsPrompt = false
+    --       }
+    --     }
+    --   }
+    -- })
     lspconfig.yamlls.setup({
       settings = {
         yaml = {
