@@ -19,7 +19,7 @@ vim.opt.wrap = false
 vim.opt.virtualedit = 'none'
 vim.opt.mouse = ''
 vim.opt.conceallevel = 3
-vim.opt.cursorline = true
+vim.opt.cursorline = false
 vim.opt.smartindent = true
 vim.opt.winborder = 'rounded'
 
