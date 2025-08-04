@@ -17,6 +17,7 @@ alias open='xdg-open'
 alias icat="kitty +kitten icat"
 
 # directories i frequent
-alias fb='cd ~/projects/department-for-education/current/govuk-formbuilder'
-alias ecf='cd ~/projects/department-for-education/current/ecf'
-alias npq='cd ~/projects/department-for-education/current/npq'
+alias fb='cd ~/projects/x-govuk/govuk-formbuilder'
+alias ecf='cd ~/projects/department-for-education/cpd/ecf'
+alias ecf2='cd ~/projects/department-for-education/cpd/ecf2'
+alias npq='cd ~/projects/department-for-education/cpd/npq'
