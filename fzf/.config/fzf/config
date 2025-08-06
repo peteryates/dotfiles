@@ -1,0 +1,11 @@
+--color=fg:#d0d0d0,fg+:#f0f0f0,bg:#121212,bg+:#1f1f1f
+--color=hl:#f1fa8c,hl+:#5fd7ff,info:#f1fa8c,marker:#ff81c6
+--color=prompt:#ff81c6,spinner:#bd93f9,pointer:#f1fa8c,header:#8be9fd
+--color=border:#262626,label:#aeaeae,query:#d9d9d9
+--border="rounded" --border-label=""
+--preview-window="border-rounded"
+--prompt="> "
+--marker=">"
+--pointer="◆"
+--separator="─"
+--scrollbar="│"
