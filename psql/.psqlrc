@@ -4,6 +4,7 @@
 \pset null '(null)'
 \pset linestyle unicode
 \pset pager off
+\pset format wrapped
 \pset border 2
 \pset x auto
 \pset tuples_only off
