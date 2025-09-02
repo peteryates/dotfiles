@@ -35,6 +35,10 @@ return {
         function() require("fzf-lua").git_commits() end,
         { silent = true, desc = "Fuzzy find project git commits" })
 
+      vim.keymap.set({ "n", "v", "i" }, "<Leader>S",
+        function() require("fzf-lua").git_status() end,
+        { silent = true, desc = "Fuzzy find git status" })
+
       vim.keymap.set({ "n", "v", "i" }, "<Leader>s",
         function() require("fzf-lua").spell_suggest() end,
         { silent = true, desc = "Suggest spellings" })
