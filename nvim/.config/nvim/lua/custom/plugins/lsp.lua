@@ -30,14 +30,35 @@ return {
       }
     })
     lspconfig.terraformls.setup({})
-    lspconfig.ts_ls.setup({})
+    lspconfig.ts_ls.setup({
+      compilerOptions = {
+        module = "commonjs",
+        target = "es6",
+        checkJs = false
+      },
+      exclude = {
+        "node_modules"
+      }
+    })
     lspconfig.tflint.setup({})
-    lspconfig.cssls.setup({})
+    lspconfig.cssls.setup({
+      settings = {
+        css = {
+          validate = true
+        },
+        less = {
+          validate = true
+        },
+        scss = {
+          validate = true
+        }
+      }
+    })
     lspconfig.lua_ls.setup({})
-    -- lspconfig.rubocop.setup({
-    --   command = "bundle",
-    --   args = { "exec", "rubocop", "--lsp" }
-    -- })
+    lspconfig.rubocop.setup({
+      command = "bundle",
+      args = { "exec", "rubocop", "--lsp" }
+    })
     -- lspconfig.ruby_lsp.setup({
     --   cmd = { 'rbenv', 'exec', 'ruby-lsp' },
     --   init_options = {
