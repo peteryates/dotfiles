@@ -43,6 +43,8 @@ return {
         LineNrBelow = { fg = "#6272A4" },
 
         mkdBlockquote = { fg = "#F1FA8C" },
+
+        WinSeparator = { fg = "#FFB86C" }
       },
     })
 
