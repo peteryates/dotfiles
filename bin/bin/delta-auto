@@ -1,5 +1,3 @@
 #!/usr/bin/env bash
 
-echo "cols: ${COLUMNS}"
-
 [ "${COLUMNS}" -ge 220 ] && delta --side-by-side || delta
