@@ -9,9 +9,12 @@
 
 [core]
 	editor = vim
-  pager = diff-highlight | less
+	pager = delta-auto
 	excludesfile = /home/peter/.gitignore_global
 	UseHttpPath = true
+
+[delta]
+	syntax-theme = Dracula
 
 [merge]
 	ff = false
