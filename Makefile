@@ -22,6 +22,7 @@ bootstrap:
 	fzf                                            \
 	gcc-c++                                        \
 	git                                            \
+	git-delta                                      \
 	gh                                             \
 	golang                                         \
 	jetbrains-mono-fonts-all                       \
