@@ -8,7 +8,7 @@ local s = ls.snippet
 local t = ls.text_node
 local i = ls.insert_node
 -- local f = ls.function_node
--- local c = ls.choice_node
+local c = ls.choice_node
 -- local d = ls.dynamic_node
 -- local r = ls.restore_node
 -- local l = require("luasnip.extras").lambda
@@ -24,28 +24,55 @@ local fmt = require("luasnip.extras.fmt").fmt
 
 ls.filetype_extend("ruby", { "rails" })
 
+vim.keymap.set({"i", "s"}, "<C-L>", function() ls.jump( 1) end, {silent = true})
+vim.keymap.set({"i", "s"}, "<C-J>", function() ls.jump(-1) end, {silent = true})
+
+vim.keymap.set({"i", "s"}, "<C-E>", function()
+	if ls.choice_active() then
+		ls.change_choice(1)
+	end
+end, {silent = true})
+
 ls.add_snippets(
   "ruby",
   {
-    s(
-      "spec",
-      fmt(
-        [[
-          specify "{}" do
-            {}
-          end
-        ]], { i(1, "spec name"), i(0) })
-    ),
-    s(
-      "scen",
-      fmt(
-        [[
-          scenario "{}" do
-            {}
-          end
-        ]], { i(1, "scenario name"), i(0) })
-    ),
+    s({ trig = "it", dscr = "RSpec 'it' snippet" }, {
+      c(1, {
+        fmt(
+          [[
+            it '{}' do
+              {}
+            end
+          ]], { i(1, 'scenario name'), i(2, 'test case') }
+        ),
+        fmt(
+          [[
+            it {{ {} }}
+          ]], { i(1, 'test case') }
+        ),
+        fmt(
+          [[
+            scenario '{}' do
+              {}
+            end
+          ]], { i(1, 'scenario name'), i(2, 'test case') }
+        ),
+      }),
+    }),
     s("ri", fmt("render_inline({})", { i(1, "component") })),
+    -- Snippet for FactoryBot.create and FactoryBot.build
+    s("fb", {
+        t("FactoryBot."),
+        c(1, {
+          t("create"),
+          t("build"),
+        }),
+        t("("),
+        i(2, "user"),
+        t(", "),
+        i(3, "attributes"),
+        t(")"),
+    }),
   }
 )
 
