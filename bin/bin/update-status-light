@@ -2,16 +2,28 @@
 
 cd ~/projects/department-for-education/cpd/ecf2/
 
-set build_status
+set response (gh run list --branch main --workflow Deploy --limit 1 --json conclusion,status)
 
-set build_status (gh run list --branch main --workflow Deploy --limit 1 --json status | jq '.[0].status' | string replace -a '"' '')
+# {cancelled|failure|neutral|skipped|stale|success}
+set build_conclusion (echo $response | jq -r '.[0].conclusion' | string replace -a '"' '')
 
 # {queued|completed|in_progress|requested|waiting|pending|action_required|cancelled|failure|neutral|skipped|stale|startup_failure|success|timed_out}
+set build_status (echo $response | jq -r '.[0].status' | string replace -a '"' '')
+
 switch $build_status
+  case in_progress queued
+    set colour 'orange'
+  case failure action_required
+    set colour 'red'
   case completed
-    busylight --dim 50 on green
-  case in_progress
-    busylight --dim 50 on orange
-  case failure
-    busylight --dim 50 on red
+    switch $build_conclusion
+      case cancelled neutral skipped stale
+        set colour 'white'
+      case completed
+        set colour 'green'
+      case failure
+        set colour 'red'
+    end
 end
+
+busylight --dim 20 on $colour
