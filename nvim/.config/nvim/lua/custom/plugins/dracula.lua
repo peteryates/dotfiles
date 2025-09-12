@@ -4,7 +4,6 @@ return {
     local dracula = require("dracula")
 
     dracula.setup({
-      -- customize dracula color palette
       colors = {
         bg = "#282A36",
         fg = "#F8F8F2",
@@ -33,19 +32,12 @@ return {
       },
       show_end_of_buffer = true, -- default false
       transparent_bg = true, -- default false
-      -- lualine_bg_color = "#282A36", -- default nil
-      -- set italic comment
       italic_comment = true, -- default false
-      -- overrides the default highlights with table see `:h synIDattr`
       overrides = {
-        LineNrAbove = { fg = "#6272A4" },
-        LineNr= { fg = "#6272A4" },
-        LineNrBelow = { fg = "#6272A4" },
-
-        mkdBlockquote = { fg = "#F1FA8C" },
-
-        WinSeparator = { fg = "#FFB86C" }
+        WinSeparator = { fg = "#FFB86C" },
+        IncSearch = { fg = "#282A36", bg = "#FFFFA5" }
       },
+      completions = { lsp = { enabled = true } },
     })
 
     vim.cmd('colorscheme dracula')
@@ -58,4 +50,3 @@ return {
     })
   end
 }
-
