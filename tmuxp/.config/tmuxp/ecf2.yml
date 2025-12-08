@@ -26,3 +26,8 @@ windows:
     layout: tiled
     panes:
       -
+
+  - window_name: gemini
+    layout: tiled
+    panes:
+      - gemini

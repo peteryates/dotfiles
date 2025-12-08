@@ -9,16 +9,17 @@
 
 [core]
 	editor = vim
-	pager = delta-auto
+	pager = diff-highlight | less
 	excludesfile = /home/peter/.gitignore_global
 	UseHttpPath = true
-
-[delta]
-	syntax-theme = Dracula
 
 [merge]
 	ff = false
 	conflictStyle = zdiff3
+
+[merge "mergiraf"]
+	name = mergiraf
+	driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L
 
 [fetch]
 	prune = true

@@ -40,7 +40,7 @@ ls.add_snippets(
       c(1, {
         fmt(
           [[
-            it '{}' do
+            it "{}" do
               {}
             end
           ]], { i(1, 'scenario name'), i(2, 'test case') }
@@ -52,7 +52,7 @@ ls.add_snippets(
         ),
         fmt(
           [[
-            scenario '{}' do
+            scenario "{}" do
               {}
             end
           ]], { i(1, 'scenario name'), i(2, 'test case') }
@@ -99,5 +99,6 @@ vim.keymap.set({ 'i', 's' }, '<M-f>', function()
   end
 end, { silent = true })
 
-vim.keymap.set({"i", "s"}, "<M-n>", function() ls.jump( 1) end, {silent = true})
+vim.keymap.set({"i", "s"}, "<M-c>", function() ls.change_choice(1) end, {silent = true})
+vim.keymap.set({"i", "s"}, "<M-n>", function() ls.jump(1) end, {silent = true})
 vim.keymap.set({"i", "s"}, "<M-p>", function() ls.jump(-1) end, {silent = true})

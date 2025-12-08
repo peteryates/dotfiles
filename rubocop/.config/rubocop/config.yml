@@ -1,3 +1,6 @@
+AllCops:
+  TargetRubyVersion: 3.4
+
 Style/Documentation:
   Enabled: false
 Style/FrozenStringLiteralComment:
@@ -15,6 +18,8 @@ Style/StringConcatenation:
 Style/NumericPredicate:
   Enabled: false
 Style/EmptyMethod:
+  Enabled: false
+Style/EmptyCaseCondition:
   Enabled: false
 
 Layout/AccessModifierIndentation:

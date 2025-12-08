@@ -14,10 +14,9 @@ return {
   },
   config = function()
     require("mason").setup({})
-    local lspconfig = require("lspconfig")
 
-    lspconfig.lua_ls.setup({})
-    lspconfig.solargraph.setup({
+    vim.lsp.config('lua_ls', {})
+    vim.lsp.config('solargraph', {
       filetypes = { "ruby" },
       formatting = true,
       command = { 'rbenv', 'exec', 'solargraph', 'stdio' },
@@ -26,22 +25,20 @@ return {
         rename = true,
         symbols = true,
         autoformat = true,
-        diagnostic = false,
+        diagnostic = true,
       }
     })
-    lspconfig.terraformls.setup({})
-    lspconfig.ts_ls.setup({
-      compilerOptions = {
+    vim.lsp.config('terraformls', {})
+    vim.lsp.config('ts_ls', {
         module = "commonjs",
         target = "es6",
-        checkJs = false
-      },
-      exclude = {
-        "node_modules"
-      }
+        checkJs = false,
+        exclude = {
+          "node_modules"
+        }
     })
-    lspconfig.tflint.setup({})
-    lspconfig.cssls.setup({
+    vim.lsp.config('tflint', {})
+    vim.lsp.config('cssls', {
       settings = {
         css = {
           validate = true
@@ -54,12 +51,12 @@ return {
         }
       }
     })
-    lspconfig.lua_ls.setup({})
-    lspconfig.rubocop.setup({
-      command = "bundle",
-      args = { "exec", "rubocop", "--lsp" }
-    })
-    -- lspconfig.ruby_lsp.setup({
+    vim.lsp.config('herb_ls', {})
+    -- vim.lsp.config('rubocop', {
+    --   command = "bundle",
+    --   args = { "exec", "rubocop", "--lsp" }
+    -- })
+    -- vim.lsp.config('ruby_lsp', {
     --   cmd = { 'rbenv', 'exec', 'ruby-lsp' },
     --   init_options = {
     --     addonSettings = {
@@ -69,7 +66,7 @@ return {
     --     }
     --   }
     -- })
-    lspconfig.yamlls.setup({
+    vim.lsp.config('yamlls', {
       settings = {
         yaml = {
           schemas = {
@@ -79,6 +76,17 @@ return {
           }
         }
       }
+    })
+
+    vim.lsp.enable({
+      'solargraph',
+      'lua_ls',
+      'tflint',
+      'cssls',
+      'terraformls',
+      'ruby_lsp',
+      'yamlls',
+      'herb_ls'
     })
   end
 }
