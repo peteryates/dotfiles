@@ -1,6 +1,6 @@
 ---
 # x-govuk
-x-govuk/govuk-formbuilder/: x-govuk/govuk-formbuilder
+x-govuk/govuk-formbuilder/: x-govuk/govuk-form-builder
 x-govuk/govuk-components/: x-govuk/govuk-components
 x-govuk/html-attributes-utils/: x-govuk/html-attributes-utils
 x-govuk/govuk-accessibility-mistakes-forms/: x-govuk/govuk-accessibility-mistakes-forms
