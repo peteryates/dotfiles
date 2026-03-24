@@ -20,7 +20,7 @@ vim.opt.virtualedit = 'none'
 vim.opt.mouse = ''
 vim.opt.conceallevel = 3
 vim.opt.cursorline = false
-vim.opt.smartindent = true
+-- vim.opt.smartindent = true
 vim.opt.winborder = 'rounded'
 
 -- search
