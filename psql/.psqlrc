@@ -2,12 +2,12 @@
 \set comp_keyword_case lower
 \set show_slow_queries
 \pset null '(null)'
-\pset linestyle unicode
-\pset pager off
-\pset format wrapped
+\pset linestyle ascii
+\pset pager on
+\pset format aligned
 \pset border 2
-\pset x auto
 \pset tuples_only off
 \pset footer
 \set QUIET 0
-\setenv PAGER 'less -F'
+\setenv PAGER 'ov -F --view-mode psql --config ~/.config/ov/ov.yaml'
+\x auto

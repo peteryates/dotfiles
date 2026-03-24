@@ -1,0 +1,12 @@
+Mode:
+  psql:
+    Header: 2
+    AlternateRows: true
+    ColumnMode: true
+    LineNumMode: false
+    Wrap: "character"
+    ColumnDelimiter: "│"
+    ColumnRainbow: false
+    Style:
+      Alternate:
+        Background: "#44475a"
