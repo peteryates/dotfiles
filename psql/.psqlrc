@@ -2,7 +2,7 @@
 \set comp_keyword_case lower
 \set show_slow_queries
 \pset null '(null)'
-\pset linestyle ascii
+\pset linestyle unicode
 \pset pager on
 \pset format aligned
 \pset border 2

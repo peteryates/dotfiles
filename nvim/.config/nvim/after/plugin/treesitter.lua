@@ -1,26 +1,40 @@
 local ts = require('nvim-treesitter')
 local tsj = require('treesj')
-
+--
 local languages = {
   'html',
   'lua',
   'ruby',
   'sql',
   'yaml',
-  'markdown'
+  'markdown',
+  'embedded_template'
 }
 
-ts.setup { }
-ts.install(languages):wait(300000)
+ts.setup {
+  ensure_installed = {
+    'html',
+    'lua',
+    'ruby',
+    'sql',
+    'yaml',
+    'markdown',
+    'embedded_template'
+  },
+}
 
-vim.api.nvim_create_autocmd('FileType', {
-  pattern = languages,
-  callback = function()
-    vim.treesitter.start()
-    vim.bo.indentexpr = "v:lua.require('nvim-treesitter').indentexpr()"
-  end,
+-- ts.install(languages):wait(300000)
+-- ts.install(languages)
+--
+-- vim.api.nvim_create_autocmd('FileType', {
+--   pattern = languages,
+--   callback = function()
+--     vim.treesitter.start()
+--     vim.bo.indentexpr = "v:lua.require('nvim-treesitter').indentexpr()"
+--   end,
+-- })
 
-})
+vim.treesitter.language.register('embedded_template', 'eruby')
 
 tsj.setup({
   use_default_keymaps = true,
