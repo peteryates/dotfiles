@@ -9,5 +9,6 @@
 \pset tuples_only off
 \pset footer
 \set QUIET 0
-\setenv PAGER 'ov -F --view-mode psql --config ~/.config/ov/ov.yaml'
+--\setenv PAGER 'ov --view-mode psql --config ~/.config/ov/ov.yaml'
+\setenv PAGER 'less -F'
 \x auto

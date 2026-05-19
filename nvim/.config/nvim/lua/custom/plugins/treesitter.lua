@@ -1,9 +1,9 @@
 return {
-  'nvim-treesitter/nvim-treesitter',
+  'arborist-ts/arborist.nvim',
   dependencies = {
     'Wansmer/treesj',
     'nvim-treesitter/nvim-treesitter-context',
   },
   lazy = false,
-  build = ':TSUpdate'
+  -- build = ':TSUpdate'
 }
