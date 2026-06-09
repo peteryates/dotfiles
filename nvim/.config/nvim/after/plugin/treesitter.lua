@@ -1,8 +1,8 @@
 require("arborist").setup({
   update_cadence = "weekly",
-  -- overrides = {
-  --   my_language = { url = "https://github.com/me/tree-sitter-my-language" },
-  -- },
+  disable = {
+    indent = { "ruby", "markdown" }
+  }
 })
 
 local tsj = require('treesj')
