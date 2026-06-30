@@ -15,7 +15,7 @@ return {
         function() require("fzf-lua").live_grep() end,
         { silent = true, desc = "Live grep" })
 
-      vim.keymap.set({ "n", "v", "i" }, "<Leader>c",
+      vim.keymap.set({ "n", "v" }, "<Leader>c",
         function() require("fzf-lua").grep_cword() end,
         { silent = true, desc = "Grep for the word under the cursor" })
 
