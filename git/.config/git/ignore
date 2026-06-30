@@ -6,3 +6,4 @@
 *.map
 *.njk
 app/assets/builds/
+.aider*

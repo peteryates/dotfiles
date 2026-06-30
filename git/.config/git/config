@@ -10,7 +10,6 @@
 [core]
 	editor = vim
 	pager = diff-highlight | less
-	excludesfile = /home/peter/.gitignore_global
 	UseHttpPath = true
 
 [merge]
