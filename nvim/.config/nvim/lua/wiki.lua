@@ -12,15 +12,29 @@ vim.api.nvim_set_keymap(
 )
 
 
-function TodayWikiFn ()
+function TodayFilename ()
   return diary_root .. os.date("%Y-%m-%d") .. ".md"
+end
+
+function TomorrowFilename ()
+  local tomorrow_time = os.time() + (24 * 60 * 60)
+  local tomorrow_date = os.date("%Y-%m-%d", tomorrow_time)
+  return diary_root .. tomorrow_date .. ".md"
 end
 
 -- change to today's diary entry
 vim.api.nvim_set_keymap(
   "n",
   "<leader>w<leader>w",
-  ":lua vim.cmd.edit(TodayWikiFn())<cr>",
+  ":lua vim.cmd.edit(TodayFilename())<cr>",
+  { silent = true }
+)
+
+-- change to tomorrow's diary entry
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>w<leader>t",
+  ":lua vim.cmd.edit(TomorrowFilename())<cr>",
   { silent = true }
 )
 
