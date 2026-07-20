@@ -9,12 +9,9 @@ return {
           { path = "${3rd}/luv/library", words = { "vim%.uv" } },
         }
       },
-    },
-    { "williamboman/mason.nvim" }
+    }
   },
   config = function()
-    require("mason").setup({})
-
     vim.lsp.config('lua_ls', {})
     vim.lsp.config('solargraph', {
       filetypes = { "ruby" },
@@ -29,43 +26,15 @@ return {
       }
     })
     vim.lsp.config('terraformls', {})
-    vim.lsp.config('ts_ls', {
-        module = "commonjs",
-        target = "es6",
-        checkJs = false,
-        exclude = {
-          "node_modules"
-        }
+    vim.lsp.config('biome', {
+      cmd = { 'biome', 'lsp-proxy' },
+      filetypes = { 'javascript', 'typescript', 'json', 'jsonc', 'css' },
+      -- root_markers = { 'package.json', '.git' },
+      root_markers = { '.git', '' },
     })
+
     vim.lsp.config('tflint', {})
-    vim.lsp.config('cssls', {
-      settings = {
-        css = {
-          validate = true
-        },
-        less = {
-          validate = true
-        },
-        scss = {
-          validate = true
-        }
-      }
-    })
     vim.lsp.config('herb_ls', {})
-    -- vim.lsp.config('rubocop', {
-    --   command = "bundle",
-    --   args = { "exec", "rubocop", "--lsp" }
-    -- })
-    -- vim.lsp.config('ruby_lsp', {
-    --   cmd = { 'rbenv', 'exec', 'ruby-lsp' },
-    --   init_options = {
-    --     addonSettings = {
-    --       ["Ruby LSP Rails"] = {
-    --         enablePendingMigrationsPrompt = false
-    --       }
-    --     }
-    --   }
-    -- })
     vim.lsp.config('yamlls', {
       settings = {
         yaml = {
@@ -79,14 +48,15 @@ return {
     })
 
     vim.lsp.enable({
-      'solargraph',
-      'lua_ls',
-      'tflint',
+      'biome',
       'cssls',
-      'terraformls',
+      'herb_ls',
+      'lua_ls',
       'ruby_lsp',
-      'yamlls',
-      'herb_ls'
+      'solargraph',
+      'terraformls',
+      'tflint',
+      'yamlls'
     })
   end
 }
