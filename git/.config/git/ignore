@@ -7,3 +7,4 @@
 *.njk
 app/assets/builds/
 .aider*
+*.byebug_history
