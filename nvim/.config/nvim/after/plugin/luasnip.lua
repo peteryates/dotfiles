@@ -33,6 +33,7 @@ vim.keymap.set({"i", "s"}, "<C-E>", function()
 	end
 end, {silent = true})
 
+ls.add_snippets('all', require('luasnip-emoji'))
 ls.add_snippets(
   "ruby",
   {
