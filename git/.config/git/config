@@ -7,6 +7,9 @@
 	verbose = true
 	gpgsign = true
 
+[tag]
+	gpgsign = true
+
 [core]
 	editor = vim
 	pager = diff-highlight | less
@@ -15,10 +18,6 @@
 [merge]
 	ff = false
 	conflictStyle = zdiff3
-
-[merge "mergiraf"]
-	name = mergiraf
-	driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L
 
 [fetch]
 	prune = true
