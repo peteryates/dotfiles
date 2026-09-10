@@ -23,6 +23,7 @@ vim.opt.cursorline = false
 vim.opt.smartindent = true
 vim.opt.autoindent = true
 vim.opt.winborder = 'rounded'
+vim.opt.completeopt = {'menuone', 'popup', 'preview'}
 
 -- search
 vim.opt.hls = true
