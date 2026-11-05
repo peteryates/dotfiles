@@ -27,4 +27,5 @@
 --
 -- <M-C-Right>             Accept the next line of the current suggestion.
 -- <Plug>(copilot-accept-line)
-vim.keymap.set('i', '<M-Down>', '<Plug>(copilot-accept-line)')
+vim.keymap.set('i', '<M-w>', '<Plug>(copilot-accept-word)')
+vim.keymap.set('i', '<M-l>', '<Plug>(copilot-accept-line)')
