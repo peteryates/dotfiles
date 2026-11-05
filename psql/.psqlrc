@@ -10,5 +10,5 @@
 \pset footer
 \set QUIET 0
 --\setenv PAGER 'ov --view-mode psql --config ~/.config/ov/ov.yaml'
-\setenv PAGER 'less -F'
+\setenv PAGER 'less -FX'
 \x auto
