@@ -35,7 +35,15 @@ return {
       italic_comment = true, -- default false
       overrides = {
         WinSeparator = { fg = "#FFB86C" },
-        IncSearch = { fg = "#282A36", bg = "#FFFFA5" }
+        IncSearch = { fg = "#282A36", bg = "#FFFFA5" },
+        RenderMarkdownCode = { bg = "#21222C" },
+        RenderMarkdownQuote = { fg = "#F1FA8C" },
+        RenderMarkdownQuote1 = { fg = "#FF79C6" },
+        RenderMarkdownQuote2 = { fg = "#F1FA8C" },
+        RenderMarkdownQuote3 = { fg = "#FF79C6" },
+        RenderMarkdownQuote4 = { fg = "#F1FA8C" },
+        RenderMarkdownQuote5 = { fg = "#FF79C6" },
+        RenderMarkdownQuote6 = { fg = "#F1FA8C" }
       },
       completions = { lsp = { enabled = true } },
     })
