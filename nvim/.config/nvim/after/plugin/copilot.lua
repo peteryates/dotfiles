@@ -1,0 +1,30 @@
+-- Use the defaults here:
+--
+--                                                 *copilot-i_CTRL-]*
+-- <C-]>                   Dismiss the current suggestion.
+-- <Plug>(copilot-dismiss)
+-- 
+--                                                 *copilot-i_ALT-]*
+-- <M-]>                   Cycle to the next suggestion, if one is available.
+-- <Plug>(copilot-next)
+-- 
+--                                                     *copilot-i_ALT-[*
+-- <M-[>                   Cycle to the previous suggestion.
+-- <Plug>(copilot-previous)
+-- 
+--                                                     *copilot-i_ALT-\*
+-- <M-\>                   Explicitly request a suggestion, even if Copilot
+-- <Plug>(copilot-suggest) is disabled.
+-- 
+--                                                     *copilot-i_ALT-Right*
+-- <M-Right>               Accept the next word of the current suggestion.
+-- <Plug>(copilot-accept-word)
+-- 
+--                                                     *copilot-i_ALT-CTRL-Right*
+-- 
+--
+-- Except this one with clashes with GNOME's virtual desktop switcher
+--
+-- <M-C-Right>             Accept the next line of the current suggestion.
+-- <Plug>(copilot-accept-line)
+vim.keymap.set('i', '<M-Down>', '<Plug>(copilot-accept-line)')
