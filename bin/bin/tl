@@ -1,5 +1,5 @@
 #!/usr/bin/fish
 
-if set -l project (tmuxp ls | fzf); and set -q project
+if set -l project (tmuxp ls --json | jq '.workspaces[].name' -r | fzf); and set -q project
   tmuxp load $project
 end
